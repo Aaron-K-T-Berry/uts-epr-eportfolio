@@ -1,8 +1,8 @@
 {
-  "name": "my-gatsby-site",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "My Gatsby Site",
+  "description": "Aaron Berry portfolio for uts epr",
   "author": "Aaron-K-T-Berry",
   "keywords": [
     "gatsby"
