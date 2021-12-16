@@ -1,4 +1,5 @@
 import * as React from "react"
+import { PageProps } from "gatsby"
 
 // styles
 const pageStyles = {
@@ -126,7 +127,7 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+export default (props: PageProps) => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
@@ -154,7 +155,7 @@ const IndexPage = () => {
             {docLink.text}
           </a>
         </li>
-        {links.map(link => (
+        {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
@@ -180,5 +181,3 @@ const IndexPage = () => {
     </main>
   )
 }
-
-export default IndexPage
