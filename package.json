@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "lint": "./node_modules/.bin/prettier --write ./src/**/*.tsx",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -31,5 +32,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
