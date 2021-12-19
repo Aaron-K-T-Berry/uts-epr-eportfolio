@@ -8,7 +8,7 @@ export const Hero: React.FunctionComponent = (props) => {
         style={styles.img}
         layout="fullWidth"
         alt="Astronaut boy working on laptop"
-        src={"../images/astro.jpg"}
+        src={"../../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
 
@@ -34,8 +34,9 @@ const styles = {
   },
   text: {
     width: "25rem",
-    padding: "0.625rem",
+    padding: "1.5rem",
     borderRadius: "6px",
-    boxShadow: "0px 2px 15px 2px #8b8eaf;",
+    boxShadow: "0px 2px 15px 2px var(--primary-shadow)",
+    backgroundColor: "white"
   },
 }

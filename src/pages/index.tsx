@@ -70,7 +70,7 @@ export default (props: PageProps) => {
         <Nav sections={["About", "Skills", "Projects", "Writing", "Contact"]}>
           <h1>
             <span style={styles.headingAccentStyles}>Aaron Berry </span>{" "}
-            Portfolio
+            ePortfolio
           </h1>
         </Nav>
 
