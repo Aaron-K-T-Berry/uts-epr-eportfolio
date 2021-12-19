@@ -1,5 +1,6 @@
 import * as React from "react"
 import Typed from "typed.js"
+
 import * as skillsStyles from "./skills.module.css"
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
@@ -36,6 +37,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   )
 }
 
+// TODO extract the whole terminal output lifecycle into its own generic component
 export const Terminal: React.FunctionComponent<{
   skill: { summary: string; extras: string[] }
   show: boolean

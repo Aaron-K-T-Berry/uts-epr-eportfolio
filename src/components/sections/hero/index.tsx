@@ -1,5 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+
 import * as heroStyles from "./hero.module.css"
 
 interface HeroProps {

@@ -1,5 +1,6 @@
-require("./nav.module.css")
 import * as React from "react"
+
+require("./nav.module.css")
 
 export const Nav: React.FunctionComponent<NavProps> = (props) => {
   return (

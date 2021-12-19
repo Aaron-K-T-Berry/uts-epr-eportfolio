@@ -1,10 +1,11 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
+
 import { Layout } from "../components/layout"
-import { LayoutBody } from "../components/layout-body"
-import { Nav } from "../components/nav"
-import { Hero } from "../components/hero"
-import { Skills } from "../components/Skills"
+import { LayoutBody } from "../components/layout/body"
+import { Nav } from "../components/layout/nav"
+import { Hero } from "../components/sections/hero"
+import { Skills } from "../components/sections/skills"
 
 export default (props: PageProps) => {
   return (
