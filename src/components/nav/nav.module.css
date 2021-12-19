@@ -11,6 +11,10 @@ nav {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
+nav h1 span {
+  color: var(--primary-color);
+}
+
 nav a {
   color: var(--primary-color);
   transition: var(--transition);
@@ -23,6 +27,7 @@ nav a:hover {
 nav ul {
   display: flex;
   gap: 1.9rem;
+  color: var(--primary-color);
 }
 
 nav ul li {

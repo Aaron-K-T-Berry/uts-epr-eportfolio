@@ -1,42 +1,28 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import * as heroStyles from "./hero.module.css"
 
-export const Hero: React.FunctionComponent = (props) => {
+interface HeroProps {
+  heading: string
+  body: string
+}
+
+export const Hero: React.FunctionComponent<HeroProps> = (props) => {
   return (
-    <div style={styles.section}>
+    <div className={heroStyles.hero}>
       <StaticImage
-        style={styles.img}
+        className={heroStyles.heroImg}
         layout="fullWidth"
         alt="Astronaut boy working on laptop"
         src={"../../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
-
-      {/* Hero text */}
-      {/* TODO Move the hero text slightly to the right */}
-      <div style={styles.text}>{props.children}</div>
+      <div className={heroStyles.bio}>
+        <span>
+          <h2>{props.heading}</h2>
+          <p>{props.body}</p>
+        </span>
+      </div>
     </div>
   )
-}
-
-const styles = {
-  section: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "2.5rem",
-    maxWidth: "68.75rem",
-    margin: "auto",
-  },
-  img: {
-    height: "37.5rem",
-    width: "37.5rem",
-  },
-  text: {
-    width: "25rem",
-    padding: "1.5rem",
-    borderRadius: "6px",
-    boxShadow: "0px 2px 15px 2px var(--primary-shadow)",
-    backgroundColor: "white"
-  },
 }

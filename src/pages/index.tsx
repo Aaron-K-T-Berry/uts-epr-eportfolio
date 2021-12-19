@@ -68,18 +68,14 @@ export default (props: PageProps) => {
         <title>Home Page</title>
 
         <Nav sections={["About", "Skills", "Projects", "Writing", "Contact"]}>
-          <h1>
-            <span style={styles.headingAccentStyles}>Aaron Berry </span>{" "}
-            ePortfolio
-          </h1>
+          <span>Aaron Berry </span>
+          {"  ePortfolio"}
         </Nav>
 
-        <Hero>
-          <span>
-            <h2>{content.aboutMe.text}</h2>
-            <p>{content.aboutMe.description}</p>
-          </span>
-        </Hero>
+        <Hero
+          heading={content.aboutMe.text}
+          body={content.aboutMe.description}
+        />
 
         <div style={styles.page}>
           <ul style={styles.listStyles}>
@@ -110,9 +106,6 @@ const styles = {
   page: {
     color: "#232129",
     padding: 96,
-  },
-  headingAccentStyles: {
-    color: "#663399",
   },
   listStyles: {
     marginBottom: 96,

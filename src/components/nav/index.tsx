@@ -1,12 +1,10 @@
 require("./nav.module.css")
-
 import * as React from "react"
 
-// TODO dynamically create links to sections of the page
 export const Nav: React.FunctionComponent<NavProps> = (props) => {
   return (
     <nav>
-      {props.children}
+      <h1>{props.children}</h1>
 
       <ul>
         {props.sections.map((section) => {

@@ -34,6 +34,8 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "@types/node": "^17.0.0",
+    "@types/react-dom": "^17.0.11"
   }
 }
