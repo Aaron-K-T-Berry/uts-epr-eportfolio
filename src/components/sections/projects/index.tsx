@@ -1,6 +1,5 @@
 import * as React from "react"
-
-import "../shared.css"
+import { Layout } from "../layout"
 
 export const Projects: React.FunctionComponent<{
   heading: string
@@ -8,24 +7,18 @@ export const Projects: React.FunctionComponent<{
   publicProjects: string[]
 }> = (props) => {
   return (
-    <div className="section_container">
-      <div className="section_heading">
-        <h2>{props.heading}</h2>
-      </div>
-
-      <div className="section_body">
-        <ul>
-          {props.professionalProjects.map((project) => (
-            <li key={project}>{project}</li>
-          ))}
-        </ul>
-        <br />
-        <ul>
-          {props.publicProjects.map((project) => (
-            <li key={project}>{project}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <Layout heading={props.heading}>
+      <ul>
+        {props.professionalProjects.map((project) => (
+          <li key={project}>{project}</li>
+        ))}
+      </ul>
+      <br />
+      <ul>
+        {props.publicProjects.map((project) => (
+          <li key={project}>{project}</li>
+        ))}
+      </ul>
+    </Layout>
   )
 }

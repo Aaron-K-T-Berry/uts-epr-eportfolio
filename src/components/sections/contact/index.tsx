@@ -1,17 +1,8 @@
 import * as React from "react"
-
-import "../shared.css"
+import { Layout } from "../layout"
 
 export const Contact: React.FunctionComponent<{
   heading: string
 }> = (props) => {
-  return (
-    <div className="section_container">
-      <div className="section_heading">
-        <h2>{props.heading}</h2>
-      </div>
-
-      <div className="section_body">TODO placeholder content</div>
-    </div>
-  )
+  return <Layout heading={props.heading}>TODO placeholder content</Layout>
 }
