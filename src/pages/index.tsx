@@ -4,9 +4,11 @@ import { PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { LayoutBody } from "../components/layout/body"
 import { Nav } from "../components/layout/nav"
-import { Hero } from "../components/sections/hero"
+import { AboutMe } from "../components/sections/about-me"
 import { Skills } from "../components/sections/skills"
 import { Projects } from "../components/sections/projects"
+import { Writing } from "../components/sections/writing"
+import { Contact } from "../components/sections/contact"
 
 export default (props: PageProps) => {
   return (
@@ -19,8 +21,7 @@ export default (props: PageProps) => {
           {"  ePortfolio"}
         </Nav>
 
-        {/* About Me */}
-        <Hero
+        <AboutMe
           heading={content.aboutMe.heading}
           body={content.aboutMe.description}
         />
@@ -37,20 +38,12 @@ export default (props: PageProps) => {
             publicProjects={content.projects.publicProjects}
           />
 
-          {/* Writing */}
-          <span>
-            <h2>{content.writing.heading}</h2>
-            <ul>
-              {content.writing.articles.map((article) => (
-                <li key={article}>{article}</li>
-              ))}
-            </ul>
-          </span>
+          <Writing
+            heading={content.writing.heading}
+            articles={content.writing.articles}
+          />
 
-          {/* Contact */}
-          <span>
-            <h2>{content.contact.heading}</h2>
-          </span>
+          <Contact heading={content.contact.heading} />
         </LayoutBody>
       </main>
     </Layout>

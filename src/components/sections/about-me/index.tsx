@@ -1,24 +1,24 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import * as heroStyles from "./hero.module.css"
+import * as AboutMeStyles from "./hero.module.css"
 
-interface HeroProps {
+interface AboutMeProps {
   heading: string
   body: string
 }
 
-export const Hero: React.FunctionComponent<HeroProps> = (props) => {
+export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
   return (
-    <div className={heroStyles.hero}>
+    <div className={AboutMeStyles.hero}>
       <StaticImage
-        className={heroStyles.heroImg}
+        className={AboutMeStyles.heroImg}
         layout="fullWidth"
         alt="Astronaut boy working on laptop"
         src={"../../../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
-      <div className={heroStyles.bio}>
+      <div className={AboutMeStyles.bio}>
         <span>
           <h2>{props.heading}</h2>
           <p>{props.body}</p>

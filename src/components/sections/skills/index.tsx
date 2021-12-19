@@ -1,18 +1,21 @@
 import * as React from "react"
 import { Terminal, TerminalLine } from "../../terminal-output"
 
+import "../shared.css"
+import * as skillsStyles from "./index.module.css"
+
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   const [animationState, setAnimationState] = React.useState(
     props.skills.map((skill, index) => (index == 0 ? true : false))
   )
 
   return (
-    <div>
-      <div>
+    <div className="section_container">
+      <div className="section_heading">
         <h2>{props.heading}</h2>
       </div>
 
-      <div>
+      <div className="section_body">
         <Terminal title="-- bash">
           {props.skills.map((skill, index) => {
             return (
