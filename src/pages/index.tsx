@@ -1,14 +1,9 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
+import { Nav } from "../components/nav"
+import { Hero } from "../components/hero"
 
 const links = [
-  {
-    text: "Intro about me",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
-    color: "#E95800",
-  },
   {
     text: "Some skills I have",
     url: "https://www.gatsbyjs.com/docs/how-to/",
@@ -56,44 +51,65 @@ const links = [
   },
 ]
 
+const content = {
+  aboutMe: {
+    text: "About me",
+    description:
+      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
+    color: "#E95800",
+  },
+}
+
 export default (props: PageProps) => {
   return (
-    <main style={pageStyles}>
+    <main style={root}>
       <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Portfolio
-        <br />
-        <span style={headingAccentStyles}>— Aaron Berry </span>
-      </h1>
-      <ul style={listStyles}>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
+
+      <Nav sections={["About", "Skills", "Projects", "Writing", "Contact"]}>
+        <h1>
+          <span style={headingAccentStyles}>Aaron Berry </span> Portfolio
+        </h1>
+      </Nav>
+
+      {/* About me */}
+      {/* TODO style the about me content */}
+      <Hero>
+        <span>
+          <h2>{content.aboutMe.text}</h2>
+          <p>{content.aboutMe.description}</p>
+        </span>
+      </Hero>
+
+      <div style={pageStyles}>
+        <ul style={listStyles}>
+          {links.map((link) => (
+            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+              <span>
+                <a
+                  style={linkStyle}
+                  href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                >
+                  {link.text}
+                </a>
+                <p style={descriptionStyle}>{link.description}</p>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   )
+}
+
+// TODO Refactor this CSS to be more scalable with some framework
+const root = {
+  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  backgroundColor: "#cdeeff",
 }
 
 const pageStyles = {
   color: "#232129",
   padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
 }
 
 const headingAccentStyles = {
