@@ -15,7 +15,7 @@ export const Hero: React.FunctionComponent<HeroProps> = (props) => {
         className={heroStyles.heroImg}
         layout="fullWidth"
         alt="Astronaut boy working on laptop"
-        src={"../../images/astro.jpg"}
+        src={"../../../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
       <div className={heroStyles.bio}>

@@ -6,6 +6,7 @@ import { LayoutBody } from "../components/layout/body"
 import { Nav } from "../components/layout/nav"
 import { Hero } from "../components/sections/hero"
 import { Skills } from "../components/sections/skills"
+import { Projects } from "../components/sections/projects"
 
 export default (props: PageProps) => {
   return (
@@ -30,20 +31,11 @@ export default (props: PageProps) => {
             skills={content.skills.skills}
           />
 
-          {/* Projects */}
-          <span>
-            <h2>{content.projects.heading}</h2>
-            <ul>
-              {content.projects.professionalExp.map((project) => (
-                <li key={project}>{project}</li>
-              ))}
-            </ul>
-            <ul>
-              {content.projects.publicProjects.map((project) => (
-                <li key={project}>{project}</li>
-              ))}
-            </ul>
-          </span>
+          <Projects
+            heading={content.projects.heading}
+            professionalProjects={content.projects.professionalExp}
+            publicProjects={content.projects.publicProjects}
+          />
 
           {/* Writing */}
           <span>
@@ -94,7 +86,14 @@ const content = {
       "Data engineering with airflow and snowflake",
       "Building react applications as tableau extensions",
     ],
-    publicProjects: ["packer ubuntu"],
+    publicProjects: [
+      "packer-ubuntu-proxmox-template",
+      "proxmox-api-go",
+      "terraform-provider-proxmox",
+      "generator-ansible-molecule",
+      "python-encrypted-rsa-keys-demo ",
+      "jsonresume-theme-spartan-extended",
+    ],
   },
   writing: {
     heading: "Writing",

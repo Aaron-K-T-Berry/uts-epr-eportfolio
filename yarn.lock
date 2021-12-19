@@ -9436,6 +9436,11 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.10.tgz#0fe26db4fa85d9dbb8624729580e90e7159a59a6"
   integrity sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA==
 
+react-gh-repo-cards@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-gh-repo-cards/-/react-gh-repo-cards-1.0.1.tgz#d307f3dcf9094ca3f9040c56a29f3f0fcc7003da"
+  integrity sha512-v5LbNPyCYXSr5XeZtT24UARXsx883cwQlRFweVsmkJ2YXthIBw4mwsqkU2GtB3gdt8aanUB/+eLnzaheqTG4Tg==
+
 react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
