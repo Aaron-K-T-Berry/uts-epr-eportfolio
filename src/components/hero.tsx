@@ -7,8 +7,7 @@ export const Hero: React.FunctionComponent = (props) => {
       <StaticImage
         style={styles.img}
         layout="fullWidth"
-        // aspectRatio={3 / 1}
-        alt=""
+        alt="Astronaut boy working on laptop"
         src={"../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
