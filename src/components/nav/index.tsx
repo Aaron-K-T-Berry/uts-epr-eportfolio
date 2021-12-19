@@ -7,12 +7,12 @@ export const Nav: React.FunctionComponent<NavProps> = (props) => {
       <h1>{props.children}</h1>
 
       <ul>
-        {props.sections.map((section) => {
+        {props.sections.map((section, index) => {
           const link = `#${section.toLowerCase()}`
           const text = section
 
           return (
-            <li>
+            <li key={`${text}-${index}`}>
               <a href={link}>{text}</a>
             </li>
           )

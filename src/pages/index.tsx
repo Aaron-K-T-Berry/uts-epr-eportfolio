@@ -1,9 +1,10 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
 import { Layout } from "../components/layout"
+import { LayoutBody } from "../components/layout-body"
 import { Nav } from "../components/nav"
 import { Hero } from "../components/hero"
-import { LayoutBody } from "../components/layout-body"
+import { Skills } from "../components/Skills"
 
 export default (props: PageProps) => {
   return (
@@ -23,27 +24,22 @@ export default (props: PageProps) => {
         />
 
         <LayoutBody>
-          {/* Skills */}
-          <span>
-            <h2>{content.skills.heading}</h2>
-            <ul>
-              {content.skills.skills.map((skill) => (
-                <li>{skill}</li>
-              ))}
-            </ul>
-          </span>
+          <Skills
+            heading={content.skills.heading}
+            skills={content.skills.skills}
+          />
 
           {/* Projects */}
           <span>
             <h2>{content.projects.heading}</h2>
             <ul>
               {content.projects.professionalExp.map((project) => (
-                <li>{project}</li>
+                <li key={project}>{project}</li>
               ))}
             </ul>
             <ul>
               {content.projects.publicProjects.map((project) => (
-                <li>{project}</li>
+                <li key={project}>{project}</li>
               ))}
             </ul>
           </span>
@@ -53,7 +49,7 @@ export default (props: PageProps) => {
             <h2>{content.writing.heading}</h2>
             <ul>
               {content.writing.articles.map((article) => (
-                <li>{article}</li>
+                <li key={article}>{article}</li>
               ))}
             </ul>
           </span>
@@ -77,9 +73,18 @@ const content = {
   skills: {
     heading: "Skills",
     skills: [
-      "Web development Javascript, Typescript using tools like React and express JS and serverless ",
-      "Data Engineering with Python, Apache Airflow and Snowflake",
-      "DevOps using Terraform and Ansible in the cloud",
+      {
+        summary: "Web development",
+        extras: ["Javascript & Typescript", "ReactJs", "Gatsby"],
+      },
+      {
+        summary: "Data Engineering ",
+        extras: ["Python", "Airflow", "Snowflake"],
+      },
+      {
+        summary: "Devops",
+        extras: ["Docker", "Terraform", "Ansible", "Jenkins", "Github Actions"],
+      },
     ],
   },
   projects: {
