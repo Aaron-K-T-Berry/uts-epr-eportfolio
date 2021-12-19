@@ -3,61 +3,41 @@ import { PageProps } from "gatsby"
 import { Layout } from "../components/layout"
 import { Nav } from "../components/nav"
 import { Hero } from "../components/hero"
+import { LayoutBody } from "../components/layout-body"
 
-const links = [
-  {
-    text: "Some skills I have",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description: "TODO",
+const content = {
+  aboutMe: {
+    heading: "About me",
+    description:
+      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
+  },
+  skills: {
+    heading: "Some skills I have",
     skills: [
       "Web development Javascript, Typescript using tools like React and express JS and serverless ",
       "Data Engineering with Python, Apache Airflow and Snowflake",
       "DevOps using Terraform and Ansible in the cloud",
     ],
-    color: "#1099A8",
   },
-  {
-    text: "Projects I've worked on",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description: "TODO",
+  projects: {
+    heading: "Projects I've worked on",
     projects: [
       "Data engineering with airflow and snowflake",
       "Building react applications as tableau extensions",
     ],
-    color: "#BC027F",
   },
-  {
-    text: "Writing I have done",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description: "TODO",
-    projects: ["article 1", "article 2", "article 3"],
-    color: "#0D96F2",
+  writing: {
+    heading: "Writing I have done",
+    articles: ["article 1", "article 2", "article 3"],
   },
-  {
-    text: "Get in contact with me",
-    url: "https://www.gatsbyjs.com/plugins",
+  contact: {
+    heading: "Get in contact with me",
     description: "TODO",
     contactLinks: {
       linkedin: "",
       github: "",
       medium: "",
     },
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description: "TODO",
-    color: "#663399",
-  },
-]
-
-const content = {
-  aboutMe: {
-    text: "About me",
-    description:
-      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
-    color: "#E95800",
   },
 }
 
@@ -72,62 +52,49 @@ export default (props: PageProps) => {
           {"  ePortfolio"}
         </Nav>
 
+        {/* About Me */}
         <Hero
-          heading={content.aboutMe.text}
+          heading={content.aboutMe.heading}
           body={content.aboutMe.description}
         />
 
-        <div style={styles.page}>
-          <ul style={styles.listStyles}>
-            {links.map((link) => (
-              <li
-                key={link.url}
-                style={{ ...styles.listItemStyles, color: link.color }}
-              >
-                <span>
-                  <a
-                    style={styles.linkStyle}
-                    href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-                  >
-                    {link.text}
-                  </a>
-                  <p style={styles.descriptionStyle}>{link.description}</p>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <LayoutBody>
+          {/* Skills */}
+          <span>
+            <h2>{content.skills.heading}</h2>
+            <ul>
+              {content.skills.skills.map((skill) => (
+                <li>{skill}</li>
+              ))}
+            </ul>
+          </span>
+
+          {/* Projects */}
+          <span>
+            <h2>{content.projects.heading}</h2>
+            <ul>
+              {content.projects.projects.map((project) => (
+                <li>{project}</li>
+              ))}
+            </ul>
+          </span>
+
+          {/* Writing */}
+          <span>
+            <h2>{content.writing.heading}</h2>
+            <ul>
+              {content.writing.articles.map((article) => (
+                <li>{article}</li>
+              ))}
+            </ul>
+          </span>
+
+          {/* Contact */}
+          <span>
+            <h2>{content.contact.heading}</h2>
+          </span>
+        </LayoutBody>
       </main>
     </Layout>
   )
-}
-
-const styles = {
-  page: {
-    color: "#232129",
-    padding: 96,
-  },
-  listStyles: {
-    marginBottom: 96,
-    paddingLeft: 0,
-  },
-  listItemStyles: {
-    fontWeight: 300,
-    fontSize: 24,
-    maxWidth: 560,
-    marginBottom: 30,
-  },
-  linkStyle: {
-    color: "#8954A8",
-    fontWeight: "bold",
-    fontSize: 16,
-    verticalAlign: "5%",
-  },
-  descriptionStyle: {
-    color: "#232129",
-    fontSize: 14,
-    marginTop: 10,
-    marginBottom: 0,
-    lineHeight: 1.25,
-  },
 }
