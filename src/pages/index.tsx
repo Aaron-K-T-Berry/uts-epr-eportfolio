@@ -5,42 +5,6 @@ import { Nav } from "../components/nav"
 import { Hero } from "../components/hero"
 import { LayoutBody } from "../components/layout-body"
 
-const content = {
-  aboutMe: {
-    heading: "About me",
-    description:
-      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
-  },
-  skills: {
-    heading: "Some skills I have",
-    skills: [
-      "Web development Javascript, Typescript using tools like React and express JS and serverless ",
-      "Data Engineering with Python, Apache Airflow and Snowflake",
-      "DevOps using Terraform and Ansible in the cloud",
-    ],
-  },
-  projects: {
-    heading: "Projects I've worked on",
-    projects: [
-      "Data engineering with airflow and snowflake",
-      "Building react applications as tableau extensions",
-    ],
-  },
-  writing: {
-    heading: "Writing I have done",
-    articles: ["article 1", "article 2", "article 3"],
-  },
-  contact: {
-    heading: "Get in contact with me",
-    description: "TODO",
-    contactLinks: {
-      linkedin: "",
-      github: "",
-      medium: "",
-    },
-  },
-}
-
 export default (props: PageProps) => {
   return (
     <Layout>
@@ -73,7 +37,12 @@ export default (props: PageProps) => {
           <span>
             <h2>{content.projects.heading}</h2>
             <ul>
-              {content.projects.projects.map((project) => (
+              {content.projects.professionalExp.map((project) => (
+                <li>{project}</li>
+              ))}
+            </ul>
+            <ul>
+              {content.projects.publicProjects.map((project) => (
                 <li>{project}</li>
               ))}
             </ul>
@@ -97,4 +66,41 @@ export default (props: PageProps) => {
       </main>
     </Layout>
   )
+}
+
+const content = {
+  aboutMe: {
+    heading: "About me",
+    description:
+      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
+  },
+  skills: {
+    heading: "Skills",
+    skills: [
+      "Web development Javascript, Typescript using tools like React and express JS and serverless ",
+      "Data Engineering with Python, Apache Airflow and Snowflake",
+      "DevOps using Terraform and Ansible in the cloud",
+    ],
+  },
+  projects: {
+    heading: "Projects",
+    professionalExp: [
+      "Data engineering with airflow and snowflake",
+      "Building react applications as tableau extensions",
+    ],
+    publicProjects: ["packer ubuntu"],
+  },
+  writing: {
+    heading: "Writing",
+    articles: ["article 1", "article 2", "article 3"],
+  },
+  contact: {
+    heading: "Contact",
+    description: "TODO",
+    contactLinks: {
+      linkedin: "",
+      github: "",
+      medium: "",
+    },
+  },
 }
