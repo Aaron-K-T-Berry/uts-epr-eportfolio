@@ -1,7 +1,5 @@
 import * as React from "react"
 
-import "./shared.css"
-
 export const Layout: React.FunctionComponent<{
   heading: string
 }> = (props) => {
