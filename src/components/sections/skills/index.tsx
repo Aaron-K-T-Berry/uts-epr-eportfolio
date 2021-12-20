@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Layout } from "../layout"
-import { Terminal, TerminalLine } from "../../terminal-output"
+import { Terminal, TerminalLine } from "../../common/terminal-output"
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   const [animationState, setAnimationState] = React.useState(

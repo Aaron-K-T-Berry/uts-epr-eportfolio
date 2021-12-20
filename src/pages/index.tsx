@@ -57,7 +57,7 @@ const content = {
       "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
   },
   skills: {
-    heading: "Skills",
+    heading: "Technical skills",
     skills: [
       {
         summary: "Web development",
@@ -73,8 +73,9 @@ const content = {
       },
     ],
   },
+  // TODO update this data structure so we can add a bit more details about each project ive worked on
   projects: {
-    heading: "Projects",
+    heading: "Development Projects",
     professionalExp: [
       "Data engineering with airflow and snowflake",
       "Building react applications as tableau extensions",
