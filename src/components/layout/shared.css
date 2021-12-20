@@ -13,7 +13,7 @@
 }
 
 .section_body {
-  margin-bottom: var(--bottom-margin);
+  margin: var(--bottom-margin);
 }
 
 .flex_container {
@@ -32,8 +32,4 @@
   box-shadow: 0px 2px 15px 2px var(--primary-shadow);
   transition: 0.3s;
   background-color: var(--bg-color);
-}
-
-.flex_item h3 {
-  margin-bottom: var(--bottom-margin);
 }

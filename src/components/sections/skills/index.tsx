@@ -8,6 +8,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   )
   return (
     <Layout heading={props.heading}>
+      {/* TODO wrap this in a div to give it the standard padding */}
       <Terminal title="-- bash">
         {props.skills.map((skill, index) => {
           return (

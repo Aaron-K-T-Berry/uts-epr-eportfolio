@@ -1,0 +1,11 @@
+.summary {
+  line-height: var(--line-height);
+}
+
+.container ul {
+  padding-left: 01rem;
+}
+
+.container li {
+  line-height: var(--line-height);
+}

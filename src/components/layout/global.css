@@ -13,7 +13,7 @@
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
+  --line-height: 1.5rem;
   --transition: 0.3s;
 }
 /* Variables end */
@@ -45,4 +45,10 @@ a:hover {
 body {
   font-family: var(--font-family);
   background-color: #cdeeff;
+}
+
+h2,
+h3,
+h4 {
+  margin-bottom: var(--bottom-margin);
 }

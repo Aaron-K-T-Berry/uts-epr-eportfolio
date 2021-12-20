@@ -52,7 +52,8 @@ export default (props: PageProps) => {
   )
 }
 
-const temp = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+const temp =
+  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
 
 const content = {
   aboutMe: {
@@ -60,7 +61,7 @@ const content = {
     description: [
       "I'm Aaron berry, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
       "Ive been in the Banking and Financial services sector for 3 years building solutions ranging from customer facing web applications in the banking sector to scalable data pipelines ingesting millions of rows.",
-    ]
+    ],
   },
   skills: {
     heading: "Technical skills",
@@ -75,7 +76,13 @@ const content = {
       },
       {
         summary: "Building scalable and automated devops solutions",
-        extras: ["✅ Docker", "✅ Terraform", "✅ Ansible", "✅ Jenkins", "✅ Github Actions"],
+        extras: [
+          "✅ Docker",
+          "✅ Terraform",
+          "✅ Ansible",
+          "✅ Jenkins",
+          "✅ Github Actions",
+        ],
       },
     ],
   },
@@ -86,45 +93,55 @@ const content = {
       {
         title: "Data engineering with airflow and snowflake",
         summary: temp,
-        achievements: []
+        achievements: [
+          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
+          "cupiditate non provident, similique su",
+          "excepturi sint occaecati cupiditate non provident, similique",
+          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
+        ],
       },
       {
         title: "Building react applications as tableau extensions",
         summary: temp,
-        achievements: []
+        achievements: [
+          "excepturi sint occaecati cupiditate non provident, similique",
+          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
+          "excepturi sint occaecati cupiditate non provident, similique",
+          "cupiditate non provident, similique su",
+        ],
       },
     ],
     publicProjects: [
       {
         title: "packer-ubuntu-proxmox-template",
         summary: temp,
-        achievements: []
+        achievements: [],
       },
       {
         title: "proxmox-api-go",
         summary: temp,
-        achievements: []
+        achievements: [],
       },
       {
         title: "terraform-provider-proxmox",
         summary: temp,
-        achievements: []
+        achievements: [],
       },
       {
         title: "generator-ansible-molecule",
         summary: temp,
-        achievements: []
+        achievements: [],
       },
       {
         title: "python-encrypted-rsa-keys-demo ",
         summary: temp,
-        achievements: []
+        achievements: [],
       },
       {
         title: "jsonresume-theme-spartan-extended",
         summary: temp,
-        achievements: []
-      }
+        achievements: [],
+      },
     ],
   },
   writing: {
@@ -133,7 +150,7 @@ const content = {
       {
         title: "Airflow DAG and Task Markdown Docs",
         summary:
-          "I’ve recently been developing and operating a lot more on the Airflow platform. While doing this development, there was always the challenge of communicating the parts of your DAG effectively without the developer or operator having to open the DAG code to understand how it functions.",
+          "I've recently been developing and operating a lot more on the Airflow platform. While doing this development, there was always the challenge of communicating the parts of your DAG effectively without the developer or operator having to open the DAG code to understand how it functions.",
         url: "",
       },
       {
