@@ -10,6 +10,8 @@ import { Projects } from "../components/sections/projects"
 import { Writing } from "../components/sections/writing"
 import { Contact } from "../components/sections/contact"
 
+// TODO add page to download resume if needed
+
 export default (props: PageProps) => {
   return (
     <Layout>
@@ -90,11 +92,31 @@ const content = {
     ],
   },
   writing: {
-    heading: "Writing",
-    articles: ["article 1", "article 2", "article 3"],
+    heading: "Technology Writing",
+    articles: [
+      {
+        title: "Airflow DAG and Task Markdown Docs",
+        summary:
+          "I’ve recently been developing and operating a lot more on the Airflow platform. While doing this development, there was always the challenge of communicating the parts of your DAG effectively without the developer or operator having to open the DAG code to understand how it functions.",
+        url: "",
+      },
+      {
+        title:
+          "Generating Swagger API Docs And UI Automatically For Express.js Apps",
+        summary:
+          "If you are writing your express js API, you might get in a situation where your number of routes is growing, and it’s getting harder to communicate your routes and their inputs and outputs within your team or outside your team, be that publicly or privately.",
+        url: "",
+      },
+      {
+        title: "Creating proxmox templates with packer",
+        summary:
+          "This article will cover how you can easily set up a local or externally accessible Docker registry for hosting your own built Docker images.",
+        url: "",
+      },
+    ],
   },
   contact: {
-    heading: "Contact",
+    heading: "Get in touch!",
     description: "TODO",
     contactLinks: {
       linkedin: "",
