@@ -52,26 +52,30 @@ export default (props: PageProps) => {
   )
 }
 
+const temp = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+
 const content = {
   aboutMe: {
     heading: "About me",
-    description:
-      "I'm Aaron, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
+    description: [
+      "I'm Aaron berry, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
+      "Ive been in the Banking and Financial services sector for 3 years building solutions ranging from customer facing web applications in the banking sector to scalable data pipelines ingesting millions of rows.",
+    ]
   },
   skills: {
     heading: "Technical skills",
     skills: [
       {
         summary: "Web development",
-        extras: ["Javascript & Typescript", "ReactJs", "Gatsby"],
+        extras: ["✅ Javascript & Typescript", "✅ ReactJs", "✅ Gatsby"],
       },
       {
         summary: "Data Engineering ",
-        extras: ["Python", "Airflow", "Snowflake"],
+        extras: ["✅ Python", "✅ Airflow", "✅ Snowflake"],
       },
       {
-        summary: "Devops",
-        extras: ["Docker", "Terraform", "Ansible", "Jenkins", "Github Actions"],
+        summary: "Building scalable and automated devops solutions",
+        extras: ["✅ Docker", "✅ Terraform", "✅ Ansible", "✅ Jenkins", "✅ Github Actions"],
       },
     ],
   },
@@ -79,16 +83,48 @@ const content = {
   projects: {
     heading: "Development Projects",
     professionalExp: [
-      "Data engineering with airflow and snowflake",
-      "Building react applications as tableau extensions",
+      {
+        title: "Data engineering with airflow and snowflake",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "Building react applications as tableau extensions",
+        summary: temp,
+        achievements: []
+      },
     ],
     publicProjects: [
-      "packer-ubuntu-proxmox-template",
-      "proxmox-api-go",
-      "terraform-provider-proxmox",
-      "generator-ansible-molecule",
-      "python-encrypted-rsa-keys-demo ",
-      "jsonresume-theme-spartan-extended",
+      {
+        title: "packer-ubuntu-proxmox-template",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "proxmox-api-go",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "terraform-provider-proxmox",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "generator-ansible-molecule",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "python-encrypted-rsa-keys-demo ",
+        summary: temp,
+        achievements: []
+      },
+      {
+        title: "jsonresume-theme-spartan-extended",
+        summary: temp,
+        achievements: []
+      }
     ],
   },
   writing: {

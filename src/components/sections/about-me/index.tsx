@@ -5,7 +5,7 @@ import * as AboutMeStyles from "./hero.module.css"
 
 interface AboutMeProps {
   heading: string
-  body: string
+  body: string[]
 }
 
 export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
@@ -21,7 +21,9 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
       <div className={AboutMeStyles.bio}>
         <span>
           <h2>{props.heading}</h2>
-          <p>{props.body}</p>
+          <span>
+            {props.body.map(line => <p>{line}</p>)}
+          </span>
         </span>
       </div>
     </div>
