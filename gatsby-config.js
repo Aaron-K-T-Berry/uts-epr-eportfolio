@@ -1,22 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://aaron-berry.work",
+    siteUrl: "https://portfolio.aaron-berry.work",
     title: "Aaron Berry - Portfolio",
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    // TODO add my personal google analytics tracking id here
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: "",
-    //   },
-    // },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        // TODO update the icon
         icon: "src/images/icon.png",
       },
     },
