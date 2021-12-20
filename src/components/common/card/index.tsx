@@ -1,12 +1,13 @@
 import * as React from "react"
+import { FlexBox, FlexItem } from "../flex-box"
+
 import * as styles from "./styles.module.css"
 
 export const SimpleCard: React.FunctionComponent<{
   title: string
-  className?: string
 }> = (props) => {
   return (
-    <div className={props.className}>
+    <div className={styles.card}>
       <h3>{props.title}</h3>
       <div>{props.children}</div>
     </div>
@@ -16,12 +17,14 @@ export const SimpleCard: React.FunctionComponent<{
 export const ProjectCard: React.FunctionComponent<{
   title: string
   desc: string
-  achievements: string[]
-  className?: string
+  achievements?: string[]
 }> = (props) => {
   return (
-    <SimpleCard title={props.title} className={props.className}>
+    <SimpleCard title={props.title}>
+      {/* Summary */}
       <p className={styles.summary}>{props.desc}</p>
+
+      {/* Achievements */}
       {props.achievements && (
         <div className={styles.container}>
           <br />
@@ -33,6 +36,29 @@ export const ProjectCard: React.FunctionComponent<{
           </ul>
         </div>
       )}
+
+      {/* Extras */}
+      <div>{props.children}</div>
     </SimpleCard>
+  )
+}
+
+export const GithubRepoCard: React.FunctionComponent<{
+  title: string
+  desc: string
+  achievements?: string[]
+}> = (props) => {
+  return (
+    <ProjectCard
+      title={props.title}
+      desc={props.desc}
+      achievements={props.achievements}
+    >
+      <FlexBox>
+        <FlexItem>stars</FlexItem>
+        <FlexItem>forks</FlexItem>
+        <FlexItem>language</FlexItem>
+      </FlexBox>
+    </ProjectCard>
   )
 }

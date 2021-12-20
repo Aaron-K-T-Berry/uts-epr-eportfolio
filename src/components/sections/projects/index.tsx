@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Layout } from "../layout"
-import { FlexBox } from "../../common/flex-box"
-import { ProjectCard } from "../../common/card"
+import { FlexBox, FlexItem } from "../../common/flex-box"
+import { ProjectCard, GithubRepoCard } from "../../common/card"
 
 export const Projects: React.FunctionComponent<{
   heading: string
@@ -16,21 +16,20 @@ export const Projects: React.FunctionComponent<{
     <Layout heading={props.heading}>
       <FlexBox>
         {props.professionalProjects.map((project) => (
-          <ProjectCard
-            title={project.title}
-            desc={project.summary}
-            achievements={project.achievements}
-            className="flex_item"
-          />
+          <FlexItem>
+            <ProjectCard
+              title={project.title}
+              desc={project.summary}
+              achievements={project.achievements}
+            />
+          </FlexItem>
         ))}
       </FlexBox>
       <FlexBox>
         {props.publicProjects.map((project) => (
-          <ProjectCard
-            title={project.title}
-            desc={project.summary}
-            className="flex_item"
-          />
+          <FlexItem>
+            <GithubRepoCard title={project.title} desc={project.summary} />
+          </FlexItem>
         ))}
       </FlexBox>
     </Layout>

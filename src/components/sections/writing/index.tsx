@@ -1,8 +1,7 @@
 import * as React from "react"
 import { Layout } from "../layout"
-import { FlexBox } from "../../common/flex-box"
+import { FlexBox, FlexItem } from "../../common/flex-box"
 import { ProjectCard } from "../../common/card"
-
 
 export const Writing: React.FunctionComponent<{
   heading: string
@@ -12,7 +11,9 @@ export const Writing: React.FunctionComponent<{
     <Layout heading={props.heading}>
       <FlexBox>
         {props.articles.map((article) => (
-          <ProjectCard title={article.title} desc={article.summary} className="flex_item" />
+          <FlexItem>
+            <ProjectCard title={article.title} desc={article.summary} />
+          </FlexItem>
         ))}
       </FlexBox>
     </Layout>
