@@ -16,6 +16,7 @@ export const Projects: React.FunctionComponent<{
 }> = (props) => {
   const repoData = useRepoData()
 
+  // Filter out just the relevant repo data we care about based on the inputs
   const providedRepoKeys = props.publicProjects.map((repo) => repo.title)
   const filteredRepos = repoData.filter((repo) =>
     providedRepoKeys.includes(repo.name)

@@ -8,10 +8,18 @@ import * as styles from "./styles.module.css"
 
 export const SimpleCard: React.FunctionComponent<{
   title: string
+  titleLink?: string
 }> = (props) => {
   return (
     <div className={styles.card}>
-      <h3>{props.title}</h3>
+      {props.titleLink ? (
+        <a target="blank" href={props.titleLink}>
+          <h3>{props.title}</h3>
+        </a>
+      ) : (
+        <h3>{props.title}</h3>
+      )}
+
       <div>{props.children}</div>
     </div>
   )
@@ -19,11 +27,12 @@ export const SimpleCard: React.FunctionComponent<{
 
 export const ProjectCard: React.FunctionComponent<{
   title: string
+  titleLink?: string
   desc: string
   achievements?: string[]
 }> = (props) => {
   return (
-    <SimpleCard title={props.title}>
+    <SimpleCard title={props.title} titleLink={props.titleLink}>
       {/* Summary */}
       <p className={styles.summary}>{props.desc}</p>
 
@@ -58,6 +67,7 @@ export const GithubRepoCard: React.FunctionComponent<{
   return (
     <ProjectCard
       title={props.title}
+      titleLink={props.url}
       desc={props.desc}
       achievements={props.achievements}
     >
@@ -84,7 +94,7 @@ export const GithubRepoCard: React.FunctionComponent<{
                 target="blank"
                 href={`${props.url}/stargazers`}
               >
-                <StarIcon className="svg" /> {props.startGazerCount}
+                <SVGText svg={StarIcon} text={props.forkCount} />
               </a>
             </>
           )}
@@ -98,11 +108,21 @@ export const GithubRepoCard: React.FunctionComponent<{
               target="blank"
               href={`${props.url}/network`}
             >
-              <ForkIcon className="svg" /> {props.forkCount}
+              <SVGText svg={ForkIcon} text={props.forkCount} />
             </a>
           )}
         </FlexItem>
       </FlexBox>
     </ProjectCard>
+  )
+}
+
+const SVGText: React.FunctionComponent<{ svg: any; text: string | number }> = (
+  props
+) => {
+  return (
+    <div>
+      <props.svg className={styles.svg} /> {props.text}
+    </div>
   )
 }
