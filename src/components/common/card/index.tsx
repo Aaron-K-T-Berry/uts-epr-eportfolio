@@ -1,6 +1,9 @@
 import * as React from "react"
 import { FlexBox, FlexItem } from "../flex-box"
 
+import StarIcon from "./star.svg"
+import * as ForkIcon from "./fork.svg"
+
 import * as styles from "./styles.module.css"
 
 export const SimpleCard: React.FunctionComponent<{
@@ -47,6 +50,7 @@ export const GithubRepoCard: React.FunctionComponent<{
   title: string
   desc: string
   achievements?: string[]
+  language?: { name: string; colour: string }
 }> = (props) => {
   return (
     <ProjectCard
@@ -55,9 +59,37 @@ export const GithubRepoCard: React.FunctionComponent<{
       achievements={props.achievements}
     >
       <FlexBox>
-        <FlexItem>stars</FlexItem>
-        <FlexItem>forks</FlexItem>
-        <FlexItem>language</FlexItem>
+        {true && (
+          <FlexItem>
+            <a
+              className={styles.langColor}
+              style={{ backgroundColor: "#555555" }}
+            ></a>{" "}
+            python
+          </FlexItem>
+        )}
+        {true && (
+          <FlexItem>
+            <a
+              className={styles.githubIcon}
+              // target="blank"
+              // href={`https://github.com/${user}/${repo}/stargazers`}
+            >
+              <StarIcon className="svg" /> 35
+            </a>
+          </FlexItem>
+        )}
+        {true && (
+          <FlexItem>
+            <a
+              className={styles.githubIcon}
+              // target="blank"
+              // href={`https://github.com/${user}/${repo}/network`}
+            >
+              <ForkIcon className="svg" /> 20
+            </a>
+          </FlexItem>
+        )}
       </FlexBox>
     </ProjectCard>
   )

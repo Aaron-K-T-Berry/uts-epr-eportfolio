@@ -21,3 +21,22 @@
 .container li {
   line-height: var(--line-height);
 }
+
+.svg {
+  display: inline;
+  vertical-align: text-bottom;
+}
+
+.lang-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.github-icon {
+  text-decoration: none !important;
+  color: #586069 !important;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
