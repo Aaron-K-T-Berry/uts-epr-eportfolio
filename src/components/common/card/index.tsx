@@ -49,8 +49,11 @@ export const ProjectCard: React.FunctionComponent<{
 export const GithubRepoCard: React.FunctionComponent<{
   title: string
   desc: string
+  url: string
   achievements?: string[]
   language?: { name: string; colour: string }
+  startGazerCount?: number
+  forkCount?: number
 }> = (props) => {
   return (
     <ProjectCard
@@ -59,37 +62,46 @@ export const GithubRepoCard: React.FunctionComponent<{
       achievements={props.achievements}
     >
       <FlexBox>
-        {true && (
-          <FlexItem>
-            <a
-              className={styles.langColor}
-              style={{ backgroundColor: "#555555" }}
-            ></a>{" "}
-            python
-          </FlexItem>
-        )}
-        {true && (
-          <FlexItem>
+        {/* Github Primary Language */}
+        <FlexItem>
+          {props.language && (
+            <>
+              <a
+                className={styles.langColor}
+                style={{ backgroundColor: props.language.colour }}
+              ></a>{" "}
+              {props.language.name}
+            </>
+          )}
+        </FlexItem>
+
+        {/* Github star count */}
+        <FlexItem>
+          {props.startGazerCount > 0 && (
+            <>
+              <a
+                className={styles.githubIcon}
+                target="blank"
+                href={`${props.url}/stargazers`}
+              >
+                <StarIcon className="svg" /> {props.startGazerCount}
+              </a>
+            </>
+          )}
+        </FlexItem>
+
+        {/* Github fork count */}
+        <FlexItem>
+          {props.forkCount > 0 && (
             <a
               className={styles.githubIcon}
-              // target="blank"
-              // href={`https://github.com/${user}/${repo}/stargazers`}
+              target="blank"
+              href={`${props.url}/network`}
             >
-              <StarIcon className="svg" /> 35
+              <ForkIcon className="svg" /> {props.forkCount}
             </a>
-          </FlexItem>
-        )}
-        {true && (
-          <FlexItem>
-            <a
-              className={styles.githubIcon}
-              // target="blank"
-              // href={`https://github.com/${user}/${repo}/network`}
-            >
-              <ForkIcon className="svg" /> 20
-            </a>
-          </FlexItem>
-        )}
+          )}
+        </FlexItem>
       </FlexBox>
     </ProjectCard>
   )
