@@ -7,7 +7,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
     props.skills.map((skill, index) => (index == 0 ? true : false))
   )
   return (
-    <Layout heading={props.heading}>
+    <Layout heading={props.heading} headingId={props.headingId}>
       {/* TODO wrap this in a div to give it the standard padding */}
       <Terminal title="-- bash">
         {props.skills.map((skill, index) => {
@@ -32,5 +32,6 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
 interface SkillsProps {
   heading: string
+  headingId: string
   skills: { summary: string; extras: string[] }[]
 }

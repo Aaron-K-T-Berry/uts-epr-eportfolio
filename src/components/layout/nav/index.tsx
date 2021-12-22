@@ -9,8 +9,8 @@ export const Nav: React.FunctionComponent<NavProps> = (props) => {
 
       <ul>
         {props.sections.map((section, index) => {
-          const link = `#${section.toLowerCase()}`
-          const text = section
+          const link = `#${section.id}`
+          const text = section.title
 
           return (
             <li key={`${text}-${index}`}>
@@ -24,5 +24,5 @@ export const Nav: React.FunctionComponent<NavProps> = (props) => {
 }
 
 interface NavProps {
-  sections: string[]
+  sections: { title: string; id: string }[]
 }

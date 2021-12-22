@@ -18,34 +18,46 @@ export default (props: PageProps) => {
       <main>
         <title>Home Page</title>
 
-        <Nav sections={["About", "Skills", "Projects", "Writing", "Contact"]}>
+        <Nav
+          sections={[
+            { title: "About", id: "about-me" },
+            { title: "Skills", id: "skills" },
+            { title: "Projects", id: "projects" },
+            { title: "Writing", id: "writing" },
+            { title: "Contact", id: "contact" },
+          ]}
+        >
           <span>Aaron Berry </span>
           {"  ePortfolio"}
         </Nav>
 
         <AboutMe
           heading={content.aboutMe.heading}
+          headingId="about-me"
           body={content.aboutMe.description}
         />
 
         <LayoutBody>
           <Skills
             heading={content.skills.heading}
+            headingId="skills"
             skills={content.skills.skills}
           />
 
           <Projects
             heading={content.projects.heading}
+            headingId="projects"
             professionalProjects={content.projects.professionalExp}
             publicProjects={content.projects.publicProjects}
           />
 
           <Writing
             heading={content.writing.heading}
+            headingId="writing"
             articles={content.writing.articles}
           />
 
-          <Contact heading={content.contact.heading} />
+          <Contact heading={content.contact.heading} headingId="contact" />
         </LayoutBody>
       </main>
     </Layout>

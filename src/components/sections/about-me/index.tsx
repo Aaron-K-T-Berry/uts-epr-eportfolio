@@ -5,6 +5,7 @@ import * as AboutMeStyles from "./hero.module.css"
 
 interface AboutMeProps {
   heading: string
+  headingId: string
   body: string[]
 }
 
@@ -18,13 +19,20 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
         src={"../../../images/astro.jpg"}
         formats={["auto", "webp", "avif"]}
       />
+
       <div className={AboutMeStyles.bio}>
-        <span>
+        <div className="section_heading">
+          <a id={props.headingId}></a>
           <h2>{props.heading}</h2>
+        </div>
+
+        <div>
           <span>
-            {props.body.map(line => <p>{line}</p>)}
+            {props.body.map((line) => (
+              <p>{line}</p>
+            ))}
           </span>
-        </span>
+        </div>
       </div>
     </div>
   )

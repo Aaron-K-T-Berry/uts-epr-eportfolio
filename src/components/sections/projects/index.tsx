@@ -7,6 +7,7 @@ import { useRepoData } from "./data"
 
 export const Projects: React.FunctionComponent<{
   heading: string
+  headingId: string
   professionalProjects: {
     title: string
     summary: string[]
@@ -23,7 +24,7 @@ export const Projects: React.FunctionComponent<{
   )
 
   return (
-    <Layout heading={props.heading}>
+    <Layout heading={props.heading} headingId={props.headingId}>
       <FlexBox>
         {props.professionalProjects.map((project) => (
           <FlexItem>
