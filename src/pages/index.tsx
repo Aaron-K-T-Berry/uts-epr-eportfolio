@@ -86,23 +86,24 @@ const content = {
       },
     ],
   },
-  // TODO update this data structure so we can add a bit more details about each project ive worked on
   projects: {
     heading: "Development Projects",
     professionalExp: [
       {
         title: "Data engineering with airflow and snowflake",
-        summary: temp,
+        summary: [
+          "As part of the data platform i develop on the data engineering team i have developed DAG's and custom operators built on the Apache Airflow platform. Doing this i have leveraged the building of generic python tooling on the platform to make the ongoing operation and management of the platform easier",
+          "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform.",
+          "The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
+        ],
         achievements: [
-          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
-          "cupiditate non provident, similique su",
-          "excepturi sint occaecati cupiditate non provident, similique",
-          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
+          "Developing custom but scalable solutions utilizing python to create common interfaces for interacting with aspects of the data pipeline",
+          "Build custom web applications using React to support the better ingesting of internal user data and reporting of that data",
         ],
       },
       {
         title: "Building react applications as tableau extensions",
-        summary: temp,
+        summary: [temp],
         achievements: [
           "excepturi sint occaecati cupiditate non provident, similique",
           "s molestias excepturi sint occaecati cupiditate non provident, similique su",
@@ -114,32 +115,22 @@ const content = {
     publicProjects: [
       {
         title: "packer-ubuntu-proxmox-template",
-        summary: temp,
-        achievements: [],
-      },
-      {
-        title: "proxmox-api-go",
-        summary: temp,
-        achievements: [],
-      },
-      {
-        title: "terraform-provider-proxmox",
-        summary: temp,
-        achievements: [],
-      },
-      {
-        title: "generator-ansible-molecule",
-        summary: temp,
-        achievements: [],
-      },
-      {
-        title: "python-encrypted-rsa-keys-demo ",
-        summary: temp,
+        summary: [temp],
         achievements: [],
       },
       {
         title: "jsonresume-theme-spartan-extended",
-        summary: temp,
+        summary: [temp],
+        achievements: [],
+      },
+      {
+        title: "proxmox-api-go",
+        summary: [temp],
+        achievements: [],
+      },
+      {
+        title: "terraform-provider-proxmox",
+        summary: [temp],
         achievements: [],
       },
     ],
@@ -149,21 +140,24 @@ const content = {
     articles: [
       {
         title: "Airflow DAG and Task Markdown Docs",
-        summary:
+        summary: [
           "I've recently been developing and operating a lot more on the Airflow platform. While doing this development, there was always the challenge of communicating the parts of your DAG effectively without the developer or operator having to open the DAG code to understand how it functions.",
+        ],
         url: "",
       },
       {
         title:
           "Generating Swagger API Docs And UI Automatically For Express.js Apps",
-        summary:
-          "If you are writing your express js API, you might get in a situation where your number of routes is growing, and it’s getting harder to communicate your routes and their inputs and outputs within your team or outside your team, be that publicly or privately.",
+        summary: [
+          "If you are writing your express js API, you might get in a situation where your number of routes is growing, and it's getting harder to communicate your routes and their inputs and outputs within your team or outside your team, be that publicly or privately.",
+        ],
         url: "",
       },
       {
         title: "Creating proxmox templates with packer",
-        summary:
+        summary: [
           "This article will cover how you can easily set up a local or externally accessible Docker registry for hosting your own built Docker images.",
+        ],
         url: "",
       },
     ],

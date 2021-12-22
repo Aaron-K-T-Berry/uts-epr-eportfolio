@@ -28,13 +28,17 @@ export const SimpleCard: React.FunctionComponent<{
 export const ProjectCard: React.FunctionComponent<{
   title: string
   titleLink?: string
-  desc: string
+  desc: string[]
   achievements?: string[]
 }> = (props) => {
   return (
     <SimpleCard title={props.title} titleLink={props.titleLink}>
       {/* Summary */}
-      <p className={styles.summary}>{props.desc}</p>
+      <span>
+        {props.desc.map((str) => (
+          <p className={styles.summary}>{str}</p>
+        ))}
+      </span>
 
       {/* Achievements */}
       {props.achievements && (
@@ -57,7 +61,7 @@ export const ProjectCard: React.FunctionComponent<{
 
 export const GithubRepoCard: React.FunctionComponent<{
   title: string
-  desc: string
+  desc: string[]
   url: string
   achievements?: string[]
   language?: { name: string; colour: string }

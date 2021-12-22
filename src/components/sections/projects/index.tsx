@@ -9,10 +9,10 @@ export const Projects: React.FunctionComponent<{
   heading: string
   professionalProjects: {
     title: string
-    summary: string
+    summary: string[]
     achievements: string[]
   }[]
-  publicProjects: { title: string; summary: string; achievements: string[] }[]
+  publicProjects: { title: string; summary: string[]; achievements: string[] }[]
 }> = (props) => {
   const repoData = useRepoData()
 
