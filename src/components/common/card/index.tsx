@@ -20,7 +20,7 @@ export const SimpleCard: React.FunctionComponent<{
         <h3>{props.title}</h3>
       )}
 
-      <div>{props.children}</div>
+      <div className={styles.cardContent}>{props.children}</div>
     </div>
   )
 }
@@ -43,7 +43,6 @@ export const ProjectCard: React.FunctionComponent<{
       {/* Achievements */}
       {props.achievements && (
         <div className={styles.container}>
-          <br />
           <h4>Achievements</h4>
           <ul>
             {props.achievements.map((str, index) => {

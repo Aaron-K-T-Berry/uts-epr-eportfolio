@@ -1,9 +1,9 @@
 import * as React from "react"
 
 import { Layout } from "../layout"
-import { FlexBox, FlexItem } from "../../common/flex-box"
 import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { useRepoData } from "./data"
+import { GridContainer } from "../../common/grid"
 
 export const Projects: React.FunctionComponent<{
   heading: string
@@ -25,25 +25,40 @@ export const Projects: React.FunctionComponent<{
 
   return (
     <Layout heading={props.heading} headingId={props.headingId}>
-      <FlexBox>
-        {props.professionalProjects.map((project) => (
-          <FlexItem>
-            <ProjectCard
-              title={project.title}
-              desc={project.summary}
-              achievements={project.achievements}
-            />
-          </FlexItem>
-        ))}
-      </FlexBox>
-      <FlexBox>
-        {props.publicProjects.map((project) => {
+      <br />
+      <GridContainer>
+        {props.professionalProjects.map((project, index) => {
+          if (index > 0) {
+            return (
+              <ProjectCard
+                title={project.title}
+                desc={project.summary}
+                achievements={project.achievements}
+              />
+            )
+          } else {
+            return (
+              <div className="grid_item_focus">
+                <ProjectCard
+                  title={project.title}
+                  desc={project.summary}
+                  achievements={project.achievements}
+                />
+              </div>
+            )
+          }
+        })}
+      </GridContainer>
+      <br />
+      <br />
+      <GridContainer>
+        {props.publicProjects.map((project, index) => {
           const currentRepoData = filteredRepos.filter(
             (repo) => project.title === repo.name
           )[0]
 
-          return (
-            <FlexItem>
+          if (index > 0) {
+            return (
               <GithubRepoCard
                 title={project.title}
                 desc={project.summary}
@@ -55,10 +70,26 @@ export const Projects: React.FunctionComponent<{
                   colour: currentRepoData?.primaryLanguage?.color,
                 }}
               />
-            </FlexItem>
-          )
+            )
+          } else {
+            return (
+              <div className="grid_item_focus">
+                <GithubRepoCard
+                  title={project.title}
+                  desc={project.summary}
+                  url={currentRepoData?.url}
+                  startGazerCount={currentRepoData?.stargazerCount}
+                  forkCount={currentRepoData?.forkCount}
+                  language={{
+                    name: currentRepoData?.primaryLanguage?.name,
+                    colour: currentRepoData?.primaryLanguage?.color,
+                  }}
+                />
+              </div>
+            )
+          }
         })}
-      </FlexBox>
+      </GridContainer>
     </Layout>
   )
 }

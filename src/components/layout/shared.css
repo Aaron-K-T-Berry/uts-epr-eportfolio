@@ -16,6 +16,7 @@
   margin: var(--bottom-margin);
 }
 
+/* Flex box container styles */
 .flex_container {
   display: flex;
   flex-wrap: wrap;
@@ -26,4 +27,27 @@
 
 .flex_item {
   flex: 1 0 25%;
+}
+
+/* GRID STYLES */
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  .grid_container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid_item_focus {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .grid_container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

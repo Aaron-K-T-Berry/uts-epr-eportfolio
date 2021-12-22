@@ -10,16 +10,22 @@
   background-color: var(--bg-color);
 }
 
+.card-content span p {
+  padding-bottom: 0.5rem;
+}
+
 .summary {
   line-height: var(--line-height);
 }
 
 .container ul {
-  padding-left: 01rem;
+  padding-left: 3rem;
+  list-style-type: circle;
+  line-height: var(--line-height);
 }
 
 .container li {
-  line-height: var(--line-height);
+  padding-bottom: 0.5rem;
 }
 
 .svg {
