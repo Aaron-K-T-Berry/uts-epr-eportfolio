@@ -22,7 +22,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
 
       <div className={AboutMeStyles.bio}>
         <div className="section_heading">
-          <a id={props.headingId}></a>
+          <a className={AboutMeStyles.headingLink} id={props.headingId}></a>
           <h2>{props.heading}</h2>
         </div>
 
