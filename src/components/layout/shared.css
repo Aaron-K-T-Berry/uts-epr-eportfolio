@@ -1,6 +1,8 @@
 .section_container {
   padding: 0.625rem;
   margin-bottom: var(--bottom-margin);
+  /* Makes the section take up the whole screen at a minimum */
+  min-height: 55rem;
 }
 
 .section_heading {
