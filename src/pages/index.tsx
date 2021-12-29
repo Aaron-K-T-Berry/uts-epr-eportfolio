@@ -109,18 +109,24 @@ const content = {
           "The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
         ],
         achievements: [
+          "Developing Devops tooling and infrastructure code to support continues integration of the data engineering stack.",
+          "Monitoring and logging of data engineering workflows with Datadog",
           "Developing custom but scalable solutions utilizing python to create common interfaces for interacting with aspects of the data pipeline",
           "Build custom web applications using React to support the better ingesting of internal user data and reporting of that data",
+          "Maintaining and administering a snowflake data warehouse using modern devops principles for defining and maintaining tenant database rearouses",
         ],
       },
       {
         title: "Building react applications as tableau extensions",
-        summary: [temp],
+        summary: [
+          "Within the business unit the data engineering team i worked in supported we needed to ingest commentary data on assets under management by the business.",
+          "This project was implemented as a embedded web application that could be installed on the business users tableau dashboards to allow for them to input commentaries data in their existing dashboards",
+          "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer utilizing materialized views to enable less apu logic to manage",
+        ],
         achievements: [
-          "excepturi sint occaecati cupiditate non provident, similique",
-          "s molestias excepturi sint occaecati cupiditate non provident, similique su",
-          "excepturi sint occaecati cupiditate non provident, similique",
-          "cupiditate non provident, similique su",
+          "Introduced an example production application with React + Express Js stack",
+          "10k Requests a month from internal business users",
+          "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
         ],
       },
     ],
@@ -137,11 +143,6 @@ const content = {
       },
       {
         title: "proxmox-api-go",
-        summary: [temp],
-        achievements: [],
-      },
-      {
-        title: "terraform-provider-proxmox",
         summary: [temp],
         achievements: [],
       },

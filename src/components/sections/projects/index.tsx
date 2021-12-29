@@ -73,7 +73,7 @@ export const Projects: React.FunctionComponent<{
             )
           } else {
             return (
-              <div className="grid_item_focus">
+              // <div className="grid_item_focus">
                 <GithubRepoCard
                   title={project.title}
                   desc={project.summary}
@@ -85,7 +85,7 @@ export const Projects: React.FunctionComponent<{
                     colour: currentRepoData?.primaryLanguage?.color,
                   }}
                 />
-              </div>
+              // </div>
             )
           }
         })}
