@@ -156,6 +156,8 @@ const content = {
           "I've recently been developing and operating a lot more on the Airflow platform. While doing this development, there was always the challenge of communicating the parts of your DAG effectively without the developer or operator having to open the DAG code to understand how it functions.",
         ],
         url: "https://levelup.gitconnected.com/airflow-dag-and-task-markdown-docs-2c00c72152b4",
+        imageUrl:
+          "https://miro.medium.com/max/1400/1*bFZ6qSsSNTLayT0Vr1tqXw.png",
       },
       {
         title:
@@ -164,6 +166,8 @@ const content = {
           "If you are writing your express js API, you might get in a situation where your number of routes is growing, and it's getting harder to communicate your routes and their inputs and outputs within your team or outside your team, be that publicly or privately.",
         ],
         url: "https://levelup.gitconnected.com/generating-swagger-api-docs-and-ui-automatically-for-express-js-apps-2ea1436a0f59",
+        imageUrl:
+          "https://miro.medium.com/max/1400/1*7ZKm-fPKuGkr8UG-jbqfWQ.png",
       },
       {
         title: "Creating proxmox templates with packer",
@@ -171,6 +175,8 @@ const content = {
           "This article will cover how you can easily set up a local or externally accessible Docker registry for hosting your own built Docker images.",
         ],
         url: "https://aaron-kt-berry.medium.com/creating-proxmox-templates-with-packer-7ada62474c44",
+        imageUrl:
+          "https://miro.medium.com/max/700/1*NRt0va8zdrfVflJL6ZLN1A.jpeg",
       },
     ],
   },

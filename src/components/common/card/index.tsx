@@ -9,17 +9,38 @@ import * as styles from "./styles.module.css"
 export const SimpleCard: React.FunctionComponent<{
   title: string
   titleLink?: string
+  imageUrl?: string
 }> = (props) => {
   return (
     <div className={styles.card}>
-      {props.titleLink ? (
-        <a target="blank" href={props.titleLink}>
+      {/* Card title */}
+      <div>
+        {props.titleLink ? (
+          <a target="blank" href={props.titleLink}>
+            <h3>{props.title}</h3>
+          </a>
+        ) : (
           <h3>{props.title}</h3>
-        </a>
-      ) : (
-        <h3>{props.title}</h3>
+        )}
+      </div>
+
+      {/* Card image */}
+      {props.imageUrl && (
+        <div>
+          <div
+            style={{
+              backgroundImage: `url(${props.imageUrl})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minHeight: "20rem",
+              width: "100%",
+              padding: "1rem",
+            }}
+          />
+        </div>
       )}
 
+      {/* Card content */}
       <div className={styles.cardContent}>{props.children}</div>
     </div>
   )
@@ -30,9 +51,14 @@ export const ProjectCard: React.FunctionComponent<{
   titleLink?: string
   desc: string[]
   achievements?: string[]
+  imageUrl?: string
 }> = (props) => {
   return (
-    <SimpleCard title={props.title} titleLink={props.titleLink}>
+    <SimpleCard
+      title={props.title}
+      titleLink={props.titleLink}
+      imageUrl={props.imageUrl}
+    >
       {/* Summary */}
       <span>
         {props.desc.map((str) => (
