@@ -14,11 +14,13 @@ export const SimpleCard: React.FunctionComponent<{
   return (
     <div className={styles.card}>
       {/* Card title */}
-      <div>
+      <div className={styles.cardHeading}>
         {props.titleLink ? (
-          <a target="blank" href={props.titleLink}>
-            <h3>{props.title}</h3>
-          </a>
+          <h3>
+            <a target="blank" href={props.titleLink} rel="noopener noreferrer">
+              {props.title}
+            </a>
+          </h3>
         ) : (
           <h3>{props.title}</h3>
         )}
@@ -121,6 +123,7 @@ export const GithubRepoCard: React.FunctionComponent<{
               <a
                 className={styles.githubIcon}
                 target="blank"
+                rel="noopener noreferrer"
                 href={`${props.url}/stargazers`}
               >
                 <SVGText svg={StarIcon} text={props.forkCount} />
@@ -136,6 +139,7 @@ export const GithubRepoCard: React.FunctionComponent<{
               className={styles.githubIcon}
               target="blank"
               href={`${props.url}/network`}
+              rel="noopener noreferrer"
             >
               <SVGText svg={ForkIcon} text={props.forkCount} />
             </a>

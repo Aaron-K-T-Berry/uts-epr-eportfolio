@@ -1,5 +1,4 @@
 import * as React from "react"
-import CSS from "csstype"
 
 import { Layout } from "../layout"
 import { ProjectCard } from "../../common/card"
@@ -22,26 +21,7 @@ export const Writing: React.FunctionComponent<{
       <div className={styles.wrapper}>
         {/* Section Summary */}
         <div className={styles.summaryWrapper}>
-          <span>
-            <p>
-              In my Free time i enjoy reading and writing about technology and
-              things i am working on. I find this has been a great way to
-              process the things i have been learning about and see how they can
-              integrate into more of the things i have learning ver my career.
-            </p>
-            <p>
-              In my Free time i enjoy reading and writing about technology and
-              things i am working on. I find this has been a great way to
-              process the things i have been learning about and see how they can
-              integrate into more of the things i have learning ver my career.
-            </p>
-            <p>
-              In my Free time i enjoy reading and writing about technology and
-              things i am working on. I find this has been a great way to
-              process the things i have been learning about and see how they can
-              integrate into more of the things i have learning ver my career.
-            </p>
-          </span>
+          <SectionSummary />
         </div>
 
         {/* Section grid */}
@@ -72,5 +52,30 @@ export const Writing: React.FunctionComponent<{
         </div>
       </div>
     </Layout>
+  )
+}
+
+const SectionSummary = () => {
+  return (
+    <span>
+      <p>
+        In my Free time i enjoy reading and writing about technology and things
+        i am working on. I find this has been a great way to process the things
+        i have been learning about and see how they can integrate into more of
+        the things i have learning ver my career.
+      </p>
+      <p>
+        In my Free time i enjoy reading and writing about technology and things
+        i am working on. I find this has been a great way to process the things
+        i have been learning about and see how they can integrate into more of
+        the things i have learning ver my career.
+      </p>
+      <p>
+        In my Free time i enjoy reading and writing about technology and things
+        i am working on. I find this has been a great way to process the things
+        i have been learning about and see how they can integrate into more of
+        the things i have learning ver my career.
+      </p>
+    </span>
   )
 }

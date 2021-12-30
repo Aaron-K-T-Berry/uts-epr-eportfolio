@@ -51,7 +51,7 @@ export const TerminalLine: React.FunctionComponent<{
   }, [props.show])
 
   return (
-    <div>
+    <div style={{ paddingBottom: "0.5rem" }}>
       <span style={{ color: "#ff00df", display: showPromptText(props.show) }}>
         user@local:~${" "}
       </span>

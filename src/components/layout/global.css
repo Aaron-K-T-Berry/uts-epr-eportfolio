@@ -39,7 +39,8 @@ a {
 }
 
 a:hover {
-  color: var(--second ary-color);
+  color: var(--secondary-color);
+  border-bottom: 1px solid;
 }
 
 body {

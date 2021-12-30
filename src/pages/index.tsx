@@ -82,21 +82,27 @@ const content = {
     heading: "Technical skills",
     skills: [
       {
-        summary: "Web development",
-        extras: ["✅ Javascript & Typescript", "✅ ReactJs", "✅ Gatsby"],
+        summary: "Modern full stack web development",
+        extras: [
+          "✅ Latest Javascript, Typescript and ReactJs standards and practices",
+          "✅ Focus on testing for a maintainable and scalable codebase",
+          "✅ Building custom internal and external user focused solutions",
+        ],
       },
       {
-        summary: "Data Engineering ",
-        extras: ["✅ Python", "✅ Airflow", "✅ Snowflake"],
+        summary: "Developing scalable data engineering pipelines ",
+        extras: [
+          "✅ Maintaining and developing a dockerized Airflow environment",
+          "✅ Developing custom Airflow operators and plugins to support  data ingestion",
+          "✅ Using DBT and liquidbase for scalable data warehouse object management",
+        ],
       },
       {
         summary: "Building scalable and automated devops solutions",
         extras: [
-          "✅ Docker",
-          "✅ Terraform",
-          "✅ Ansible",
-          "✅ Jenkins",
-          "✅ Github Actions",
+          "✅ Scalable applications and deployments with tools like docker and kubernetes",
+          "✅ Implementing infrastructure as code through tools like ansible and terraform",
+          "✅ Building generic and maintainable CICD infrastructure on Jenkins and Github Actions",
         ],
       },
     ],
