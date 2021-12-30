@@ -2,9 +2,8 @@
   padding: 1rem;
   height: 100%;
   width: 100%;
-
-  /* border-radius: 20px; */
-  /* box-shadow: 0px 2px 15px 2px var(--primary-shadow); */
+  border-bottom: 0.5px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
   transition: 0.3s;
 
   background-color: var(--bg-color);

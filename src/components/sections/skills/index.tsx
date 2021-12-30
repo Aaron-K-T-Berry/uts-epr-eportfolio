@@ -1,6 +1,10 @@
 import * as React from "react"
 import { Layout } from "../layout"
 import { Terminal, TerminalLine } from "../../common/terminal-output"
+import { GridContainer } from "../../common/grid"
+import { ProjectCard } from "../../common/card"
+
+import * as styles from "./styles.module.css"
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   const [animationState, setAnimationState] = React.useState(
@@ -8,24 +12,91 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   )
   return (
     <Layout heading={props.heading} headingId={props.headingId}>
-      {/* TODO wrap this in a div to give it the standard padding */}
-      <Terminal title="-- bash">
-        {props.skills.map((skill, index) => {
-          return (
-            <TerminalLine
-              key={`${skill}-${index}`}
-              skill={skill}
-              show={animationState[index]}
-              onCompleteFunc={() => {
-                let currentState = [...animationState]
-                currentState[index + 1] = true
-                setAnimationState(currentState)
-              }}
-              delay={1500}
-            />
-          )
-        })}
-      </Terminal>
+      {/* Terminal section */}
+      <div className={styles.terminalWrapper}>
+        <Terminal title="-- bash">
+          {props.skills.map((skill, index) => {
+            return (
+              <TerminalLine
+                key={`${skill}-${index}`}
+                skill={skill}
+                show={animationState[index]}
+                onCompleteFunc={() => {
+                  let currentState = [...animationState]
+                  currentState[index + 1] = true
+                  setAnimationState(currentState)
+                }}
+                delay={1500}
+              />
+            )
+          })}
+        </Terminal>
+      </div>
+
+      {/* Detailed Skills Sections */}
+      <div className={styles.detailsSkillsWrapper}>
+        <GridContainer>
+          <ProjectCard
+            title="Technical Skills"
+            desc={["List some technical skills that i have."]}
+          >
+            <div style={{ display: "flex", gap: "5rem" }}>
+              <div>
+                <h4>Programming Languages</h4>
+                <ul>
+                  <li>Javascript and TypeScript</li>
+                  <li>Python</li>
+                  <li>Java</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Data Engineering</h4>
+                <ul>
+                  <li>Snowflake</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4>Devops and Cloud</h4>
+                <ul>
+                  <li>Ansible</li>
+                  <li>Terraform</li>
+                  <li>AWS - Certified Solution Architect</li>
+                  <li>Azure</li>
+                  <li>Digital ocean</li>
+                </ul>
+              </div>
+            </div>
+          </ProjectCard>
+
+          <ProjectCard
+            title="Transferrable Skills"
+            desc={[
+              "I have been working effectively as a software engineering within a data engineering and devops teams to release value weekly to the business. I can provide effective support through the following areas",
+            ]}
+          >
+            <div style={{ display: "flex", gap: "5rem" }}>
+              <div>
+                <h4>General Skills</h4>
+                <ul>
+                  <li>Providing demos to stakeholders in the business</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Agile Development</h4>
+                <ul>
+                  <li>Writing and refining sprint stories</li>
+                  <li>
+                    participating in sprint reviews for continues improvements
+                    of team processes
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ProjectCard>
+        </GridContainer>
+      </div>
     </Layout>
   )
 }
