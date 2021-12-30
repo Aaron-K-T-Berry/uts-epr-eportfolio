@@ -5,7 +5,6 @@
   border-bottom: 0.5px solid #dfdfdf;
   border-right: 1px solid #dfdfdf;
   transition: 0.3s;
-
   background-color: var(--bg-color);
 }
 
@@ -34,6 +33,7 @@
 
 .lang-color {
   display: inline-block;
+  border: 1px solid #dfdfdf;
   width: 12px;
   height: 12px;
   border-radius: 50%;
