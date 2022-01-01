@@ -67,9 +67,6 @@ export default (props: PageProps) => {
   )
 }
 
-const temp =
-  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
-
 const content = {
   aboutMe: {
     heading: "About me",
@@ -113,27 +110,23 @@ const content = {
       {
         title: "Data engineering with airflow and snowflake",
         summary: [
-          "As part of the data platform i develop on the data engineering team i have developed DAG's and custom operators built on the Apache Airflow platform. Doing this i have leveraged the building of generic python tooling on the platform to make the ongoing operation and management of the platform easier",
-          "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform.",
-          "The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
+          "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
+          "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible"
         ],
         achievements: [
-          "Developing Devops tooling and infrastructure code to support continues integration of the data engineering stack.",
+          "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
+          "Administering a Snowflake data warehouse scalably with many tenant business units and use cases",
+          "Integrating DevOps best practices into a Data engineering stack",
           "Monitoring and logging of data engineering workflows with Datadog",
-          "Developing custom but scalable solutions utilizing python to create common interfaces for interacting with aspects of the data pipeline",
-          "Build custom web applications using React to support the better ingesting of internal user data and reporting of that data",
-          "Maintaining and administering a snowflake data warehouse using modern devops principles for defining and maintaining tenant database rearouses",
         ],
       },
       {
         title: "Building react applications as tableau extensions",
         summary: [
-          "Within the business unit the data engineering team i worked in supported we needed to ingest commentary data on assets under management by the business.",
-          "This project was implemented as a embedded web application that could be installed on the business users tableau dashboards to allow for them to input commentaries data in their existing dashboards",
-          "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer utilizing materialized views to enable less apu logic to manage",
+          "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature i developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
+          "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases."
         ],
         achievements: [
-          "Introduced an example production application with React + Express Js stack",
           "10k Requests a month from internal business users",
           "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
         ],
@@ -142,18 +135,31 @@ const content = {
     publicProjects: [
       {
         title: "packer-ubuntu-proxmox-template",
-        summary: [temp],
-        achievements: [],
+        summary: [
+          "Using packer i developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment."
+        ],
+        achievements: [
+          "Using linux features to programmatically configure os from base ISO's"
+        ],
       },
       {
         title: "jsonresume-theme-spartan-extended",
-        summary: [temp],
-        achievements: [],
+        summary: [
+          "This was originally based of another project that i forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods."
+        ],
+        achievements: [
+          "Working with responsive CSS best practices",
+          "Developing sites with handlebars"
+        ],
       },
       {
         title: "proxmox-api-go",
-        summary: [temp],
-        achievements: [],
+        summary: [
+          "For the proxmox-api-go project i have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment."
+        ],
+        achievements: [
+          "Learning GO development best practices"
+        ],
       },
     ],
   },

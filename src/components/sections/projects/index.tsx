@@ -108,43 +108,28 @@ const ProfessionalExperienceSummary = () => {
   return (
     <span>
       <p>
-        In my professionally experience i have worked on projects across the
-        banking and financial services industry. These projects have ranged from
-        frontend and external user focused to more internal roles to develop and
-        refine business data in a Data engineering team.
+        In my professional experience i have found myself focusing on delivering
+        consistent best practice and innovation in the following fields of Software
+        Engineering to try and maximize teams output whilst reducing their defects.
       </p>
 
-      <h3>Developing Scalable And Automated Solution</h3>
+      <h3>Developing Scalable and Maintainable Software</h3>
       <p>
-        Within these projects I always focus on build applications and solutions
-        that are scalable into the long term to make the easier to maintain and
-        change in the future as business requirements change.
-      </p>
-      <p>
-        To enable this i focus on testing, best practices and automation to make
-        the project approachable by any develop so they are comfortable to make
-        changes rather than feeling like the project is a house of cards.
+        For any oif the software that i build i focus on assuring that the solution
+        is built to scale in the future rather than just to get the job done this sprint.
+        Building this scalable and maintainable software for the future allows teams to
+        develop faster and with less defects by reducing the amount of rework needed later.
       </p>
 
-      <h3>Focus On Testing For Confidence</h3>
+      <h3>Automated DevOps Solutions</h3>
       <p>
-        I am an advocate for the sensible testing of Javascript and Python
-        projects to increase the confidence of developers in the features they
-        are building.
+        I am certified as a AWS Solution Architect and have been developing automated
+        CICD solutions for the cloud. Through developing automated infrastructure and
+        taking away the manual process of deploying environments developers can focus
+        more on their business logic rather than building and debugging deployments.
       </p>
       <p>
-        I have developed unit testing across React PWA's to capture important
-        user behavior and business requirements are being met as well as writing
-        testing to assure internal develop tooling works as expected when it is
-        being integrated into external teams projects.
-      </p>
 
-      <h3>Automation In The Cloud</h3>
-      <p>
-        I am certified as a AWS Solution Architect and have been developing
-        solutions for the cloud. Through developing automated infrastructure
-        taking away the manual process of deploying environments developers can
-        focus more on their business logic rather than debugging deployments.
       </p>
     </span>
   )
@@ -153,18 +138,17 @@ const ProfessionalExperienceSummary = () => {
 const PublicProjectSummary = () => {
   return (
     <span>
-      <h3>Personal Projects</h3>
+      <h3>Open Source Projects</h3>
       <p>
         In my free time i enjoy working on may personal programming projects
-        focusing mainly on virtualization and devops tooling and to maintain my
-        frontend development skills.
+        focusing mainly on virtualization and devops tooling. Where possible
+        i like to share what im building and to write about it to make someone
+        elses learning journey a bit easier.
       </p>
       <p>
-        Giving back to the open source community is also important to me as i
-        have used many projects in my professional career that has leveraged the
-        work of others. I have enjoyed particularly working with typescript
-        projects and projects looking to integrate resources into terraform as
-        well as proxmox.
+        Where possible i like to give back to the open source community by
+        contributing fixes and features for the tooling that i use day to day
+        and has saved me plenty of time and headaches.
       </p>
     </span>
   )

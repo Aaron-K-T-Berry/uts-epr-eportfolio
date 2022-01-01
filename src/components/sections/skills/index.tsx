@@ -38,9 +38,9 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         <GridContainer>
           <ProjectCard
             title="Technical Skills"
-            desc={["List some technical skills that i have."]}
+            desc={["Im currently working as a Software Engineer in a Data engineering and DevOps team and am currently looking to grow my skills in these areas further. In the past i have worked to develop frontend and backend solutions fro custom facing banking apps."]}
           >
-            <div style={{ display: "flex", gap: "5rem" }}>
+            <div style={{ display: "flex", gap: "2rem" }}>
               <div>
                 <h4>Programming Languages</h4>
                 <ul>

@@ -59,22 +59,15 @@ const SectionSummary = () => {
   return (
     <span>
       <p>
-        In my Free time i enjoy reading and writing about technology and things
-        i am working on. I find this has been a great way to process the things
-        i have been learning about and see how they can integrate into more of
-        the things i have learning ver my career.
+        I have found writing to be a great way to solidify my learning on some
+        of the projects i have working on both my personal time as well as my
+        professional work.
       </p>
       <p>
-        In my Free time i enjoy reading and writing about technology and things
-        i am working on. I find this has been a great way to process the things
-        i have been learning about and see how they can integrate into more of
-        the things i have learning ver my career.
-      </p>
-      <p>
-        In my Free time i enjoy reading and writing about technology and things
-        i am working on. I find this has been a great way to process the things
-        i have been learning about and see how they can integrate into more of
-        the things i have learning ver my career.
+        I have been writing now for around 2 years to improve my technology writing
+        and communication skills so far being published on medium.com and dev.to as
+        a way to share more resources with developers learning and data engineering
+        and devops.
       </p>
     </span>
   )
