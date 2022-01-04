@@ -19,7 +19,8 @@
 }
 
 .summaryTextWrapper,
-.form {
+.form,
+.resume {
   padding-bottom: 25px;
 }
 
@@ -45,7 +46,7 @@
 /* FORM */
 
 .form form .field {
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .form form .field label {
@@ -77,10 +78,11 @@
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
+/* Icons */
 .iconsList {
   padding-top: 2rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,11 +96,14 @@
 
 .iconsList .icon {
   width: 50%;
-  height: 142px;
-  margin-bottom: 10px;
 }
 
-.iconsList .icon {
+.iconsList .icon p {
+  margin-top: 10px;
+}
+
+.iconsList .icon i,
+.iconsList .icon svg {
   color: white;
   font-size: 1.5rem;
 }

@@ -73,6 +73,10 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               <b>
                 <a href={"#contact"}>Get in touch! 👋</a>
               </b>
+              {" or "}
+              <b>
+                <a href={"#contact"}>Checkout my Resume </a>
+              </b>
             </p>
           </div>
         </div>

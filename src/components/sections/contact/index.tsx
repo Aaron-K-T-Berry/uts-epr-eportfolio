@@ -1,4 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faFileWord,
+  faFilePdf,
+  faDesktop,
+} from "@fortawesome/free-solid-svg-icons"
 import { faMedium } from "@fortawesome/free-brands-svg-icons"
 
 import * as React from "react"
@@ -74,7 +79,52 @@ const ContactForm: React.FunctionComponent<{}> = (props) => {
   )
 }
 
-const Socials = () => {
+const Resume: React.FunctionComponent<{}> = () => {
+  const resumeLinks = [
+    {
+      text: "html",
+      fa: faDesktop,
+      link: "https://cv.aaron-berry.com/index.html",
+    },
+    {
+      text: "doc",
+      fa: faFileWord,
+      link: "https://cv.aaron-berry.com/resume.doc",
+    },
+    {
+      text: "pdf",
+      fa: faFilePdf,
+      link: "https://cv.aaron-berry.com/resume.pdf",
+    },
+  ]
+
+  return (
+    <div className={styles.resume}>
+      {/* Resume Summary */}
+      <div>
+        <h3>Resume</h3>
+        <p>
+          If you are looking for a copy of my current resume you can find it in
+          the following formats!
+        </p>
+      </div>
+
+      <div className={styles.iconsList}>
+        {resumeLinks.map((item) => {
+          return (
+            <div className={styles.icon}>
+              <a href={item.link} target="blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={item.fa} />
+              </a>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+const Socials: React.FunctionComponent<{}> = () => {
   const socials = [
     {
       link: "linkedin",
@@ -96,8 +146,11 @@ const Socials = () => {
 
   return (
     <div className={styles.socials}>
-      {/* Summary */}
+      <Resume />
+
+      {/* Social Summary */}
       <div>
+        <h3>Socials</h3>
         <p>
           Prefer socials, You can find me in the following online spaces as
           well!
