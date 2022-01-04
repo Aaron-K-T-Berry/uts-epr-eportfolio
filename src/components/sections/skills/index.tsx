@@ -54,8 +54,13 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
           <DetailedTools />
         </div>
 
-        {/* The transferrable skills i provide */}
-        <div></div>
+        {/* Leadership skills section */}
+        <div>
+          <span>
+            <h4>Leadership</h4>
+            <p>TODO add some content about the leadership stuff i have done.</p>
+          </span>
+        </div>
       </div>
     </section>
   )

@@ -25,7 +25,7 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
         <div>
           <a className={styles.headingLink} id={props.headingId}></a>
           <h2>Projects</h2>
-          <h3>Selection of some of the projects ive worked on</h3>
+          <h3>Selection of some of my professional projects and experience</h3>
         </div>
 
         {/* Content */}
@@ -52,6 +52,11 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
             filteredRepos={filteredRepos}
           />
         </div>
+
+        {/* Academic Projects */}
+        <div className={styles.acaProjSummary}>
+          <AcademicProjectsSummary />
+        </div>
       </div>
     </section>
   )
@@ -67,7 +72,7 @@ const ProfessionalExperienceSummary = () => {
         their defects.
       </p>
 
-      <h3>Developing Scalable and Maintainable Software</h3>
+      <h4>Developing Scalable and Maintainable Software</h4>
       <p>
         For any oif the software that i build i focus on assuring that the
         solution is built to scale in the future rather than just to get the job
@@ -76,7 +81,7 @@ const ProfessionalExperienceSummary = () => {
         reducing the amount of rework needed later.
       </p>
 
-      <h3>Automated DevOps Solutions</h3>
+      <h4>Automated DevOps Solutions</h4>
       <p>
         I am certified as a AWS Solution Architect and have been developing
         automated CICD solutions for the cloud. Through developing automated
@@ -84,7 +89,6 @@ const ProfessionalExperienceSummary = () => {
         environments developers can focus more on their business logic rather
         than building and debugging deployments.
       </p>
-      <p></p>
     </span>
   )
 }
@@ -145,7 +149,7 @@ const PublicProjectGrid: React.FunctionComponent<{
               title={project.title}
               desc={project.summary}
               url={currentRepoData?.url}
-              startGazerCount={currentRepoData?.stargazerCount}
+              starGazerCount={currentRepoData?.stargazerCount}
               forkCount={currentRepoData?.forkCount}
               language={{
                 name: currentRepoData?.primaryLanguage?.name,
@@ -160,7 +164,7 @@ const PublicProjectGrid: React.FunctionComponent<{
                 title={project.title}
                 desc={project.summary}
                 url={currentRepoData?.url}
-                startGazerCount={currentRepoData?.stargazerCount}
+                starGazerCount={currentRepoData?.stargazerCount}
                 forkCount={currentRepoData?.forkCount}
                 language={{
                   name: currentRepoData?.primaryLanguage?.name,
@@ -172,6 +176,16 @@ const PublicProjectGrid: React.FunctionComponent<{
         }
       })}
     </GridContainer>
+  )
+}
+
+const AcademicProjectsSummary = () => {
+  return (
+    <span>
+      <h3>Academic Experience and Projects</h3>
+      <p>TODO add some content about academic projects</p>
+      <p>TODO add some content about academic projects</p>
+    </span>
   )
 }
 

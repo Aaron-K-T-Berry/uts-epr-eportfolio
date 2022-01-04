@@ -21,6 +21,13 @@
 .profExpSummary,
 .profProjGrid,
 .pubProjSummary,
-.pubProjGrid {
+.pubProjGrid,
+.acaProjSummary {
   padding-bottom: 25px;
+}
+
+.profExpSummary span p,
+.pubProjSummary span p,
+.acaProjSummary span p {
+  margin-bottom: 10px;
 }

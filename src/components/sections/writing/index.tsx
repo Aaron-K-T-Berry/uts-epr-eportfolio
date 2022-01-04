@@ -22,7 +22,7 @@ export const Writing: React.FunctionComponent<{
       <div className={styles.wrapper}>
         <div className={styles.headingWrapper}>
           <a className={styles.headingLink} id={props.headingId}></a>
-          <h2>Writing</h2>
+          <h2>Research and Writing</h2>
           <h3>I like to put projects and thoughts to paper</h3>
         </div>
 
