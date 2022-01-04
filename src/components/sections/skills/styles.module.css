@@ -11,9 +11,6 @@
   padding: 0 8%;
 }
 
-.headingWrapper {
-}
-
 .headingLink {
   display: block;
   position: relative;
@@ -24,9 +21,6 @@
 .terminalWrapper {
   height: 50%;
   padding: 2rem 0 2rem 0;
-}
-
-.detailsSkillsWrapper {
 }
 
 .iconsList {

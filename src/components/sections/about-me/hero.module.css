@@ -47,6 +47,7 @@
     align-items: flex-start;
   }
 }
+
 @media only screen and (min-width: 1200px) {
   .contentTextWrapper {
     width: 70%;

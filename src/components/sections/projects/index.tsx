@@ -1,22 +1,15 @@
 import * as React from "react"
 
-import { Layout } from "../layout"
-import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { useRepoData } from "./data"
+
+import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { GridContainer } from "../../common/grid"
 
 import * as styles from "./styles.module.css"
 
-export const Projects: React.FunctionComponent<{
-  heading: string
-  headingId: string
-  professionalProjects: {
-    title: string
-    summary: string[]
-    achievements: string[]
-  }[]
-  publicProjects: { title: string; summary: string[]; achievements: string[] }[]
-}> = (props) => {
+export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
+  props
+) => {
   const repoData = useRepoData()
 
   // Filter out just the relevant repo data we care about based on the inputs
@@ -26,85 +19,41 @@ export const Projects: React.FunctionComponent<{
   )
 
   return (
-    <Layout
-      heading={props.heading}
-      headingId={props.headingId}
-      extraClasses={["projects"]}
-    >
-      {/* Professional projects */}
+    <section className={styles.projectsSection}>
       <div className={styles.wrapper}>
-        {/* Summary */}
-        <div className={styles.summaryWrapper}>
+        {/* Heading */}
+        <div>
+          <a className={styles.headingLink} id={props.headingId}></a>
+          <h2>Projects</h2>
+          <h3>Selection of some of the projects ive worked on</h3>
+        </div>
+
+        {/* Content */}
+        <div className={styles.profExpSummary}>
           <ProfessionalExperienceSummary />
         </div>
-        {/* Grid Project */}
-        <div className={styles.gridWrapper}>
-          <GridContainer>
-            {props.professionalProjects.map((project, index) => {
-              return (
-                <div className="grid_item_focus">
-                  <ProjectCard
-                    title={project.title}
-                    desc={project.summary}
-                    achievements={project.achievements}
-                  />
-                </div>
-              )
-            })}
-          </GridContainer>
-        </div>
-      </div>
 
-      {/* Personal Projects */}
-      <div className={styles.wrapper}>
-        {/* Summary */}
-        <div className={styles.summaryWrapper}>
+        {/* Professional Projects */}
+        <div className={styles.profProjGrid}>
+          <ProfessionalProjectsGrid
+            professionalProjects={props.professionalProjects}
+          />
+        </div>
+
+        {/* Content 2 */}
+        <div className={styles.pubProjSummary}>
           <PublicProjectSummary />
         </div>
-        {/* Grid Project */}
-        <div className={styles.gridWrapper}>
-          <GridContainer>
-            {props.publicProjects.map((project, index) => {
-              const currentRepoData = filteredRepos.filter(
-                (repo) => project.title === repo.name
-              )[0]
 
-              if (index > 0) {
-                return (
-                  <GithubRepoCard
-                    title={project.title}
-                    desc={project.summary}
-                    url={currentRepoData?.url}
-                    startGazerCount={currentRepoData?.stargazerCount}
-                    forkCount={currentRepoData?.forkCount}
-                    language={{
-                      name: currentRepoData?.primaryLanguage?.name,
-                      colour: currentRepoData?.primaryLanguage?.color,
-                    }}
-                  />
-                )
-              } else {
-                return (
-                  <div className="grid_item_focus">
-                    <GithubRepoCard
-                      title={project.title}
-                      desc={project.summary}
-                      url={currentRepoData?.url}
-                      startGazerCount={currentRepoData?.stargazerCount}
-                      forkCount={currentRepoData?.forkCount}
-                      language={{
-                        name: currentRepoData?.primaryLanguage?.name,
-                        colour: currentRepoData?.primaryLanguage?.color,
-                      }}
-                    />
-                  </div>
-                )
-              }
-            })}
-          </GridContainer>
+        {/* Public Projects */}
+        <div className={styles.pubProjGrid}>
+          <PublicProjectGrid
+            publicProjects={props.publicProjects}
+            filteredRepos={filteredRepos}
+          />
         </div>
       </div>
-    </Layout>
+    </section>
   )
 }
 
@@ -140,6 +89,26 @@ const ProfessionalExperienceSummary = () => {
   )
 }
 
+const ProfessionalProjectsGrid: React.FunctionComponent<{
+  professionalProjects: ProfessionalProject[]
+}> = (props) => {
+  return (
+    <GridContainer>
+      {props.professionalProjects.map((project, index) => {
+        return (
+          <div className="grid_item_focus">
+            <ProjectCard
+              title={project.title}
+              desc={project.summary}
+              achievements={project.achievements}
+            />
+          </div>
+        )
+      })}
+    </GridContainer>
+  )
+}
+
 const PublicProjectSummary = () => {
   return (
     <span>
@@ -157,4 +126,70 @@ const PublicProjectSummary = () => {
       </p>
     </span>
   )
+}
+
+const PublicProjectGrid: React.FunctionComponent<{
+  publicProjects: PublicProject[]
+  filteredRepos: any[]
+}> = (props) => {
+  return (
+    <GridContainer>
+      {props.publicProjects.map((project, index) => {
+        const currentRepoData = props.filteredRepos.filter(
+          (repo) => project.title === repo.name
+        )[0]
+
+        if (index > 0) {
+          return (
+            <GithubRepoCard
+              title={project.title}
+              desc={project.summary}
+              url={currentRepoData?.url}
+              startGazerCount={currentRepoData?.stargazerCount}
+              forkCount={currentRepoData?.forkCount}
+              language={{
+                name: currentRepoData?.primaryLanguage?.name,
+                colour: currentRepoData?.primaryLanguage?.color,
+              }}
+            />
+          )
+        } else {
+          return (
+            <div className="grid_item_focus">
+              <GithubRepoCard
+                title={project.title}
+                desc={project.summary}
+                url={currentRepoData?.url}
+                startGazerCount={currentRepoData?.stargazerCount}
+                forkCount={currentRepoData?.forkCount}
+                language={{
+                  name: currentRepoData?.primaryLanguage?.name,
+                  colour: currentRepoData?.primaryLanguage?.color,
+                }}
+              />
+            </div>
+          )
+        }
+      })}
+    </GridContainer>
+  )
+}
+
+interface IProjectsSectionProps {
+  heading: string
+  headingId: string
+  professionalProjects: ProfessionalProject[]
+  publicProjects: PublicProject[]
+}
+
+interface PublicProject {
+  title: string
+  summary: string[]
+  achievements: string[]
+}
+
+interface ProfessionalProject {
+  title: string
+  summary: string[]
+  achievements: string[]
 }

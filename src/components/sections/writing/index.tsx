@@ -1,61 +1,42 @@
 import * as React from "react"
 
-import { Layout } from "../layout"
 import { ProjectCard } from "../../common/card"
 import { GridContainer } from "../../common/grid"
 
 import * as styles from "./styles.module.css"
 
+interface IArticle {
+  title: string
+  summary: string[]
+  url: string
+  imageUrl: string
+}
+
 export const Writing: React.FunctionComponent<{
   heading: string
   headingId: string
-  articles: {
-    title: string
-    summary: string[]
-    url: string
-    imageUrl: string
-  }[]
+  articles: IArticle[]
 }> = (props) => {
   return (
-    <Layout
-      heading={props.heading}
-      headingId={props.headingId}
-      extraClasses={["writing"]}
-    >
+    <section className={styles.section}>
       <div className={styles.wrapper}>
-        {/* Section Summary */}
-        <div className={styles.summaryWrapper}>
+        <div className={styles.headingWrapper}>
+          <a className={styles.headingLink} id={props.headingId}></a>
+          <h2>Writing</h2>
+          <h3>I like to put projects and thoughts to paper</h3>
+        </div>
+
+        {/* Summary */}
+        <div className={styles.summary}>
           <SectionSummary />
         </div>
 
-        {/* Section grid */}
-        <div className={styles.gridWrapper}>
-          <GridContainer>
-            {props.articles.map((article, index) => {
-              if (index > 0) {
-                return (
-                  <ProjectCard
-                    title={article.title}
-                    desc={article.summary}
-                    titleLink={article.url}
-                  />
-                )
-              } else {
-                return (
-                  <div className="grid_item_focus">
-                    <ProjectCard
-                      title={article.title}
-                      desc={article.summary}
-                      titleLink={article.url}
-                    />
-                  </div>
-                )
-              }
-            })}
-          </GridContainer>
+        {/* Article grid */}
+        <div className={styles.articleGrid}>
+          <ArticleGrid articles={props.articles} />
         </div>
       </div>
-    </Layout>
+    </section>
   )
 }
 
@@ -74,5 +55,40 @@ const SectionSummary = () => {
         data engineering and devops.
       </p>
     </span>
+  )
+}
+
+const ArticleGrid: React.FunctionComponent<{
+  articles: IArticle[]
+}> = (props) => {
+  return (
+    <div>
+      {/* Section grid */}
+      <div>
+        <GridContainer>
+          {props.articles.map((article, index) => {
+            if (index > 0) {
+              return (
+                <ProjectCard
+                  title={article.title}
+                  desc={article.summary}
+                  titleLink={article.url}
+                />
+              )
+            } else {
+              return (
+                <div className="grid_item_focus">
+                  <ProjectCard
+                    title={article.title}
+                    desc={article.summary}
+                    titleLink={article.url}
+                  />
+                </div>
+              )
+            }
+          })}
+        </GridContainer>
+      </div>
+    </div>
   )
 }

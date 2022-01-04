@@ -1,55 +1,26 @@
+.projectsSection {
+  padding: 50px 0;
+  background-color: var(--bg-color-3);
+  min-height: 80vh;
+}
+
 .wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
 }
 
-.summaryWrapper {
-  min-height: 50rem;
-  width: 30%;
-  padding: 1rem;
+.headingLink {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }
 
-.summaryWrapper span p {
-  line-height: var(--line-height);
-  padding-bottom: 0.5rem;
-}
-
-.gridWrapper {
-  min-height: 50rem;
-  width: 70%;
-  padding: 1rem;
-}
-
-/* Tablet */
-@media only screen and (max-width: 850px) {
-  .wrapper {
-    display: inline;
-  }
-
-  .summaryWrapper {
-    width: 100%;
-    min-height: 0rem;
-  }
-
-  .gridWrapper {
-    width: 100%;
-    min-height: 0rem;
-  }
-}
-
-/* Mobile */
-@media only screen and (max-width: 500px) {
-  .wrapper {
-    display: inline;
-  }
-
-  .summaryWrapper {
-    width: 100%;
-    min-height: 0rem;
-  }
-
-  .gridWrapper {
-    width: 100%;
-    min-height: 0rem;
-  }
+.profExpSummary,
+.profProjGrid,
+.pubProjSummary,
+.pubProjGrid {
+  padding-bottom: 25px;
 }
