@@ -1,0 +1,115 @@
+@media only screen and (min-width: 850px) {
+  .angle1,
+  .angle1:after {
+    height: 160px;
+  }
+  .angle2,
+  .angle2:after {
+    height: 160px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .angle1,
+  .angle1:after {
+    height: 120px;
+  }
+  .angle2,
+  .angle2:after {
+    height: 120px;
+  }
+}
+
+.angle {
+  position: relative;
+}
+
+.angle:after {
+  content: "";
+  position: absolute;
+}
+
+.angle1 {
+  background-color: var(--bg-color-1);
+}
+
+.angle1,
+.angle1:after {
+  height: 80px;
+  width: 100%;
+}
+
+.angle1:after {
+  background-color: var(--bg-color-2);
+  -webkit-clip-path: polygon(100% 100%, 100% 0, 0 0);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.angle2 {
+  background-color: var(--bg-color-2);
+}
+
+.angle2,
+.angle2:after {
+  height: 80px;
+  width: 100%;
+}
+
+.angle2:after {
+  background-color: var(--bg-color-3);
+  -webkit-clip-path: polygon(
+    33% 75%,
+    67% 21%,
+    100% 65%,
+    100% 100%,
+    0 100%,
+    0 57%
+  );
+  clip-path: polygon(33% 75%, 67% 21%, 100% 65%, 100% 100%, 0 100%, 0 57%);
+}
+
+.angle3 {
+  background-color: var(--bg-color-3);
+}
+
+.angle3,
+.angle3:after {
+  height: 80px;
+  width: 100%;
+}
+
+.angle3:after {
+  background-color: var(--bg-color-4);
+  -webkit-clip-path: polygon(
+    29% 55%,
+    100% 0,
+    100% 65%,
+    100% 100%,
+    0 100%,
+    0 19%
+  );
+  clip-path: polygon(29% 55%, 100% 0, 100% 65%, 100% 100%, 0 100%, 0 19%);
+}
+
+.angle4 {
+  background-color: var(--bg-color-4);
+}
+
+.angle4,
+.angle4:after {
+  height: 80px;
+  width: 100%;
+}
+
+.angle4:after {
+  background-color: var(--bg-color-5);
+  -webkit-clip-path: polygon(
+    11% 31%,
+    79% 57%,
+    100% 28%,
+    100% 100%,
+    0 100%,
+    0 58%
+  );
+  clip-path: polygon(11% 31%, 79% 57%, 100% 28%, 100% 100%, 0 100%, 0 58%);
+}

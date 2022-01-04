@@ -17,7 +17,11 @@ export const Writing: React.FunctionComponent<{
   }[]
 }> = (props) => {
   return (
-    <Layout heading={props.heading} headingId={props.headingId}>
+    <Layout
+      heading={props.heading}
+      headingId={props.headingId}
+      extraClasses={["writing"]}
+    >
       <div className={styles.wrapper}>
         {/* Section Summary */}
         <div className={styles.summaryWrapper}>
@@ -64,10 +68,10 @@ const SectionSummary = () => {
         professional work.
       </p>
       <p>
-        I have been writing now for around 2 years to improve my technology writing
-        and communication skills so far being published on medium.com and dev.to as
-        a way to share more resources with developers learning and data engineering
-        and devops.
+        I have been writing now for around 2 years to improve my technology
+        writing and communication skills so far being published on medium.com
+        and dev.to as a way to share more resources with developers learning and
+        data engineering and devops.
       </p>
     </span>
   )

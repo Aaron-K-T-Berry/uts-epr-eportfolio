@@ -1,8 +1,25 @@
 .section_container {
   padding: 0.625rem;
-  margin-bottom: var(--bottom-margin);
   /* Makes the section take up the whole screen at a minimum */
   min-height: 55rem;
+  padding: 0px 48px 48px 0px;
+  z-index: 1;
+}
+
+.technical-skills {
+  background-color: var(--bg-color-2);
+}
+
+.projects {
+  background-color: var(--bg-color-3);
+}
+
+.writing {
+  background-color: var(--bg-color-4);
+}
+
+.contact {
+  background-color: var(--bg-color-5);
 }
 
 .section_heading {

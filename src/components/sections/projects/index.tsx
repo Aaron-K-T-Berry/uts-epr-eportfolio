@@ -26,7 +26,11 @@ export const Projects: React.FunctionComponent<{
   )
 
   return (
-    <Layout heading={props.heading} headingId={props.headingId}>
+    <Layout
+      heading={props.heading}
+      headingId={props.headingId}
+      extraClasses={["projects"]}
+    >
       {/* Professional projects */}
       <div className={styles.wrapper}>
         {/* Summary */}
@@ -109,28 +113,29 @@ const ProfessionalExperienceSummary = () => {
     <span>
       <p>
         In my professional experience i have found myself focusing on delivering
-        consistent best practice and innovation in the following fields of Software
-        Engineering to try and maximize teams output whilst reducing their defects.
+        consistent best practice and innovation in the following fields of
+        Software Engineering to try and maximize teams output whilst reducing
+        their defects.
       </p>
 
       <h3>Developing Scalable and Maintainable Software</h3>
       <p>
-        For any oif the software that i build i focus on assuring that the solution
-        is built to scale in the future rather than just to get the job done this sprint.
-        Building this scalable and maintainable software for the future allows teams to
-        develop faster and with less defects by reducing the amount of rework needed later.
+        For any oif the software that i build i focus on assuring that the
+        solution is built to scale in the future rather than just to get the job
+        done this sprint. Building this scalable and maintainable software for
+        the future allows teams to develop faster and with less defects by
+        reducing the amount of rework needed later.
       </p>
 
       <h3>Automated DevOps Solutions</h3>
       <p>
-        I am certified as a AWS Solution Architect and have been developing automated
-        CICD solutions for the cloud. Through developing automated infrastructure and
-        taking away the manual process of deploying environments developers can focus
-        more on their business logic rather than building and debugging deployments.
+        I am certified as a AWS Solution Architect and have been developing
+        automated CICD solutions for the cloud. Through developing automated
+        infrastructure and taking away the manual process of deploying
+        environments developers can focus more on their business logic rather
+        than building and debugging deployments.
       </p>
-      <p>
-
-      </p>
+      <p></p>
     </span>
   )
 }
@@ -141,8 +146,8 @@ const PublicProjectSummary = () => {
       <h3>Open Source Projects</h3>
       <p>
         In my free time i enjoy working on may personal programming projects
-        focusing mainly on virtualization and devops tooling. Where possible
-        i like to share what im building and to write about it to make someone
+        focusing mainly on virtualization and devops tooling. Where possible i
+        like to share what im building and to write about it to make someone
         elses learning journey a bit easier.
       </p>
       <p>

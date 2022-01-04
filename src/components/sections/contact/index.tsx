@@ -6,7 +6,11 @@ export const Contact: React.FunctionComponent<{
   headingId: string
 }> = (props) => {
   return (
-    <Layout heading={props.heading} headingId={props.headingId}>
+    <Layout
+      heading={props.heading}
+      headingId={props.headingId}
+      extraClasses={["contact"]}
+    >
       TODO placeholder content
     </Layout>
   )

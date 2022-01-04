@@ -31,21 +31,13 @@ export default (props: PageProps) => {
           {"  ePortfolio"}
         </Nav>
 
-        <AboutMe
-          heading={content.aboutMe.heading}
-          headingId="about-me"
-          body={content.aboutMe.description}
-        />
-
-        {/* TODO add way to download current resume */}
-
         <LayoutBody>
-          {/* TODO need to add a bit more summaries   */}
-          <Skills
-            heading={content.skills.heading}
-            headingId="skills"
-            skills={content.skills.skills}
-          />
+          <AboutMe headingId="about-me" />
+          <div className="angle angle1" />
+
+          <Skills headingId="skills" skills={content.skills.skills} />
+
+          <div className="angle angle2" />
 
           <Projects
             heading={content.projects.heading}
@@ -54,11 +46,14 @@ export default (props: PageProps) => {
             publicProjects={content.projects.publicProjects}
           />
 
+          <div className="angle angle3" />
+
           <Writing
             heading={content.writing.heading}
             headingId="writing"
             articles={content.writing.articles}
           />
+          <div className="angle angle4" />
 
           <Contact heading={content.contact.heading} headingId="contact" />
         </LayoutBody>
@@ -68,15 +63,7 @@ export default (props: PageProps) => {
 }
 
 const content = {
-  aboutMe: {
-    heading: "About me",
-    description: [
-      "I'm Aaron berry, I'm a software engineering working in the data engineering and DevOps space building and automating software in the cloud.",
-      "Ive been in the Banking and Financial services sector for 3 years building solutions ranging from customer facing web applications in the banking sector to scalable data pipelines ingesting millions of rows.",
-    ],
-  },
   skills: {
-    heading: "Technical skills",
     skills: [
       {
         summary: "Modern full stack web development",
@@ -111,7 +98,7 @@ const content = {
         title: "Data engineering with airflow and snowflake",
         summary: [
           "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
-          "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible"
+          "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
         ],
         achievements: [
           "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
@@ -124,7 +111,7 @@ const content = {
         title: "Building react applications as tableau extensions",
         summary: [
           "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature i developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
-          "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases."
+          "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
         ],
         achievements: [
           "10k Requests a month from internal business users",
@@ -136,30 +123,28 @@ const content = {
       {
         title: "packer-ubuntu-proxmox-template",
         summary: [
-          "Using packer i developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment."
+          "Using packer i developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment.",
         ],
         achievements: [
-          "Using linux features to programmatically configure os from base ISO's"
+          "Using linux features to programmatically configure os from base ISO's",
         ],
       },
       {
         title: "jsonresume-theme-spartan-extended",
         summary: [
-          "This was originally based of another project that i forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods."
+          "This was originally based of another project that i forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods.",
         ],
         achievements: [
           "Working with responsive CSS best practices",
-          "Developing sites with handlebars"
+          "Developing sites with handlebars",
         ],
       },
       {
         title: "proxmox-api-go",
         summary: [
-          "For the proxmox-api-go project i have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment."
+          "For the proxmox-api-go project i have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment.",
         ],
-        achievements: [
-          "Learning GO development best practices"
-        ],
+        achievements: ["Learning GO development best practices"],
       },
     ],
   },
