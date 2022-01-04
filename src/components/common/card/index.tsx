@@ -92,7 +92,7 @@ export const GithubRepoCard: React.FunctionComponent<{
   url: string
   achievements?: string[]
   language?: { name: string; colour: string }
-  startGazerCount?: number
+  starGazerCount?: number
   forkCount?: number
 }> = (props) => {
   return (
@@ -118,7 +118,7 @@ export const GithubRepoCard: React.FunctionComponent<{
 
         {/* Github star count */}
         <FlexItem>
-          {props.startGazerCount > 0 && (
+          {props.starGazerCount > 0 && (
             <>
               <a
                 className={styles.githubIcon}
@@ -126,7 +126,7 @@ export const GithubRepoCard: React.FunctionComponent<{
                 rel="noopener noreferrer"
                 href={`${props.url}/stargazers`}
               >
-                <SVGText svg={StarIcon} text={props.forkCount} />
+                <SVGText svg={StarIcon} text={props.starGazerCount} />
               </a>
             </>
           )}
