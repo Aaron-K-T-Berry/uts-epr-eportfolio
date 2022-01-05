@@ -6,7 +6,7 @@ export const Footer: React.FunctionComponent<{}> = () => {
     <footer>
       <div className="footer-wrapper">
         <p>
-          {"&#169; 2021 - 2022 | Created by Aaron Berry, Checkout the repo "}
+          &#169; {"2021 - 2022 | Created by Aaron Berry, Checkout the repo "}
           <a
             href="https://github.com/Aaron-K-T-Berry/epr-eportfolio"
             target="_blank"

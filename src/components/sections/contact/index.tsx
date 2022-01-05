@@ -1,3 +1,12 @@
+import * as React from "react"
+
+import * as styles from "./styles.module.css"
+
+import { useFormik } from "formik"
+import * as yup from "yup"
+import Button from "@material-ui/core/Button"
+import TextField from "@material-ui/core/TextField"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faFileWord,
@@ -5,10 +14,6 @@ import {
   faDesktop,
 } from "@fortawesome/free-solid-svg-icons"
 import { faMedium } from "@fortawesome/free-brands-svg-icons"
-
-import * as React from "react"
-
-import * as styles from "./styles.module.css"
 
 export const Contact: React.FunctionComponent<{
   heading: string
@@ -44,37 +49,134 @@ export const Contact: React.FunctionComponent<{
 }
 
 const ContactForm: React.FunctionComponent<{}> = (props) => {
+  const [submitStatus, setSubmitStatus] = React.useState<
+    undefined | "success" | "error"
+  >(undefined)
+
+  const onFormSubmit = async (values) => {
+    const response = await fetch(
+      "https://getform.io/f/a361de67-80ff-49a4-9c86-81fe26c6fcd0",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
+      }
+    )
+
+    if (response.status == 200) {
+      setSubmitStatus("success")
+    } else {
+      setSubmitStatus("error")
+    }
+  }
+
+  const validationSchema = yup.object({
+    name: yup.string().required("Name is required"),
+    email: yup
+      .string()
+      .email("Enter a valid email")
+      .required("Email is required"),
+    message: yup.string().required("Message is required"),
+  })
+
+  const WithMaterialUI = () => {
+    const formik = useFormik({
+      initialValues: {
+        name: "",
+        email: "",
+        message: "",
+      },
+      validationSchema: validationSchema,
+      onSubmit: (values) => {
+        onFormSubmit(values)
+      },
+    })
+
+    return (
+      <form onSubmit={formik.handleSubmit}>
+        <TextField
+          fullWidth
+          id="name"
+          name="name"
+          label="Name"
+          className={styles.formInput}
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          error={formik.touched.name && Boolean(formik.errors.name)}
+          helperText={formik.touched.name && formik.errors.name}
+        />
+
+        <TextField
+          fullWidth
+          id="email"
+          name="email"
+          label="Email"
+          // type="email"
+          className={styles.formInput}
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          error={formik.touched.email && Boolean(formik.errors.email)}
+          helperText={formik.touched.email && formik.errors.email}
+        />
+
+        <TextField
+          fullWidth
+          id="message"
+          name="message"
+          label="Message"
+          type="text"
+          multiline
+          rows={6}
+          maxRows={10}
+          className={styles.formInput}
+          value={formik.values.message}
+          onChange={formik.handleChange}
+          error={formik.touched.message && Boolean(formik.errors.message)}
+          helperText={formik.touched.message && formik.errors.message}
+        />
+
+        <div className={styles.buttonWrapper}>
+          <Button
+            className={styles.submitButton}
+            color="primary"
+            variant="contained"
+            fullWidth
+            type="submit"
+          >
+            Send
+          </Button>
+        </div>
+      </form>
+    )
+  }
+
+  const WithSuccessMessage = () => {
+    return (
+      <div>
+        <p>
+          Thanks for your message, i'll get back to you as soon as possible. 😀
+        </p>
+      </div>
+    )
+  }
+
+  const WithErrorMessage = () => {
+    return (
+      <div>
+        <p>Message could not be submitted, please try again another time. 😥</p>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.form}>
-      <form
-        action="https://getform.io/f/a361de67-80ff-49a4-9c86-81fe26c6fcd0"
-        method="POST"
-      >
-        <div className={styles.field}>
-          <label>
-            Name <span className={styles.required}>*</span>
-          </label>
-          <input type="text" name="name" />
-        </div>
-
-        <div className={styles.field}>
-          <label>
-            Email <span className={styles.required}>*</span>
-          </label>
-          <input type="email" name="email" />
-        </div>
-
-        <div className={styles.field}>
-          <label>
-            Message <span className={styles.required}>*</span>
-          </label>
-          <input type="text" name="message" />
-        </div>
-
-        <button type="submit">
-          <span>Send</span>
-        </button>
-      </form>
+      {submitStatus == undefined && <WithMaterialUI />}
+      {submitStatus == "success" && <WithSuccessMessage />}
+      {submitStatus == "error" && <WithErrorMessage />}
     </div>
   )
 }
