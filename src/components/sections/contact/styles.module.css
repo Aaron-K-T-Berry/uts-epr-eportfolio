@@ -85,7 +85,7 @@
 
 /* Form */
 .formInput {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
 }
 
 /* Material Ui overrides these classes so need to mark them with important to force them  */
