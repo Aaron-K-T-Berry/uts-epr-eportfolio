@@ -88,27 +88,28 @@
   padding-bottom: 20px;
 }
 
+/* Material Ui overrides these classes so need to mark them with important to force them  */
 .submitButton {
-  background-color: #4bc598;
-  color: black;
+  background-color: #4bc598 !important;
+  color: black !important;
 
-  font-size: 1rem;
-  text-transform: capitalize;
+  font-size: 1rem !important;
+  text-transform: capitalize !important;
 
-  width: 30%;
+  width: 30% !important;
 
-  transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out !important;
 }
 
 .submitButton:hover {
-  background-color: #06e493;
+  background-color: #06e493 !important;
 
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
 
-  width: 35%;
+  width: 35% !important;
 }
 
 .buttonWrapper {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: center !important;
 }
