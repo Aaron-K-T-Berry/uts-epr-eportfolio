@@ -15,7 +15,7 @@ export default (props: PageProps) => {
   return (
     <Layout>
       <main>
-        <title>Home Page</title>
+        <title>Aaron Berry - Portfolio</title>
 
         <Nav
           sections={[
@@ -54,7 +54,7 @@ export default (props: PageProps) => {
           />
           <div className="angle angle4" />
 
-          <Contact heading={content.contact.heading} headingId="contact" />
+          <Contact headingId="contact" />
         </LayoutBody>
 
         <Footer />

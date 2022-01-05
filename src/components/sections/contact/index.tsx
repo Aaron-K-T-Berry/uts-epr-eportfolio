@@ -16,19 +16,16 @@ import {
 import { faMedium } from "@fortawesome/free-brands-svg-icons"
 
 export const Contact: React.FunctionComponent<{
-  heading: string
   headingId: string
 }> = (props) => {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        {/* Heading */}
         <div>
           <a className={styles.headingLink} id={props.headingId}></a>
           <h2>Contact</h2>
         </div>
 
-        {/* Summary */}
         <div className={styles.summary}>
           <div className={styles.summaryTextWrapper}>
             <p>
