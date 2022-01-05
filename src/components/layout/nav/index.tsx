@@ -1,8 +1,7 @@
 import * as React from "react"
-
+import { window } from "browser-monads"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-
 import "./styles.css"
 
 export const Nav: React.FunctionComponent<NavProps> = (props) => {
