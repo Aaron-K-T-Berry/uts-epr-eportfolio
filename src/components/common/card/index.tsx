@@ -102,39 +102,32 @@ export const GithubRepoCard: React.FunctionComponent<{
       desc={props.desc}
       achievements={props.achievements}
     >
-      <FlexBox>
-        {/* Github Primary Language */}
-        <FlexItem>
-          {props.language && (
-            <>
-              <a
-                className={styles.langColor}
-                style={{ backgroundColor: props.language.colour }}
-              ></a>{" "}
-              {props.language.name}
-            </>
-          )}
-        </FlexItem>
+      <div className={styles.githubRepoStats}>
+        {props.language && (
+          <div>
+            <a
+              className={styles.langColor}
+              style={{ backgroundColor: props.language.colour }}
+            ></a>{" "}
+            {props.language.name}
+          </div>
+        )}
 
-        {/* Github star count */}
-        <FlexItem>
-          {props.starGazerCount > 0 && (
-            <>
-              <a
-                className={styles.githubIcon}
-                target="blank"
-                rel="noopener noreferrer"
-                href={`${props.url}/stargazers`}
-              >
-                <SVGText svg={StarIcon} text={props.starGazerCount} />
-              </a>
-            </>
-          )}
-        </FlexItem>
+        {props.starGazerCount > 0 && (
+          <div>
+            <a
+              className={styles.githubIcon}
+              target="blank"
+              rel="noopener noreferrer"
+              href={`${props.url}/stargazers`}
+            >
+              <SVGText svg={StarIcon} text={props.starGazerCount} />
+            </a>
+          </div>
+        )}
 
-        {/* Github fork count */}
-        <FlexItem>
-          {props.forkCount > 0 && (
+        {props.forkCount > 0 && (
+          <div>
             <a
               className={styles.githubIcon}
               target="blank"
@@ -143,9 +136,9 @@ export const GithubRepoCard: React.FunctionComponent<{
             >
               <SVGText svg={ForkIcon} text={props.forkCount} />
             </a>
-          )}
-        </FlexItem>
-      </FlexBox>
+          </div>
+        )}
+      </div>
     </ProjectCard>
   )
 }

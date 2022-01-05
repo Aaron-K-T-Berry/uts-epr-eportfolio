@@ -45,3 +45,11 @@
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+.githubRepoStats {
+  display: flex;
+  justify-content: space-between;
+
+  height: 100%;
+  padding: 5px 20px;
+}
