@@ -15,6 +15,7 @@ export const Terminal: React.FunctionComponent<{ title: string }> = (props) => {
 export const TerminalLine: React.FunctionComponent<{
   skill: { summary: string; extras: string[] }
   show: boolean
+  isVisible: boolean
   onCompleteFunc: any
   delay: number
 }> = (props) => {
@@ -43,12 +44,23 @@ export const TerminalLine: React.FunctionComponent<{
       typed.current = new Typed(targetEl.current, options)
 
       return () => {
-        // Make sure to destroy Typed instance during cleanup
-        // to prevent memory leaks
+        // Make sure to destroy Typed instance during cleanup to prevent memory leaks
         typed.current.destroy()
       }
     }
   }, [props.show])
+
+  // Control if the
+  React.useEffect(() => {
+    // Check that the typed element has been placed on screen yet
+    if (typed.current) {
+      if (props.isVisible) {
+        typed.current.start()
+      } else {
+        typed.current.stop()
+      }
+    }
+  }, [props.isVisible])
 
   return (
     <div style={{ paddingBottom: "0.5rem" }}>

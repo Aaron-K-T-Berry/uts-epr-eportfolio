@@ -1,17 +1,20 @@
 import * as React from "react"
 import { Terminal, TerminalLine } from "../../common/terminal-output"
+import { useOnScreen } from "../../../utility/on-screen-hook"
 
 import * as styles from "./styles.module.css"
 
 interface SkillsProps {
   headingId: string
-  skills: { summary: string; extras: string[] }[]
+  skills: Skill[]
+}
+
+interface Skill {
+  summary: string
+  extras: string[]
 }
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
-  const [animationState, setAnimationState] = React.useState(
-    props.skills.map((skill, index) => (index == 0 ? true : false))
-  )
   return (
     <section className={styles.skillsSection}>
       <div className={styles.sectionWrapper}>
@@ -24,26 +27,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         {/* How i use skills and tools in projects */}
         <div>
           And these are just some of the ways i bring it all together
-          {/* Terminal section */}
-          <div className={styles.terminalWrapper}>
-            <Terminal title="-- bash">
-              {props.skills.map((skill, index) => {
-                return (
-                  <TerminalLine
-                    key={`${skill}-${index}`}
-                    skill={skill}
-                    show={animationState[index]}
-                    onCompleteFunc={() => {
-                      let currentState = [...animationState]
-                      currentState[index + 1] = true
-                      setAnimationState(currentState)
-                    }}
-                    delay={1500}
-                  />
-                )
-              })}
-            </Terminal>
-          </div>
+          <TerminalShowcase skills={props.skills} />
         </div>
 
         {/* Specific list of the skills and tools i use */}
@@ -60,6 +44,39 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         </div>
       </div>
     </section>
+  )
+}
+
+const TerminalShowcase: React.FunctionComponent<{ skills: Skill[] }> = (
+  props
+) => {
+  const [animationState, setAnimationState] = React.useState(
+    props.skills.map((skill, index) => (index == 0 ? true : false))
+  )
+  const ref = React.useRef()
+  const isVisible = useOnScreen(ref)
+
+  return (
+    <div ref={ref} className={styles.terminalWrapper}>
+      <Terminal title="-- bash">
+        {props.skills.map((skill, index) => {
+          return (
+            <TerminalLine
+              key={`${skill}-${index}`}
+              skill={skill}
+              show={animationState[index]}
+              isVisible={isVisible}
+              onCompleteFunc={() => {
+                let currentState = [...animationState]
+                currentState[index + 1] = true
+                setAnimationState(currentState)
+              }}
+              delay={1500}
+            />
+          )
+        })}
+      </Terminal>
+    </div>
   )
 }
 
