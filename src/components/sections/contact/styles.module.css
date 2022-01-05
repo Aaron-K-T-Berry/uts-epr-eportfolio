@@ -81,21 +81,18 @@
 /* Icons */
 .iconsList {
   padding-top: 2rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  text-align: center;
+  justify-content: space-between;
 }
 
 .iconsList .icon {
-  width: 50%;
+  /* width: 30%; */
+  padding-bottom: 15px;
 }
 
 .iconsList .icon p {
@@ -111,11 +108,13 @@
 @media (min-width: 600px) {
   .iconsList .icon {
     width: 20%;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: 1024px) {
   .iconsList .icon {
     width: 12.5%;
+    padding-bottom: 0;
   }
 }

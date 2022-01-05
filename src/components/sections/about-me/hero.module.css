@@ -3,6 +3,7 @@
   padding: 50px 0;
   background-color: var(--bg-color-1);
   min-height: 80vh;
+  padding-top: 10vh;
 }
 
 .sectionWrapper {
@@ -30,8 +31,6 @@
 
 @media only screen and (min-width: 700px) {
   .contentWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -102,6 +101,10 @@
 
 /* Mobile */
 @media only screen and (max-width: 500px) {
+  .aboutSection {
+    padding-top: 7vh;
+  }
+
   .heroImg {
     height: 10rem;
     width: 10rem;

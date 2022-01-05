@@ -1,0 +1,74 @@
+nav {
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 50px;
+  background-color: var(--bg-color);
+  z-index: 1;
+  border-bottom: 1px solid gray;
+}
+
+.list {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.items,
+.items a {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+}
+
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+  border: 0;
+  background-color: transparent;
+}
+
+/* Overrides for widescreen size */
+@media screen and (min-width: 900px) {
+  .list {
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+/* Styles for anything smaller than a widescreen seize */
+@media screen and (max-width: 900px) {
+  .list {
+    flex-direction: column;
+    height: auto;
+    background-color: var(--bg-color);
+  }
+
+  .items:nth-child(1) {
+    border-top: 1px solid gray;
+    margin-top: 50px;
+  }
+
+  .items {
+    width: 100%;
+    border-top: 1px solid gray;
+    text-align: center;
+    margin-right: 0px;
+    padding: 20px 0;
+  }
+
+  .btn {
+    display: block;
+  }
+}

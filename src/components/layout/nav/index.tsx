@@ -1,25 +1,50 @@
 import * as React from "react"
 
-require("./nav.module.css")
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+
+import "./styles.css"
 
 export const Nav: React.FunctionComponent<NavProps> = (props) => {
+  const [toggleMenu, setToggleMenu] = React.useState<Boolean>(false)
+  const [screenWidth, setScreenWidth] = React.useState<number>(
+    window.innerWidth
+  )
+
+  const toggleNav = () => setToggleMenu(!toggleMenu)
+
+  React.useEffect(() => {
+    const changeWidth = () => setScreenWidth(window.innerWidth)
+    window.addEventListener("resize", changeWidth)
+    return () => window.removeEventListener("resize", changeWidth)
+  })
+
   return (
-    <nav>
-      <h1>{props.children}</h1>
+    <div>
+      <nav>
+        {(toggleMenu || screenWidth > 900) && (
+          <ul className="list">
+            {props.sections.map((section, index) => {
+              const link = `#${section.id}`
+              const text = section.title
 
-      <ul>
-        {props.sections.map((section, index) => {
-          const link = `#${section.id}`
-          const text = section.title
-
-          return (
-            <li key={`${text}-${index}`}>
-              <a href={link}>{text}</a>
-            </li>
-          )
-        })}
-      </ul>
-    </nav>
+              return (
+                <li className="items" key={`${text}-${index}`}>
+                  <a href={link} onClick={toggleNav}>
+                    {text}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        )}
+        {screenWidth < 900 && (
+          <button className="btn" onClick={toggleNav}>
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+        )}
+      </nav>
+    </div>
   )
 }
 
