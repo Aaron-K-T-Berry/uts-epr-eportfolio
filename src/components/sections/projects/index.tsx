@@ -96,6 +96,7 @@ const ProfessionalProjectsGrid: React.FunctionComponent<{
               title={project.title}
               desc={project.summary}
               achievements={project.achievements}
+              technologies={project.technologies}
             />
           </div>
         )
@@ -280,4 +281,5 @@ interface ProfessionalProject {
   title: string
   summary: string[]
   achievements: string[]
+  technologies?: string[]
 }

@@ -53,6 +53,7 @@ export const ProjectCard: React.FunctionComponent<{
   titleLink?: string
   desc: string[]
   achievements?: string[]
+  technologies?: string[]
   imageUrl?: string
 }> = (props) => {
   return (
@@ -77,6 +78,18 @@ export const ProjectCard: React.FunctionComponent<{
               return <li key={`achiv-${index}`}>{str}</li>
             })}
           </ul>
+        </div>
+      )}
+
+      {props.technologies && (
+        <div className={styles.iconsList}>
+          {props.technologies.map((item) => {
+            return (
+              <div className={styles.icon}>
+                <i className={item}></i>
+              </div>
+            )
+          })}
         </div>
       )}
 

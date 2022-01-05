@@ -53,3 +53,20 @@
   height: 100%;
   padding: 5px 20px;
 }
+
+/* Icons */
+.iconsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.iconsList .icon {
+  padding-right: 10px;
+}
+
+.iconsList .icon i {
+  font-size: 2.5rem;
+}

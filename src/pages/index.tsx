@@ -11,8 +11,6 @@ import { Projects } from "../components/sections/projects"
 import { Writing } from "../components/sections/writing"
 import { Contact } from "../components/sections/contact"
 
-// TODO add page to download resume if needed
-
 export default (props: PageProps) => {
   return (
     <Layout>
@@ -109,6 +107,13 @@ const content = {
           "Integrating DevOps best practices into a Data engineering stack",
           "Monitoring and logging of data engineering workflows with Datadog",
         ],
+        // TODO find an icon to use for snowflake
+        // TODO find an icon to use for airflow
+        technologies: [
+          "devicon-python-plain",
+          "devicon-docker-plain",
+          "devicon-amazonwebservices-original",
+        ],
       },
       {
         title: "Building react applications as tableau extensions",
@@ -119,6 +124,15 @@ const content = {
         achievements: [
           "10k Requests a month from internal business users",
           "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
+        ],
+        technologies: [
+          "devicon-typescript-plain",
+          "devicon-react-original",
+          "devicon-materialui-plain",
+          "devicon-express-original",
+          "devicon-jest-plain",
+          "devicon-docker-plain",
+          "devicon-amazonwebservices-original",
         ],
       },
     ],
@@ -186,14 +200,5 @@ const content = {
           "https://miro.medium.com/max/700/1*NRt0va8zdrfVflJL6ZLN1A.jpeg",
       },
     ],
-  },
-  contact: {
-    heading: "Get in touch!",
-    description: "TODO",
-    contactLinks: {
-      linkedin: "",
-      github: "",
-      medium: "",
-    },
   },
 }
