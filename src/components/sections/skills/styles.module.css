@@ -1,3 +1,7 @@
+p {
+  line-height: var(--line-height);
+}
+
 .skillsSection {
   padding: 50px 0;
   background-color: var(--bg-color-2);
@@ -18,11 +22,13 @@
   visibility: hidden;
 }
 
+/* Terminal */
 .terminalWrapper {
   height: 50%;
   padding: 2rem 0 2rem 0;
 }
 
+/* Icons */
 .iconsList {
   padding-top: 2rem;
   text-align: center;
@@ -39,7 +45,7 @@
 }
 
 .iconsList .icon {
-  width: 50%;
+  width: 30%;
   margin-bottom: 10px;
 }
 
@@ -63,5 +69,29 @@
 @media (min-width: 1024px) {
   .iconsList .icon {
     width: 12.5%;
+  }
+}
+
+/* leadership */
+.leadershipSection {
+  padding-bottom: 20px;
+}
+
+.leadershipSection h5 {
+  font-size: 14px;
+}
+
+.leadershipSection h5,
+.leadershipSection p {
+  padding-bottom: 10px;
+}
+
+.leadershipSectionItem {
+  padding-left: 15px;
+}
+
+@media (min-width: 700px) {
+  .leadershipSectionItem {
+    padding-left: 30px;
   }
 }

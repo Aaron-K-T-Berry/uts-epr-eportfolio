@@ -32,8 +32,9 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
             {/* My moto */}
             <div className={styles.moto}>
               <h4>
-                I build scalable and automated software solutions in the cloud.
-                ☁️
+                {
+                  "I build scalable and automated software solutions in the cloud ☁️"
+                }
               </h4>
             </div>
             {/* Self motivation sumary */}
@@ -66,8 +67,21 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               the businesses data engineering goals.
             </p>
 
+            {/* Career / Future goals */}
             <h3>Goals and the future</h3>
-            <p>TODO expand on what my current goals are</p>
+            <p>
+              Over the next few years I aim to further my work in the DevOps
+              space through certification in Azure to support running multi
+              cloud workloads across Azure and AWS as well as support migrations
+              of workloads to Azure.
+            </p>
+            <p>
+              Over the last 2 years developing workloads to run on containers
+              has been a key part of my everyday work and expertise. I aim to
+              further build on this skill through building out more distributed
+              applications and workloads on the Kubernetes platform running in
+              both AWS and Azure.
+            </p>
             <p>
               I am currently working with AMP Capital building solutions across
               the data and analytics strategy and am not currently looking for

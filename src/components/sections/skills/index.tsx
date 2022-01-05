@@ -56,10 +56,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
         {/* Leadership skills section */}
         <div>
-          <span>
-            <h4>Leadership</h4>
-            <p>TODO add some content about the leadership stuff i have done.</p>
-          </span>
+          <LeaderShipSection />
         </div>
       </div>
     </section>
@@ -68,21 +65,26 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
 const DetailedTools = () => {
   const ToolsList = [
+    // Languages
     { text: "Javascript", icon: "devicon-javascript-plain" },
     { text: "Typescript", icon: "devicon-typescript-plain" },
     { text: "Python", icon: "devicon-python-plain" },
     { text: "Java", icon: "devicon-java-plain" },
     { text: "Bash", icon: "devicon-bash-plain" },
 
+    // Frameworks
     { text: "React", icon: "devicon-react-original" },
     { text: "ExpressJs", icon: "devicon-express-original" },
     { text: "Jest", icon: "devicon-jest-plain" },
     { text: "Gatsby", icon: "devicon-gatsby-plain" },
     { text: "Material Ui", icon: "devicon-materialui-plain" },
 
+    // Cloud providers
     { text: "AWS", icon: "devicon-amazonwebservices-original" },
+    { text: "Azure", icon: "devicon-azure-plain" },
     { text: "Digital Ocean", icon: "devicon-digitalocean-plain" },
 
+    // Operating system and tools
     { text: "Linux", icon: "devicon-linux-plain" },
     { text: "Docker", icon: "devicon-docker-plain" },
     { text: "Git", icon: "devicon-git-plain" },
@@ -99,5 +101,68 @@ const DetailedTools = () => {
         )
       })}
     </div>
+  )
+}
+
+const LeaderShipSection: React.FunctionComponent<{}> = () => {
+  const sectionClass = styles.leadershipSection
+  const subSectionClass = [sectionClass, styles.leadershipSectionItem].join(" ")
+
+  return (
+    <>
+      <div className={sectionClass}>
+        <span>
+          <h4>Leadership</h4>
+          <p>
+            Some of the most successful projects I have worked on have been ones
+            where i have felt like i have been able to contribute some leave of
+            leadership over the project so i can have some level of ownership
+            and accountability of its outputs. Some of my key leadership
+            highlights include.
+          </p>
+        </span>
+      </div>
+
+      <div className={subSectionClass}>
+        <span>
+          <h5>Introducing of new technology stacks</h5>
+          <p>
+            During this project the organization did not currently have a
+            standard pattern for building and deploying modern web applications
+            to production. This stack was built with React, Material Ui and
+            ExpressJs to build a modern, scalable and maintainable web
+            application.
+          </p>
+          <p>
+            After i conducted the initial proof of concept for the project i was
+            able to lead a team of developers to build this application in 6
+            months using feedback from end users. This stack was successfully
+            deployed to production without any major defects.
+          </p>
+        </span>
+      </div>
+
+      <div className={subSectionClass}>
+        <span>
+          <h5>Continuous improvements of Airflow environments</h5>
+          <p>
+            With my time working on a data engineering team we maintained and
+            developed on a self managed Airflow stack running on AWS ECS. During
+            the development of the stack I was leading the continues improvement
+            of the Airflow stack through the expanding of its unit and
+            integration testing as well as creating generic Airflow operators
+            and plugins to support carrying out actions on Airflow in a
+            standardized way.
+          </p>
+          <p>
+            This focus on improvement of the stacks tools and standardization
+            has lead to increases ability for tenants on the platform to self
+            service features whilst still maintaining quality and integration
+            patterns with external systems to the Data engineering teams
+            internal standards.
+          </p>
+        </span>
+      </div>
+    </>
   )
 }
