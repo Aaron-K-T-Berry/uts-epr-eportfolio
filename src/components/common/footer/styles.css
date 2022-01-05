@@ -1,0 +1,17 @@
+.footer-wrapper {
+  background-color: var(--bg-color-1);
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-top: 1 gray solid;
+}
+
+@media only screen and (max-width: 520px) {
+  .footer-wrapper p {
+      font-size: 8pt;
+  }
+}

@@ -3,6 +3,7 @@ import { PageProps } from "gatsby"
 
 import { Layout } from "../components/layout"
 import { LayoutBody } from "../components/layout/body"
+import { Footer } from "../components/common/footer"
 import { Nav } from "../components/layout/nav"
 import { AboutMe } from "../components/sections/about-me"
 import { Skills } from "../components/sections/skills"
@@ -57,6 +58,8 @@ export default (props: PageProps) => {
 
           <Contact heading={content.contact.heading} headingId="contact" />
         </LayoutBody>
+
+        <Footer />
       </main>
     </Layout>
   )
