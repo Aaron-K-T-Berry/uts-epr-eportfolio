@@ -1,7 +1,8 @@
+const { githubApiQuery } = require("./src/github-api")
+
+// Load local .env file if one is present
 const dotenv = require("dotenv")
 dotenv.config()
-
-const { githubApiQuery } = require("./github-api")
 
 module.exports = {
   siteMetadata: {
@@ -15,7 +16,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        // TODO update the icon
         icon: "src/images/icon.png",
       },
     },
@@ -42,23 +42,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true,
+        jsxPragma: `jsx`,
+        allExtensions: true,
       },
     },
     {
       resolve: `gatsby-source-github-api`,
       options: {
-        url: "https://api.github.com/graphql", // default Github GraphQL v4 API endpoint
-
-        // token: required by the GitHub API
+        url: "https://api.github.com/graphql",
         token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
-
-        // GraphQLquery: defaults to a search query
         graphQLQuery: githubApiQuery,
-
-        // variables: defaults to variables needed for a search query
         variables: {
           github_login: process.env.GITHUB_LOGIN,
         },
