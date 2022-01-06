@@ -1,19 +1,10 @@
 import * as React from "react"
-
-import * as styles from "./styles.module.css"
-
 import { useFormik } from "formik"
 import * as yup from "yup"
 import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faFileWord,
-  faFilePdf,
-  faDesktop,
-} from "@fortawesome/free-solid-svg-icons"
-import { faMedium } from "@fortawesome/free-brands-svg-icons"
+import icons from "./icons"
+import * as styles from "./styles.module.css"
 
 export const Contact: React.FunctionComponent<{
   headingId: string
@@ -182,24 +173,31 @@ const Resume: React.FunctionComponent<{}> = () => {
   const resumeLinks = [
     {
       text: "html",
-      fa: faDesktop,
+      fa: icons.faDesktop,
       link: "https://cv.aaron-berry.com/index.html",
     },
     {
       text: "doc",
-      fa: faFileWord,
+      fa: icons.faFileWord,
       link: "https://cv.aaron-berry.com/resume.doc",
     },
     {
       text: "pdf",
-      fa: faFilePdf,
+      fa: icons.faFilePdf,
       link: "https://cv.aaron-berry.com/resume.pdf",
     },
   ]
 
+  const withIconLink = (link, iconComponent) => {
+    return <div className={styles.icon}>
+      <a href={link} target="blank" rel="noopener noreferrer">
+        {iconComponent}
+      </a>
+    </div>
+  }
+
   return (
     <div className={styles.resume}>
-      {/* Resume Summary */}
       <div>
         <h3>Resume</h3>
         <p>
@@ -210,13 +208,7 @@ const Resume: React.FunctionComponent<{}> = () => {
 
       <div className={styles.iconsList}>
         {resumeLinks.map((item) => {
-          return (
-            <div className={styles.icon}>
-              <a href={item.link} target="blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={item.fa} />
-              </a>
-            </div>
-          )
+          return withIconLink(item.link, <icons.FontAwesomeIcon icon={item.fa} />)
         })}
       </div>
     </div>
@@ -226,28 +218,35 @@ const Resume: React.FunctionComponent<{}> = () => {
 const Socials: React.FunctionComponent<{}> = () => {
   const socials = [
     {
-      link: "linkedin",
+      link: "https://www.linkedin.com/in/aaron-kt-berry/",
       icon: "devicon-linkedin-plain",
     },
     {
-      link: "github",
+      link: "https://github.com/Aaron-K-T-Berry",
       icon: "devicon-github-plain",
     },
     {
-      link: "medium",
-      fa: faMedium,
+      link: "https://aaron-kt-berry.medium.com/",
+      fa: icons.faMedium,
     },
     {
-      link: "twitter",
+      link: "https://twitter.com/Aaron_KT_Berry",
       icon: "devicon-twitter-plain",
     },
   ]
+
+  const withIconLink = (link, iconComponent) => {
+    return <div className={styles.icon}>
+      <a href={link} target="blank" rel="noopener noreferrer">
+        {iconComponent}
+      </a>
+    </div>
+  }
 
   return (
     <div className={styles.socials}>
       <Resume />
 
-      {/* Social Summary */}
       <div>
         <h3>Socials</h3>
         <p>
@@ -256,21 +255,12 @@ const Socials: React.FunctionComponent<{}> = () => {
         </p>
       </div>
 
-      {/* Socials list */}
       <div className={styles.iconsList}>
         {socials.map((item) => {
           if (item.fa) {
-            return (
-              <div className={styles.icon}>
-                <FontAwesomeIcon icon={item.fa} />
-              </div>
-            )
+            return withIconLink(item.link, <icons.FontAwesomeIcon icon={item.fa} />)
           } else {
-            return (
-              <div className={styles.icon}>
-                <i className={item.icon}></i>
-              </div>
-            )
+            return withIconLink(item.link, <i className={item.icon} />)
           }
         })}
       </div>
