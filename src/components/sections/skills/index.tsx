@@ -23,13 +23,13 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
           <h3>My Toolbox & Things I Can Do</h3>
         </div>
 
-        {/* How i use skills and tools in projects */}
+        {/* How I use skills and tools in projects */}
         <div>
-          And these are just some of the ways i bring it all together
+          And these are just some of the ways I bring it all together
           <TerminalShowcase skills={data.skills} />
         </div>
 
-        {/* Specific list of the skills and tools i use */}
+        {/* Specific list of the skills and tools I use */}
         <div className={styles.detailsSkillsWrapper}>
           The skills, tools and technologies I use to bring your products to
           life:
@@ -115,8 +115,8 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
           <h4>Leadership</h4>
           <p>
             Some of the most successful projects I have worked on have been ones
-            where i have felt like i have been able to contribute some leave of
-            leadership over the project so i can have some level of ownership
+            where I have felt like I have been able to contribute some leave of
+            leadership over the project so I can have some level of ownership
             and accountability of its outputs. Some of my key leadership
             highlights include.
           </p>
@@ -134,7 +134,7 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
             application.
           </p>
           <p>
-            After i conducted the initial proof of concept for the project i was
+            After I conducted the initial proof of concept for the project I was
             able to lead a team of developers to build this application in 6
             months using feedback from end users. This stack was successfully
             deployed to production without any major defects.

@@ -58,7 +58,7 @@ const ProfessionalExperienceSummary = () => {
   return (
     <span>
       <p>
-        In my professional experience i have found myself focusing on delivering
+        In my professional experience I have found myself focusing on delivering
         consistent best practice and innovation in the following fields of
         Software Engineering to try and maximize teams output whilst reducing
         their defects.
@@ -66,7 +66,7 @@ const ProfessionalExperienceSummary = () => {
 
       <h4>Developing Scalable and Maintainable Software</h4>
       <p>
-        For any oif the software that i build i focus on assuring that the
+        For any oif the software that I build I focus on assuring that the
         solution is built to scale in the future rather than just to get the job
         done this sprint. Building this scalable and maintainable software for
         the future allows teams to develop faster and with less defects by
@@ -111,14 +111,14 @@ const PublicProjectSummary = () => {
     <span>
       <h3>Open Source Projects</h3>
       <p>
-        In my free time i enjoy working on may personal programming projects
-        focusing mainly on virtualization and devops tooling. Where possible i
+        In my free time I enjoy working on may personal programming projects
+        focusing mainly on virtualization and devops tooling. Where possible I
         like to share what im building and to write about it to make someone
         elses learning journey a bit easier.
       </p>
       <p>
-        Where possible i like to give back to the open source community by
-        contributing fixes and features for the tooling that i use day to day
+        Where possible I like to give back to the open source community by
+        contributing fixes and features for the tooling that I use day to day
         and has saved me plenty of time and headaches.
       </p>
     </span>
@@ -199,7 +199,7 @@ const AcademicProjectsSummary = () => {
       <span>
         <h4>2019 - 2021 Software Studio</h4>
         <p>
-          During the 6 classes involved in this course i was tasked with working
+          During the 6 classes involved in this course I was tasked with working
           in a group with 6 to 12 other students to emulate a scrum team and to
           build a software solution for the provided product spec. Each
           semesters class the teams would iterate and create their solutions
@@ -228,16 +228,16 @@ const AcademicProjectsSummary = () => {
         <p>
           This class offered by UTS outlined how a modern data engineering
           pipeline is constructed focusing on how to build ETL pipelines using
-          tools like python and apache airflow. At the time i took this class i
+          tools like python and apache airflow. At the time I took this class I
           was already working as a software engineer in a data engineering team
           who was building out custom software for an airflow stack. Naturally
-          going into this class i had a lot of preexisting knowledge from the
+          going into this class I had a lot of preexisting knowledge from the
           professional space but this class provided me an excellent opportunity
           in a team of 5 to build a Data Engineering software stack with Airflow
           from scratch.
         </p>
         <p>
-          Whilst building out this project i learned a lot in the area of how to
+          Whilst building out this project I learned a lot in the area of how to
           effectively manage a team whilst building out the Airflow stack
           particularly in the areas of how to effectively manage team members
           and the required tasks to be completed. How to manage async
@@ -279,7 +279,7 @@ const data: {
       title: "Data engineering with airflow and snowflake",
       summary: [
         "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
-        "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
+        "The data platform I worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
       ],
       achievements: [
         "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
@@ -298,7 +298,7 @@ const data: {
     {
       title: "Building react applications as tableau extensions",
       summary: [
-        "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature i developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
+        "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature I developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
         "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
       ],
       achievements: [
@@ -321,7 +321,7 @@ const data: {
     {
       title: "packer-ubuntu-proxmox-template",
       summary: [
-        "Using packer i developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment.",
+        "Using packer I developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment.",
       ],
       achievements: [
         "Using linux features to programmatically configure os from base ISO's",
@@ -330,7 +330,7 @@ const data: {
     {
       title: "jsonresume-theme-spartan-extended",
       summary: [
-        "This was originally based of another project that i forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods.",
+        "This was originally based of another project that I forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods.",
       ],
       achievements: [
         "Working with responsive CSS best practices",
@@ -340,7 +340,7 @@ const data: {
     {
       title: "proxmox-api-go",
       summary: [
-        "For the proxmox-api-go project i have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment.",
+        "For the proxmox-api-go project I have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment.",
       ],
       achievements: ["Learning GO development best practices"],
     },

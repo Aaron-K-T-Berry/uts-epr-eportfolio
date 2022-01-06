@@ -34,7 +34,7 @@ const SectionSummary = () => {
     <span>
       <p>
         I have found writing to be a great way to solidify my learning on some
-        of the projects i have working on both my personal time as well as my
+        of the projects I have working on both my personal time as well as my
         professional work.
       </p>
       <p>
@@ -91,8 +91,8 @@ const data = {
     {
       title: "Airflow DAG and Task Markdown Docs",
       summary: [
-        "I have been developing a lot of operators and pipelines on the airflow platform where the workflows may be used by other operators who may not necessarily understand the source code for that workflow. In this article i looked at how you can used inline documentation of Airflow DAGs and tasks in common formats like markdown so operators can have an easier view and understanding of how it works.",
-        "As an ongoing theme in the writing and projects i have been looking at how you can build and operate on Airflow easier has been a key idea i have been exploring as i think it is a powerful platform that can be confusing to initially begin using for many Data Engineers.",
+        "I have been developing a lot of operators and pipelines on the airflow platform where the workflows may be used by other operators who may not necessarily understand the source code for that workflow. In this article I looked at how you can used inline documentation of Airflow DAGs and tasks in common formats like markdown so operators can have an easier view and understanding of how it works.",
+        "As an ongoing theme in the writing and projects I have been looking at how you can build and operate on Airflow easier has been a key idea I have been exploring as I think it is a powerful platform that can be confusing to initially begin using for many Data Engineers.",
       ],
       url: "https://levelup.gitconnected.com/airflow-dag-and-task-markdown-docs-2c00c72152b4",
       imageUrl:
@@ -106,7 +106,7 @@ const data = {
       title:
         "Generating Swagger API Docs And UI Automatically For Express.js Apps",
       summary: [
-        "Whilst developing a React and Express Js web application i explored some scalable ways that API documentation can be maintained in the long term. Through this project I integrated automatic swagger API doc generation onto the Express Js routes",
+        "Whilst developing a React and Express Js web application I explored some scalable ways that API documentation can be maintained in the long term. Through this project I integrated automatic swagger API doc generation onto the Express Js routes",
         "Through this project developers now could maintain the API documentation inline with the routes themselves encouraging dev's to keep the api documentation up to date when they are working on the project in the future.",
       ],
       url: "https://levelup.gitconnected.com/generating-swagger-api-docs-and-ui-automatically-for-express-js-apps-2ea1436a0f59",
@@ -121,7 +121,7 @@ const data = {
     {
       title: "Creating proxmox templates with packer",
       summary: [
-        "In my own time i enjoy playing with virtualization technologies like proxmox for my personal Homelab for software development. In this article i talk about how you can use a tool like Packer to automatically build and publish a KVM image onto a proxmox cluster",
+        "In my own time I enjoy playing with virtualization technologies like proxmox for my personal Homelab for software development. In this article I talk about how you can use a tool like Packer to automatically build and publish a KVM image onto a proxmox cluster",
         "Projects like this are great fun to explore how you can implement devops best practices and learn more about how virtualization works when running it on hardware to find the most effective way to run things like disks and networking and a secure and scalable way.",
       ],
       url: "https://aaron-kt-berry.medium.com/creating-proxmox-templates-with-packer-7ada62474c44",

@@ -42,7 +42,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               I am a software engineer who is passionate about building
               applications that are easy to understand and automated to save
               developers time. I do this by keeping an eye on the details and
-              implementing best practice wherever i go to{" "}
+              implementing best practice wherever I go to{" "}
               <a href="https://www.wikiwand.com/en/KISS_principle">
                 keep it simple stupid
               </a>{" "}
