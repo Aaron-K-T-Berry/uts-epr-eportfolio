@@ -112,7 +112,7 @@ const data = {
       title: "Creating proxmox templates with packer",
       summary: [
         "In my own time I enjoy playing with virtualization technologies like proxmox for my personal Homelab for software development. In this article I talk about how you can use a tool like Packer to automatically build and publish a KVM image onto a proxmox cluster inline with devops best practices for building and managing base images.",
-        "Projects like this are great fun to explore how you can implement devops best practices and learn more about how virtualization works under the hood when running it on hardware to find the most effective way to provision things like disks and networking in a maintainable and secure.",
+        "Projects like this are great fun to explore how you can implement devops best practices and learn more about how virtualization works under the hood when running it on hardware to find the most effective way to provision things like disks and networking in a maintainable and secure way.",
       ],
       url: "https://aaron-kt-berry.medium.com/creating-proxmox-templates-with-packer-7ada62474c44",
       imageUrl: "https://miro.medium.com/max/700/1*NRt0va8zdrfVflJL6ZLN1A.jpeg",
