@@ -1,18 +1,16 @@
 import * as React from "react"
-
-import { TechIconList, StylesProps as TechIconListStyles } from "../tech-icon-list"
-
-import StarIcon from "./star.svg"
-import * as ForkIcon from "./fork.svg"
+import {
+  TechIconList,
+  StylesProps as TechIconListStyles,
+} from "../tech-icon-list"
+import icons from "./icons"
 import * as styles from "./styles.module.css"
-
 
 export const SimpleCard: React.FunctionComponent<{
   title: string
   titleLink?: string
   imageUrl?: string
 }> = (props) => {
-
   return (
     <div className={styles.card}>
       {/* Card title */}
@@ -86,7 +84,11 @@ export const ProjectCard: React.FunctionComponent<{
       )}
 
       {props.technologies && (
-        <TechIconList technologies={props.technologies} styles={props.technologyStyles} size={props.technologySize} />
+        <TechIconList
+          technologies={props.technologies}
+          styles={props.technologyStyles}
+          size={props.technologySize}
+        />
       )}
 
       {/* Extras */}
@@ -133,7 +135,7 @@ export const GithubRepoCard: React.FunctionComponent<{
               rel="noopener noreferrer"
               href={`${props.url}/stargazers`}
             >
-              <SVGText svg={StarIcon} text={props.starGazerCount} />
+              <SVGText svg={icons.StarIcon} text={props.starGazerCount} />
             </a>
           </div>
         )}
@@ -146,7 +148,7 @@ export const GithubRepoCard: React.FunctionComponent<{
               href={`${props.url}/network`}
               rel="noopener noreferrer"
             >
-              <SVGText svg={ForkIcon} text={props.forkCount} />
+              <SVGText svg={icons.ForkIcon} text={props.forkCount} />
             </a>
           </div>
         )}
