@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Terminal, TerminalLine } from "../../common/terminal-output"
+import { TechIconList } from "../../common/tech-icon-list"
 import { useOnScreen } from "../../../utility/on-screen-hook"
-
 import * as styles from "./styles.module.css"
 
 interface SkillsProps {
@@ -33,11 +33,36 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         <div className={styles.detailsSkillsWrapper}>
           The skills, tools and technologies I use to bring your products to
           life:
-          {/* Detailed Skills Sections */}
-          <DetailedTools />
+          <TechIconList
+            technologies={[
+              "javascript",
+              "typescript",
+              "python",
+              "java",
+              "bash",
+              "react",
+              "express",
+              "jest",
+              "gatsby",
+              "materialui",
+              "aws",
+              "azure",
+              "digitalocean",
+              "linux",
+              "docker",
+              "git"
+            ]}
+            styles={{
+              listPadding: "2rem 0 2rem 0",
+              iconPadding: "0 0 1rem 0",
+              color: "white"
+            }}
+            size="large"
+            displayName={true}
+            spreadItems={true}
+          />
         </div>
 
-        {/* Leadership skills section */}
         <div>
           <LeaderShipSection />
         </div>
@@ -75,47 +100,6 @@ const TerminalShowcase: React.FunctionComponent<{ skills: Skill[] }> = (
           )
         })}
       </Terminal>
-    </div>
-  )
-}
-
-const DetailedTools = () => {
-  const ToolsList = [
-    // Languages
-    { text: "Javascript", icon: "devicon-javascript-plain" },
-    { text: "Typescript", icon: "devicon-typescript-plain" },
-    { text: "Python", icon: "devicon-python-plain" },
-    { text: "Java", icon: "devicon-java-plain" },
-    { text: "Bash", icon: "devicon-bash-plain" },
-
-    // Frameworks
-    { text: "React", icon: "devicon-react-original" },
-    { text: "ExpressJs", icon: "devicon-express-original" },
-    { text: "Jest", icon: "devicon-jest-plain" },
-    { text: "Gatsby", icon: "devicon-gatsby-plain" },
-    { text: "Material Ui", icon: "devicon-materialui-plain" },
-
-    // Cloud providers
-    { text: "AWS", icon: "devicon-amazonwebservices-original" },
-    { text: "Azure", icon: "devicon-azure-plain" },
-    { text: "Digital Ocean", icon: "devicon-digitalocean-plain" },
-
-    // Operating system and tools
-    { text: "Linux", icon: "devicon-linux-plain" },
-    { text: "Docker", icon: "devicon-docker-plain" },
-    { text: "Git", icon: "devicon-git-plain" },
-  ]
-
-  return (
-    <div className={styles.iconsList}>
-      {ToolsList.map((tool) => {
-        return (
-          <div className={styles.icon}>
-            <i className={tool.icon}></i>
-            <p>{tool.text}</p>
-          </div>
-        )
-      })}
     </div>
   )
 }

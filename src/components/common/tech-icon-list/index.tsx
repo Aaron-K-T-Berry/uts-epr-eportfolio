@@ -1,6 +1,5 @@
 import * as React from "react"
-import icons from "../../sections/contact/icons"
-import SvgIcons from "./icons"
+import icons from "./icons"
 import { makeStyles } from '@mui/styles';
 
 export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) => {
@@ -12,38 +11,55 @@ export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) 
     medium: {
       fontSize: "2.5rem",
       iconWidth: 40,
+    },
+    large: {
+      fontSize: "3.5rem",
+      iconWidth: 57,
     }
   }
 
   const classes = useStyles({
-    ...(props.size ? templateStyles[props.size] : {}), ...props.styles
-  })
+    ...(props.size ? templateStyles[props.size] : {}), spreadItems: props.spreadItems, ...props.styles,
+  } as StylesProps)
 
   const techIcons = [
-    { name: "javascript", icon: <i className="devicon-javascript-plain" /> },
-    { name: "typescript", icon: <i className="devicon-typescript-plain" /> },
-    { name: "react", icon: <i className="devicon-react-original" /> },
-    { name: "materialui", icon: <i className="devicon-materialui-plain" /> },
-    { name: "express", icon: <i className="devicon-express-original" /> },
-    { name: "jest", icon: <i className="devicon-jest-plain" /> },
-    { name: "docker", icon: <i className="devicon-docker-plain" /> },
-    { name: "python", icon: <i className="devicon-python-plain" /> },
-    { name: "aws", icon: <i className="devicon-amazonwebservices-plain" /> },
-    { name: "linkedin", icon: <i className="devicon-linkedin-plain" /> },
-    { name: "github", icon: <i className="devicon-github-plain" /> },
-    { name: "twitter", icon: <i className="devicon-twitter-plain" /> },
-    { name: "linux", icon: <i className="devicon-linux-plain" /> },
-    { name: "bash", icon: <i className="devicon-bash-plain" /> },
-    { name: "medium", icon: <icons.FontAwesomeIcon icon={icons.faMedium} /> },
-    { name: "computer", icon: <icons.FontAwesomeIcon icon={icons.faDesktop} /> },
-    { name: "word", icon: <icons.FontAwesomeIcon icon={icons.faFileWord} /> },
-    { name: "pdf", icon: <icons.FontAwesomeIcon icon={icons.faFilePdf} /> },
-    { name: "packer", icon: <SvgIcons.PackerSvg /> },
-    { name: "terraform", icon: <SvgIcons.TerraformSvg /> },
-    { name: "proxmox", icon: <SvgIcons.ProxmoxSvg /> },
-    { name: "swagger", icon: <SvgIcons.SwaggerSvg /> },
-    { name: "airflow", icon: <SvgIcons.AirflowSvg /> },
-    { name: "snowflake", icon: <SvgIcons.SnowflakeSvg /> },
+    // Languages
+    { name: "javascript", displayName: "Javascript", icon: <i className="devicon-javascript-plain" /> },
+    { name: "typescript", displayName: "Typescript", icon: <i className="devicon-typescript-plain" /> },
+    { name: "python", displayName: "Python", icon: <i className="devicon-python-plain" /> },
+    { name: "java", displayName: "Java", icon: <i className="devicon-java-plain" /> },
+    { name: "bash", displayName: "Bash", icon: <i className="devicon-bash-plain" /> },
+    // Frameworks
+    { name: "react", displayName: "React", icon: <i className="devicon-react-original" /> },
+    { name: "express", displayName: "ExpressJs", icon: <i className="devicon-express-original" /> },
+    { name: "jest", displayName: "Jest", icon: <i className="devicon-jest-plain" /> },
+    { name: "gatsby", displayName: "Gatsby", icon: <i className="devicon-gatsby-plain" /> },
+    { name: "materialui", displayName: "Material Ui", icon: <i className="devicon-materialui-plain" /> },
+
+    // Cloud providers
+    { name: "aws", displayName: "AWS", icon: <i className="devicon-amazonwebservices-plain" /> },
+    { name: "azure", displayName: "Azure", icon: <i className="devicon-azure-plain" /> },
+    { name: "digitalocean", displayName: "Digital Ocean", icon: <i className="devicon-digitalocean-plain" /> },
+
+    // Operating system and tools
+    { name: "docker", displayName: "Docker", icon: <i className="devicon-docker-plain" /> },
+    { name: "linux", displayName: "Linux", icon: <i className="devicon-linux-plain" /> },
+    { name: "git", displayName: "Git", icon: <i className="devicon-git-plain" /> },
+
+    // Other
+    { name: "linkedin", displayName: "LinkedIn", icon: <i className="devicon-linkedin-plain" /> },
+    { name: "github", displayName: "Github", icon: <i className="devicon-github-plain" /> },
+    { name: "twitter", displayName: "Twitter", icon: <i className="devicon-twitter-plain" /> },
+    { name: "medium", displayName: "", icon: <icons.FontAwesomeIcon icon={icons.faMedium} /> },
+    { name: "computer", displayName: "", icon: <icons.FontAwesomeIcon icon={icons.faDesktop} /> },
+    { name: "word", displayName: "", icon: <icons.FontAwesomeIcon icon={icons.faFileWord} /> },
+    { name: "pdf", displayName: "", icon: <icons.FontAwesomeIcon icon={icons.faFilePdf} /> },
+    { name: "packer", displayName: "", icon: <icons.PackerSvg /> },
+    { name: "terraform", displayName: "", icon: <icons.TerraformSvg /> },
+    { name: "proxmox", displayName: "", icon: <icons.ProxmoxSvg /> },
+    { name: "swagger", displayName: "", icon: <icons.SwaggerSvg /> },
+    { name: "airflow", displayName: "", icon: <icons.AirflowSvg /> },
+    { name: "snowflake", displayName: "", icon: <icons.SnowflakeSvg /> },
   ]
 
   return <div className={classes.list}>
@@ -52,6 +68,9 @@ export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) 
       if (iconDetails) {
         return <div className={classes.icon}>
           {iconDetails.icon}
+          {props.displayName && (
+            <p>{iconDetails.displayName}</p>
+          )}
         </div>
       }
     })}
@@ -64,29 +83,43 @@ const useStyles = makeStyles({
     flexDirection: "row",
     flexWrap: "wrap",
     textAlign: "center",
-    paddingTop: (props: StylesProps) => props.listPadding || "10px",
+    padding: (props: StylesProps) => props.listPadding || "10px 0 0 0",
   },
-  icon: {
-    paddingRight: (props: StylesProps) => props.iconPadding || "10px",
-    "& i": {
-      width: (props: StylesProps) => props.iconWidth || 40,
-      height: (props: StylesProps) => props.iconWidth || 40,
-      color: (props: StylesProps) => props.color || "black",
-      fontSize: (props: StylesProps) => props.fontSize || "2.5rem"
+  icon: (props: StylesProps) => ({
+    width: props.spreadItems ? "30%" : null,
+    padding: props.iconPadding || "0 10px 10px 0",
+    "& i, svg": {
+      width: props.iconWidth || 40,
+      height: props.iconWidth || 40,
+      color: props.color || "black",
+      fontSize: props.fontSize || "2.5rem"
     },
-    "& svg": {
-      width: (props: StylesProps) => props.iconWidth || 40,
-      height: (props: StylesProps) => props.iconWidth || 40,
-      color: (props: StylesProps) => props.color || "black",
-      fontSize: (props: StylesProps) => props.fontSize || "2.5rem"
+    "& p": {
+      lineHeight: "1.55",
+      fontSize: "1rem",
+      padding: "20px 0"
+    }
+  }),
+
+  ["@media (min-width: 600px)"]: {
+    icon: {
+      width: (props: StylesProps) => props.spreadItems ? "20%" : null
     }
   },
+  ["@media (min-width: 1024px)"]: {
+    icon: {
+      width: (props: StylesProps) => props.spreadItems ? "12.5%" : null
+    }
+  }
+
 });
 
 export interface TechIconListProps {
   technologies: ("typescript" | "python" | string)[]
   styles?: StylesProps
-  size?: "small" | "medium"
+  displayName?: boolean
+  spreadItems?: boolean
+  size?: "small" | "medium" | "large"
 }
 
 export interface StylesProps {
@@ -95,4 +128,5 @@ export interface StylesProps {
   iconPadding?: string
   fontSize?: string
   iconWidth?: number
+  spreadItems?: boolean
 }

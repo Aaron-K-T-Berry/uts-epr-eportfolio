@@ -3,7 +3,7 @@ import { useFormik } from "formik"
 import * as yup from "yup"
 import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
-import icons from "./icons"
+import icons from "../../common/tech-icon-list/icons" 
 import * as styles from "./styles.module.css"
 
 export const Contact: React.FunctionComponent<{
