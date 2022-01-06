@@ -10,7 +10,7 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
   const repoData = useRepoData()
 
   // Filter out just the relevant repo data we care about based on the inputs
-  const providedRepoKeys = props.publicProjects.map((repo) => repo.title)
+  const providedRepoKeys = data.publicProjects.map((repo) => repo.title)
   const filteredRepos = repoData.filter((repo) =>
     providedRepoKeys.includes(repo.name)
   )
@@ -30,7 +30,7 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
 
         <div className={styles.profProjGrid}>
           <ProfessionalProjectsGrid
-            professionalProjects={props.professionalProjects}
+            professionalProjects={data.professionalExp}
           />
         </div>
 
@@ -40,7 +40,7 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
 
         <div className={styles.pubProjGrid}>
           <PublicProjectGrid
-            publicProjects={props.publicProjects}
+            publicProjects={data.publicProjects}
             filteredRepos={filteredRepos}
           />
         </div>
@@ -264,11 +264,86 @@ const AcademicProjectsSummary = () => {
   )
 }
 
-interface IProjectsSectionProps {
-  heading: string
-  headingId: string
-  professionalProjects: ProfessionalProject[]
+const data: {
+  heading: string;
+  professionalExp: ProfessionalProject[]
   publicProjects: PublicProject[]
+} = {
+  heading: "Development Projects",
+  professionalExp: [
+    {
+      title: "Data engineering with airflow and snowflake",
+      summary: [
+        "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
+        "The data platform i worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
+      ],
+      achievements: [
+        "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
+        "Administering a Snowflake data warehouse scalably with many tenant business units and use cases",
+        "Integrating DevOps best practices into a Data engineering stack",
+        "Monitoring and logging of data engineering workflows with Datadog",
+      ],
+      // TODO find an icon to use for snowflake
+      // TODO find an icon to use for airflow
+      technologies: [
+        "devicon-python-plain",
+        "devicon-docker-plain",
+        "devicon-amazonwebservices-original",
+      ],
+    },
+    {
+      title: "Building react applications as tableau extensions",
+      summary: [
+        "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature i developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
+        "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
+      ],
+      achievements: [
+        "10k Requests a month from internal business users",
+        "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
+      ],
+      technologies: [
+        "devicon-typescript-plain",
+        "devicon-react-original",
+        "devicon-materialui-plain",
+        "devicon-express-original",
+        "devicon-jest-plain",
+        "devicon-docker-plain",
+        "devicon-amazonwebservices-original",
+      ],
+    },
+  ],
+  publicProjects: [
+    {
+      title: "packer-ubuntu-proxmox-template",
+      summary: [
+        "Using packer i developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment.",
+      ],
+      achievements: [
+        "Using linux features to programmatically configure os from base ISO's",
+      ],
+    },
+    {
+      title: "jsonresume-theme-spartan-extended",
+      summary: [
+        "This was originally based of another project that i forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods.",
+      ],
+      achievements: [
+        "Working with responsive CSS best practices",
+        "Developing sites with handlebars",
+      ],
+    },
+    {
+      title: "proxmox-api-go",
+      summary: [
+        "For the proxmox-api-go project i have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment.",
+      ],
+      achievements: ["Learning GO development best practices"],
+    },
+  ],
+}
+
+interface IProjectsSectionProps {
+  headingId: string
 }
 
 interface PublicProject {

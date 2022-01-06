@@ -6,7 +6,6 @@ import * as styles from "./styles.module.css"
 
 interface SkillsProps {
   headingId: string
-  skills: Skill[]
 }
 
 interface Skill {
@@ -27,7 +26,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         {/* How i use skills and tools in projects */}
         <div>
           And these are just some of the ways i bring it all together
-          <TerminalShowcase skills={props.skills} />
+          <TerminalShowcase skills={data.skills} />
         </div>
 
         {/* Specific list of the skills and tools i use */}
@@ -182,4 +181,33 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
       </div>
     </>
   )
+}
+
+const data: { skills: Skill[] } = {
+  skills: [
+    {
+      summary: "Modern full stack web development",
+      extras: [
+        "✅ Latest Javascript, Typescript and ReactJs standards and practices",
+        "✅ Focus on testing for a maintainable and scalable codebase",
+        "✅ Building custom internal and external user focused solutions",
+      ],
+    },
+    {
+      summary: "Developing scalable data engineering pipelines ",
+      extras: [
+        "✅ Maintaining and developing a dockerized Airflow environment",
+        "✅ Developing custom Airflow operators and plugins to support  data ingestion",
+        "✅ Using DBT and liquidbase for scalable data warehouse object management",
+      ],
+    },
+    {
+      summary: "Building scalable and automated devops solutions",
+      extras: [
+        "✅ Scalable applications and deployments with tools like docker and kubernetes",
+        "✅ Implementing infrastructure as code through tools like ansible and terraform",
+        "✅ Building generic and maintainable CICD infrastructure on Jenkins and Github Actions",
+      ],
+    },
+  ],
 }
