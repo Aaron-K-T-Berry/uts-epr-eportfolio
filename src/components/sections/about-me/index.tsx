@@ -63,8 +63,8 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               Over the last 3 years i have been working in the banking and
               financial services sector working as a full stack engineer
               building customer facing web apps as well as in a data engineering
-              team building devops automation and software application to enable
-              the businesses data engineering goals.
+              team building devops automation and software application in
+              pursuit of the business' data engineering goals.
             </p>
 
             {/* Career / Future goals */}
@@ -85,7 +85,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
             <p>
               I am currently working with AMP Capital building solutions across
               the data and analytics strategy and am not currently looking for
-              any further work. But feel free to reach and say hi!
+              any further work. But feel free to reach out and say hi!
             </p>
             <p>
               <b>

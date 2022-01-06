@@ -66,7 +66,7 @@ const ProfessionalExperienceSummary = () => {
 
       <h4>Developing Scalable and Maintainable Software</h4>
       <p>
-        For any oif the software that I build I focus on assuring that the
+        For any of the software that I build I focus on assuring that the
         solution is built to scale in the future rather than just to get the job
         done this sprint. Building this scalable and maintainable software for
         the future allows teams to develop faster and with less defects by
@@ -220,7 +220,10 @@ const AcademicProjectsSummary = () => {
           for the team of 12 involved in this project.
         </p>
       </span>
-      <TechIconList technologies={["typescript", "express", "jest", "docker"]} size="small" />
+      <TechIconList
+        technologies={["typescript", "express", "jest", "docker"]}
+        size="small"
+      />
     </div>,
     <div className={subSectionClass}>
       <span>
@@ -243,7 +246,7 @@ const AcademicProjectsSummary = () => {
           and the required tasks to be completed. How to manage async
           communication was also important for me to learn how to manage
           effectively as all the team members all had to work remotely due to
-          the covid 19 lowdowns.
+          the COVID-19 lockdowns.
         </p>
         <p>
           The Airflow stack we built integrated with the twitter API to extract
@@ -256,7 +259,10 @@ const AcademicProjectsSummary = () => {
           some simple dashboards using google data desk.
         </p>
       </span>
-      <TechIconList technologies={["python", "airflow", "docker"]} size="small" />
+      <TechIconList
+        technologies={["python", "airflow", "docker"]}
+        size="small"
+      />
     </div>,
   ]
 
@@ -269,7 +275,7 @@ const AcademicProjectsSummary = () => {
 }
 
 const data: {
-  heading: string;
+  heading: string
   professionalExp: ProfessionalProject[]
   publicProjects: PublicProject[]
 } = {
@@ -279,7 +285,7 @@ const data: {
       title: "Data engineering with airflow and snowflake",
       summary: [
         "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
-        "The data platform I worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases etc ingesting all of the data into the Snowflake platform. The work on this team focused on developing solutions that could be efficiently scaled and still be effectively managed with a small team to not require as much maintenance through a focuses on testing and interfaces in the pipeline. whilst leveraging the features of the AWS platforms services where possible",
+        "The data platform I worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases ingesting all of the data into the Snowflake platform. The team focused on developing solutions prepared for scaling whilst minimizing the need for maintenance so that it could be effectively managed by a small team. This was achieved by a focus on testing and interfaces in the pipeline, whilst leveraging the features of the AWS platforms services where possible.",
       ],
       achievements: [
         "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
@@ -287,19 +293,13 @@ const data: {
         "Integrating DevOps best practices into a Data engineering stack",
         "Monitoring and logging of data engineering workflows with Datadog",
       ],
-      technologies: [
-        "python",
-        "airflow",
-        "snowflake",
-        "docker",
-        "aws"
-      ],
+      technologies: ["python", "airflow", "snowflake", "docker", "aws"],
     },
     {
       title: "Building react applications as tableau extensions",
       summary: [
         "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature I developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
-        "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. Through this project I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
+        "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. The team and I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
       ],
       achievements: [
         "10k Requests a month from internal business users",
@@ -313,7 +313,7 @@ const data: {
         "jest",
         "snowflake",
         "docker",
-        "aws"
+        "aws",
       ],
     },
   ],

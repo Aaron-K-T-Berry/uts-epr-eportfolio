@@ -50,12 +50,12 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
               "digitalocean",
               "linux",
               "docker",
-              "git"
+              "git",
             ]}
             styles={{
               listPadding: "2rem 0 2rem 0",
               iconPadding: "0 0 1rem 0",
-              color: "white"
+              color: "white",
             }}
             size="large"
             displayName={true}
@@ -114,18 +114,17 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
         <span>
           <h4>Leadership</h4>
           <p>
-            Some of the most successful projects I have worked on have been ones
-            where I have felt like I have been able to contribute some leave of
-            leadership over the project so I can have some level of ownership
-            and accountability of its outputs. Some of my key leadership
-            highlights include.
+            The projects I am most proud of are those where I have had a
+            leadership role, and have been able to have a degree of ownership
+            and accountability for the project outputs. Some of these projects,
+            and my role in them include:
           </p>
         </span>
       </div>
 
       <div className={subSectionClass}>
         <span>
-          <h5>Introducing of new technology stacks</h5>
+          <h5>Introduction of a new technology stacks</h5>
           <p>
             During this project the organization did not currently have a
             standard pattern for building and deploying modern web applications
@@ -148,18 +147,18 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
           <p>
             With my time working on a data engineering team we maintained and
             developed on a self managed Airflow stack running on AWS ECS. During
-            the development of the stack I was leading the continues improvement
-            of the Airflow stack through the expanding of its unit and
-            integration testing as well as creating generic Airflow operators
-            and plugins to support carrying out actions on Airflow in a
-            standardized way.
+            the development of the stack I was leading the continuous
+            improvement of the Airflow stack through the expanding of its unit
+            and integration testing as well as creating generic Airflow
+            operators and plugins to support carrying out actions on Airflow in
+            a standardized way.
           </p>
           <p>
             This focus on improvement of the stacks tools and standardization
-            has lead to increases ability for tenants on the platform to self
-            service features whilst still maintaining quality and integration
-            patterns with external systems to the Data engineering teams
-            internal standards.
+            increased ability for tenants on the platform to self service
+            features whilst still maintaining quality and integration patterns
+            with external systems to the Data engineering teams internal
+            standards.
           </p>
         </span>
       </div>
