@@ -283,12 +283,12 @@ const data: {
         "Integrating DevOps best practices into a Data engineering stack",
         "Monitoring and logging of data engineering workflows with Datadog",
       ],
-      // TODO find an icon to use for snowflake
-      // TODO find an icon to use for airflow
       technologies: [
-        "devicon-python-plain",
-        "devicon-docker-plain",
-        "devicon-amazonwebservices-original",
+        "python",
+        "airflow",
+        "snowflake",
+        "docker",
+        "aws"
       ],
     },
     {
@@ -302,13 +302,14 @@ const data: {
         "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
       ],
       technologies: [
-        "devicon-typescript-plain",
-        "devicon-react-original",
-        "devicon-materialui-plain",
-        "devicon-express-original",
-        "devicon-jest-plain",
-        "devicon-docker-plain",
-        "devicon-amazonwebservices-original",
+        "typescript",
+        "react",
+        "materialui",
+        "express",
+        "jest",
+        "snowflake",
+        "docker",
+        "aws"
       ],
     },
   ],

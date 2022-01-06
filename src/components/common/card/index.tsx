@@ -1,15 +1,18 @@
 import * as React from "react"
 
+import { TechIconList } from "../tech-icon-list"
+
 import StarIcon from "./star.svg"
 import * as ForkIcon from "./fork.svg"
-
 import * as styles from "./styles.module.css"
+
 
 export const SimpleCard: React.FunctionComponent<{
   title: string
   titleLink?: string
   imageUrl?: string
 }> = (props) => {
+
   return (
     <div className={styles.card}>
       {/* Card title */}
@@ -81,15 +84,7 @@ export const ProjectCard: React.FunctionComponent<{
       )}
 
       {props.technologies && (
-        <div className={styles.iconsList}>
-          {props.technologies.map((item) => {
-            return (
-              <div className={styles.icon}>
-                <i className={item}></i>
-              </div>
-            )
-          })}
-        </div>
+        <TechIconList technologies={props.technologies} />
       )}
 
       {/* Extras */}
