@@ -1,5 +1,4 @@
 import * as React from "react"
-import { FlexBox, FlexItem } from "../flex-box"
 
 import StarIcon from "./star.svg"
 import * as ForkIcon from "./fork.svg"

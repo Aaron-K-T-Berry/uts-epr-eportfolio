@@ -3,7 +3,7 @@ import { PageProps } from "gatsby"
 
 import { Layout } from "../components/layout"
 import { Footer } from "../components/common/footer"
-import { Nav } from "../components/layout/nav"
+import { Nav } from "../components/common/nav"
 import { AboutMe } from "../components/sections/about-me"
 import { Skills } from "../components/sections/skills"
 import { Projects } from "../components/sections/projects"
