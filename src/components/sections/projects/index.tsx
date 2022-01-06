@@ -3,6 +3,7 @@ import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { GridContainer } from "../../common/grid"
 import * as styles from "./styles.module.css"
 import { useRepoData } from "./data"
+import { TechIconList } from "../../common/tech-icon-list"
 
 export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
   props
@@ -147,6 +148,7 @@ const PublicProjectGrid: React.FunctionComponent<{
                 name: currentRepoData?.primaryLanguage?.name,
                 colour: currentRepoData?.primaryLanguage?.color,
               }}
+              technologies={project.technologies}
             />
           )
         } else {
@@ -162,6 +164,7 @@ const PublicProjectGrid: React.FunctionComponent<{
                   name: currentRepoData?.primaryLanguage?.name,
                   colour: currentRepoData?.primaryLanguage?.color,
                 }}
+                technologies={project.technologies}
               />
             </div>
           )
@@ -191,7 +194,6 @@ const AcademicProjectsSummary = () => {
     </div>
   )
 
-  // TODO add a way to add technology used for each project
   const projects = [
     <div className={subSectionClass}>
       <span>
@@ -218,6 +220,7 @@ const AcademicProjectsSummary = () => {
           for the team of 12 involved in this project.
         </p>
       </span>
+      <TechIconList technologies={["typescript", "express", "jest", "docker"]} size="small" />
     </div>,
     <div className={subSectionClass}>
       <span>
@@ -253,6 +256,7 @@ const AcademicProjectsSummary = () => {
           some simple dashboards using google data desk.
         </p>
       </span>
+      <TechIconList technologies={["python", "airflow", "docker"]} size="small" />
     </div>,
   ]
 
@@ -351,6 +355,7 @@ interface PublicProject {
   title: string
   summary: string[]
   achievements: string[]
+  technologies?: string[]
 }
 
 interface ProfessionalProject {

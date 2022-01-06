@@ -4,9 +4,23 @@ import SvgIcons from "./icons"
 import { makeStyles } from '@mui/styles';
 
 export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) => {
-  const classes = useStyles({ ...props.styles })
+  const templateStyles = {
+    small: {
+      fontSize: "2rem",
+      iconWidth: 32,
+    },
+    medium: {
+      fontSize: "2.5rem",
+      iconWidth: 40,
+    }
+  }
+
+  const classes = useStyles({
+    ...(props.size ? templateStyles[props.size] : {}), ...props.styles
+  })
 
   const techIcons = [
+    { name: "javascript", icon: <i className="devicon-javascript-plain" /> },
     { name: "typescript", icon: <i className="devicon-typescript-plain" /> },
     { name: "react", icon: <i className="devicon-react-original" /> },
     { name: "materialui", icon: <i className="devicon-materialui-plain" /> },
@@ -15,15 +29,21 @@ export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) 
     { name: "docker", icon: <i className="devicon-docker-plain" /> },
     { name: "python", icon: <i className="devicon-python-plain" /> },
     { name: "aws", icon: <i className="devicon-amazonwebservices-plain" /> },
-    { name: "medium", icon: <icons.FontAwesomeIcon icon={icons.faMedium} /> },
-    { name: "airflow", icon: <SvgIcons.AirflowSvg /> },
-    { name: "snowflake", icon: <SvgIcons.SnowflakeSvg /> },
     { name: "linkedin", icon: <i className="devicon-linkedin-plain" /> },
     { name: "github", icon: <i className="devicon-github-plain" /> },
     { name: "twitter", icon: <i className="devicon-twitter-plain" /> },
+    { name: "linux", icon: <i className="devicon-linux-plain" /> },
+    { name: "bash", icon: <i className="devicon-bash-plain" /> },
+    { name: "medium", icon: <icons.FontAwesomeIcon icon={icons.faMedium} /> },
     { name: "computer", icon: <icons.FontAwesomeIcon icon={icons.faDesktop} /> },
     { name: "word", icon: <icons.FontAwesomeIcon icon={icons.faFileWord} /> },
     { name: "pdf", icon: <icons.FontAwesomeIcon icon={icons.faFilePdf} /> },
+    { name: "packer", icon: <SvgIcons.PackerSvg /> },
+    { name: "terraform", icon: <SvgIcons.TerraformSvg /> },
+    { name: "proxmox", icon: <SvgIcons.ProxmoxSvg /> },
+    { name: "swagger", icon: <SvgIcons.SwaggerSvg /> },
+    { name: "airflow", icon: <SvgIcons.AirflowSvg /> },
+    { name: "snowflake", icon: <SvgIcons.SnowflakeSvg /> },
   ]
 
   return <div className={classes.list}>
@@ -39,38 +59,40 @@ export const TechIconList: React.FunctionComponent<TechIconListProps> = (props) 
 }
 
 const useStyles = makeStyles({
-  list: (props: StylesProps) => ({
+  list: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     textAlign: "center",
-    paddingTop: props.listPadding || "10px"
-  }),
-  icon: (props: StylesProps) => ({
-    paddingRight: props.iconPadding || "10px",
+    paddingTop: (props: StylesProps) => props.listPadding || "10px",
+  },
+  icon: {
+    paddingRight: (props: StylesProps) => props.iconPadding || "10px",
     "& i": {
-      height: 41,
-      width: 40,
-      color: props.color || "black",
-      fontSize: props.fontSize || "2.5rem"
+      width: (props: StylesProps) => props.iconWidth || 40,
+      height: (props: StylesProps) => props.iconWidth || 40,
+      color: (props: StylesProps) => props.color || "black",
+      fontSize: (props: StylesProps) => props.fontSize || "2.5rem"
     },
     "& svg": {
-      height: 41,
-      width: 40,
-      color: props.color || "black",
-      fontSize: props.fontSize || "2.5rem"
+      width: (props: StylesProps) => props.iconWidth || 40,
+      height: (props: StylesProps) => props.iconWidth || 40,
+      color: (props: StylesProps) => props.color || "black",
+      fontSize: (props: StylesProps) => props.fontSize || "2.5rem"
     }
-  }),
+  },
 });
 
-interface TechIconListProps {
+export interface TechIconListProps {
   technologies: ("typescript" | "python" | string)[]
   styles?: StylesProps
+  size?: "small" | "medium"
 }
 
-interface StylesProps {
+export interface StylesProps {
   color?: string
   listPadding?: string
   iconPadding?: string
   fontSize?: string
+  iconWidth?: number
 }

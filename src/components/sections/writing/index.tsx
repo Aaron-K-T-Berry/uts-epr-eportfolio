@@ -17,12 +17,10 @@ export const Writing: React.FunctionComponent<{
           <h3>I like to put projects and thoughts to paper</h3>
         </div>
 
-        {/* Summary */}
         <div className={styles.summary}>
           <SectionSummary />
         </div>
 
-        {/* Article grid */}
         <div className={styles.articleGrid}>
           <ArticleGrid articles={data.articles} />
         </div>
@@ -54,7 +52,6 @@ const ArticleGrid: React.FunctionComponent<{
 }> = (props) => {
   return (
     <div>
-      {/* Section grid */}
       <div>
         <GridContainer>
           {props.articles.map((article, index) => {
@@ -64,6 +61,8 @@ const ArticleGrid: React.FunctionComponent<{
                   title={article.title}
                   desc={article.summary}
                   titleLink={article.url}
+                  technologies={article.technologies || undefined}
+                  technologySize="small"
                 />
               )
             } else {
@@ -73,6 +72,8 @@ const ArticleGrid: React.FunctionComponent<{
                     title={article.title}
                     desc={article.summary}
                     titleLink={article.url}
+                    technologies={article.technologies || undefined}
+                    technologySize="small"
                   />
                 </div>
               )
@@ -96,6 +97,10 @@ const data = {
       url: "https://levelup.gitconnected.com/airflow-dag-and-task-markdown-docs-2c00c72152b4",
       imageUrl:
         "https://miro.medium.com/max/1400/1*bFZ6qSsSNTLayT0Vr1tqXw.png",
+      technologies: [
+        "airflow",
+        "python"
+      ]
     },
     {
       title:
@@ -107,6 +112,11 @@ const data = {
       url: "https://levelup.gitconnected.com/generating-swagger-api-docs-and-ui-automatically-for-express-js-apps-2ea1436a0f59",
       imageUrl:
         "https://miro.medium.com/max/1400/1*7ZKm-fPKuGkr8UG-jbqfWQ.png",
+      technologies: [
+        "javascript",
+        "express",
+        "swagger"
+      ]
     },
     {
       title: "Creating proxmox templates with packer",
@@ -117,8 +127,13 @@ const data = {
       url: "https://aaron-kt-berry.medium.com/creating-proxmox-templates-with-packer-7ada62474c44",
       imageUrl:
         "https://miro.medium.com/max/700/1*NRt0va8zdrfVflJL6ZLN1A.jpeg",
+      technologies: [
+        "proxmox",
+        "packer",
+        "linux"
+      ]
     },
-  ],
+  ] as IArticle[],
 }
 
 interface IArticle {
@@ -126,4 +141,5 @@ interface IArticle {
   summary: string[]
   url: string
   imageUrl: string
+  technologies?: string[]
 }

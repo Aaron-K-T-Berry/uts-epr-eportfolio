@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { TechIconList } from "../tech-icon-list"
+import { TechIconList, StylesProps as TechIconListStyles } from "../tech-icon-list"
 
 import StarIcon from "./star.svg"
 import * as ForkIcon from "./fork.svg"
@@ -56,6 +56,8 @@ export const ProjectCard: React.FunctionComponent<{
   desc: string[]
   achievements?: string[]
   technologies?: string[]
+  technologyStyles?: TechIconListStyles
+  technologySize?: "small" | "medium"
   imageUrl?: string
 }> = (props) => {
   return (
@@ -84,7 +86,7 @@ export const ProjectCard: React.FunctionComponent<{
       )}
 
       {props.technologies && (
-        <TechIconList technologies={props.technologies} />
+        <TechIconList technologies={props.technologies} styles={props.technologyStyles} size={props.technologySize} />
       )}
 
       {/* Extras */}
@@ -101,6 +103,7 @@ export const GithubRepoCard: React.FunctionComponent<{
   language?: { name: string; colour: string }
   starGazerCount?: number
   forkCount?: number
+  technologies?: string[]
 }> = (props) => {
   return (
     <ProjectCard
@@ -108,6 +111,8 @@ export const GithubRepoCard: React.FunctionComponent<{
       titleLink={props.url}
       desc={props.desc}
       achievements={props.achievements}
+      technologies={props.technologies}
+      technologySize="small"
     >
       <div className={styles.githubRepoStats}>
         {props.language && (
