@@ -44,7 +44,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               developers time. I do this by keeping an eye on the details and
               implementing best practice wherever I go to{" "}
               <a href="https://www.wikiwand.com/en/KISS_principle">
-                keep it simple stupid
+                keeping it simple
               </a>{" "}
               as i believe modern software should produce tangible outputs for
               people without all the complexity.
@@ -53,16 +53,16 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
             {/* Eduction summary */}
             <p>
               I am currently studying at the University of Technology Sydney
-              completing a Bachelors of Engineering Majoring in Software
+              completing a Bachelors of Engineering, Majoring in Software
               Engineering whilst solving problems in the professional sector as
-              well.
+              a Software Engineer.
             </p>
 
             {/* Professional summary */}
             <p>
               Over the last 3 years i have been working in the banking and
-              financial services sector working as a full stack engineer
-              building customer facing web apps as well as in a data engineering
+              financial services sector as a full stack engineer
+              building customer facing web apps and in a data engineering
               team building devops automation and software application in
               pursuit of the business' data engineering goals.
             </p>
@@ -72,8 +72,8 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
             <p>
               Over the next few years I aim to further my work in the DevOps
               space through certification in Azure to support running multi
-              cloud workloads across Azure and AWS as well as support migrations
-              of workloads to Azure.
+              cloud workloads across Azure and AWS and support migrations
+              of existing cloud workloads to Azure.
             </p>
             <p>
               Over the last 2 years developing workloads to run on containers
@@ -93,7 +93,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
               </b>
               {" or "}
               <b>
-                <a href={"#contact"}>Checkout my Resume </a>
+                <a href={"#contact"}>Checkout my Resume 📝</a>
               </b>
             </p>
           </div>

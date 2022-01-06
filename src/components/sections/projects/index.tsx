@@ -1,9 +1,9 @@
 import * as React from "react"
 import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { GridContainer } from "../../common/grid"
-import * as styles from "./styles.module.css"
-import { useRepoData } from "./data"
 import { TechIconList } from "../../common/tech-icon-list"
+import { useRepoData, data } from "./data"
+import * as styles from "./styles.module.css"
 
 export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
   props
@@ -60,26 +60,30 @@ const ProfessionalExperienceSummary = () => {
       <p>
         In my professional experience I have found myself focusing on delivering
         consistent best practice and innovation in the following fields of
-        Software Engineering to try and maximize teams output whilst reducing
-        their defects.
+        software Engineering to try and maximize teams output whilst reducing
+        the amount of maintenance required day to day.
       </p>
 
-      <h4>Developing Scalable and Maintainable Software</h4>
+      <h4>Developing scalable and maintainable software</h4>
       <p>
         For any of the software that I build I focus on assuring that the
         solution is built to scale in the future rather than just to get the job
         done this sprint. Building this scalable and maintainable software for
         the future allows teams to develop faster and with less defects by
-        reducing the amount of rework needed later.
+        reducing the amount of rework needed later as well forcing teams to
+        address the key issues in their applications sooner rather than on zero
+        day.
       </p>
 
-      <h4>Automated DevOps Solutions</h4>
+      <h4>Automated DevOps solutions</h4>
       <p>
-        I am certified as a AWS Solution Architect and have been developing
-        automated CICD solutions for the cloud. Through developing automated
-        infrastructure and taking away the manual process of deploying
+        I am certified as a <b>AWS Solution Architect</b> and have been
+        developing automated CICD solutions for the cloud. Through developing
+        automated infrastructure and taking away the manual process of deploying
         environments developers can focus more on their business logic rather
-        than building and debugging deployments.
+        than building and debugging deployments. This focus also provides an
+        opportunity to standardize and reduce that maintenance needed for
+        software through consistent CICD patterns.
       </p>
     </span>
   )
@@ -113,13 +117,11 @@ const PublicProjectSummary = () => {
       <p>
         In my free time I enjoy working on may personal programming projects
         focusing mainly on virtualization and devops tooling. Where possible I
-        like to share what im building and to write about it to make someone
-        elses learning journey a bit easier.
-      </p>
-      <p>
-        Where possible I like to give back to the open source community by
-        contributing fixes and features for the tooling that I use day to day
-        and has saved me plenty of time and headaches.
+        like to share what im building and to{" "}
+        <a href="#writing">write about it</a> to make someone elses learning
+        journey a bit easier. Where possible I like to give back to the open
+        source community by contributing fixes and features for the tooling that
+        I use day to day and has saved me plenty of time and headaches.
       </p>
     </span>
   )
@@ -188,7 +190,7 @@ const AcademicProjectsSummary = () => {
           completing a Bachelors of Engineering Majoring in Software Engineering
           expecting to finish my degree in mid 2024. The program is thankfully
           very practical providing me an opportunity to build many cool projects
-          highlighted below.
+          highlighted below;
         </p>
       </span>
     </div>
@@ -201,27 +203,30 @@ const AcademicProjectsSummary = () => {
         <p>
           During the 6 classes involved in this course I was tasked with working
           in a group with 6 to 12 other students to emulate a scrum team and to
-          build a software solution for the provided product spec. Each
+          build a software solution for the provided product specification. Each
           semesters class the teams would iterate and create their solutions
           producing all the sprint artefact expected like retrospectives and
           client feedback to continually integrate their feedback into an ideal
           product. Some of the best projects I participated in included;
         </p>
         <p>
-          Building a drag and drop Quantum equation calculator which was an
+          Building a drag and drop quantum equation calculator which was an
           interesting challenge of working out whats the best way to abstract
-          the quantum computing libraries we found and how we would visualize
-          the data structures they used to build the equations into something
-          the end user would be able to use. This project was presented to a
-          lecture from the University of Queensland with it working well to
-          allow for basic quantum equations to be calculated and demonstrated to
-          others on how each of the bits in the equation is turned through each
-          of the revolutions in the equation, this resulted in a perfect mark
-          for the team of 12 involved in this project.
+          the open source quantum computing libraries we found and how we would
+          visualize the data structures they used to build the equations into
+          something the end user would be able to use. This project was
+          presented to a lecturer from the University of Queensland with it
+          working well to allow for basic quantum equations to be calculated and
+          demonstrated to others showing how the bits in the equation are turned
+          through each of the revolutions in the equation. This resulted in a
+          perfect mark for the team of 12 involved in this project and the
+          solution we built.
         </p>
       </span>
+      {/* TODO find an image for firebase */}
+      {/* TODO find an image for lambda */}
       <TechIconList
-        technologies={["typescript", "express", "jest", "docker"]}
+        technologies={["typescript", "react", "express", "jest", "docker"]}
         size="small"
       />
     </div>,
@@ -231,36 +236,37 @@ const AcademicProjectsSummary = () => {
         <p>
           This class offered by UTS outlined how a modern data engineering
           pipeline is constructed focusing on how to build ETL pipelines using
-          tools like python and apache airflow. At the time I took this class I
+          tools like Python and Apache Airflow. At the time I took this class I
           was already working as a software engineer in a data engineering team
-          who was building out custom software for an airflow stack. Naturally
-          going into this class I had a lot of preexisting knowledge from the
+          who was building out custom software for an Airflow stack. Naturally
+          going into this class I had a lot of pre-existing knowledge from the
           professional space but this class provided me an excellent opportunity
-          in a team of 5 to build a Data Engineering software stack with Airflow
-          from scratch.
+          in a team of 5 to build an ETL stack with Airflow from scratch to see
+          how I could improve the setup within the course restrictions.
         </p>
         <p>
           Whilst building out this project I learned a lot in the area of how to
-          effectively manage a team whilst building out the Airflow stack
-          particularly in the areas of how to effectively manage team members
-          and the required tasks to be completed. How to manage async
-          communication was also important for me to learn how to manage
-          effectively as all the team members all had to work remotely due to
-          the COVID-19 lockdowns.
+          effectively manage a team whilst building software particularly in the
+          areas of how to effectively manage team members and the required tasks
+          to be completed. How to manage async communication was also important
+          for me to manage effectively as all the team members all had to work
+          remotely due to the COVID-19 lockdowns over the 2021 year.
         </p>
         <p>
-          The Airflow stack we built integrated with the twitter API to extract
+          The Airflow stack we built integrated with the Twitter API to extract
           tweet data about selected topics to be monitored. This data was then
           enriched with analytics and sentiment analysis on the tweet contents
-          to try and build and analytical and sentiment picture for a particular
-          topic being discussed on twitter. Once assessed this solution got the
-          team full marks on meeting the project specification as well as our
-          demonstration of how the data can be used for marketing analysis with
-          some simple dashboards using google data desk.
+          to try and build an analytical and sentiment picture for a particular
+          topic being discussed on Twitter. Once assessed on this built solution
+          the team achieved full marks on meeting the project specification as
+          well as our demonstration of how the data can be used for marketing
+          analysis with some simple dashboards using Google data studio.
         </p>
       </span>
+      {/* TODO find icon for mysql */}
+      {/* TODO find icon for google */}
       <TechIconList
-        technologies={["python", "airflow", "docker"]}
+        technologies={["python", "airflow", "docker", "twitter"]}
         size="small"
       />
     </div>,
@@ -274,91 +280,18 @@ const AcademicProjectsSummary = () => {
   )
 }
 
-const data: {
-  heading: string
-  professionalExp: ProfessionalProject[]
-  publicProjects: PublicProject[]
-} = {
-  heading: "Development Projects",
-  professionalExp: [
-    {
-      title: "Data engineering with airflow and snowflake",
-      summary: [
-        "Worked as a software engineer on a data engineering team to develop custom software and data pipelines to analyse private markets asset data. The platform consisted primarily of Airflow on AWS ECS, Snowflake for a Data warehouse and other tools like DBT and Liquid base for warehouse administration.",
-        "The data platform I worked on encompassed the ingesting of multiple different external providers from excel files, external vendor apis, existing databases ingesting all of the data into the Snowflake platform. The team focused on developing solutions prepared for scaling whilst minimizing the need for maintenance so that it could be effectively managed by a small team. This was achieved by a focus on testing and interfaces in the pipeline, whilst leveraging the features of the AWS platforms services where possible.",
-      ],
-      achievements: [
-        "Developing custom plugins and operators on the Airflow platform to integrate new features and tools",
-        "Administering a Snowflake data warehouse scalably with many tenant business units and use cases",
-        "Integrating DevOps best practices into a Data engineering stack",
-        "Monitoring and logging of data engineering workflows with Datadog",
-      ],
-      technologies: ["python", "airflow", "snowflake", "docker", "aws"],
-    },
-    {
-      title: "Building react applications as tableau extensions",
-      summary: [
-        "Within my time on the data engineering team we had to support the use of multiple analytic platforms by the tenant users such as tableau. The team wanted to support more effective inputting of data commentary directly inside platforms like tableau and through the use of its extensions feature I developed a full stack application to allow business users to select data in their dashboards and to apply commentary on that data that could be stored in an external system.",
-        "The web application was built using React for the frontend and express js for the api layer with data being pushed into a Snowflake data layer. The team and I and the team where able to demonstrate how a modern web application stack can be introduced to a business and how through the investment into testing and automation it can be supported by a small team whilst still being able to effectively address new features and use cases.",
-      ],
-      achievements: [
-        "10k Requests a month from internal business users",
-        "Integrated a custom web app experience inside another application (tableau) in a managed workload for the data engineering team",
-      ],
-      technologies: [
-        "typescript",
-        "react",
-        "materialui",
-        "express",
-        "jest",
-        "snowflake",
-        "docker",
-        "aws",
-      ],
-    },
-  ],
-  publicProjects: [
-    {
-      title: "packer-ubuntu-proxmox-template",
-      summary: [
-        "Using packer I developed a template to allow the easy configuration of KVM images for ubuntu. I used this project also to write an article on how the image can be used with packer to push images to a proxmox hypervisor environment.",
-      ],
-      achievements: [
-        "Using linux features to programmatically configure os from base ISO's",
-      ],
-    },
-    {
-      title: "jsonresume-theme-spartan-extended",
-      summary: [
-        "This was originally based of another project that I forked to add new features like better handling of australian date formats and too add new fields for tracking your present education and work as well as automatically calculating working periods.",
-      ],
-      achievements: [
-        "Working with responsive CSS best practices",
-        "Developing sites with handlebars",
-      ],
-    },
-    {
-      title: "proxmox-api-go",
-      summary: [
-        "For the proxmox-api-go project I have contributed with expanding the API developed in GO to integrate more features that are available in the proxmox API to allow for the easier provisioning of KVM and LXC images in a proxmox environment.",
-      ],
-      achievements: ["Learning GO development best practices"],
-    },
-  ],
-}
-
 interface IProjectsSectionProps {
   headingId: string
 }
 
-interface PublicProject {
+export interface PublicProject {
   title: string
   summary: string[]
   achievements: string[]
   technologies?: string[]
 }
 
-interface ProfessionalProject {
+export interface ProfessionalProject {
   title: string
   summary: string[]
   achievements: string[]

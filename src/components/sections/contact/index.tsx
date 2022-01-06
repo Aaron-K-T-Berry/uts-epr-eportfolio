@@ -22,7 +22,7 @@ export const Contact: React.FunctionComponent<{
             <p>
               If you wanna reach out about any opportunities or just want to say
               hi about any of my work or writing feel free to use the below form
-              and ill get back to you in no time.
+              and ill get back to you in no time via email .
             </p>
           </div>
         </div>
@@ -189,11 +189,13 @@ const Resume: React.FunctionComponent<{}> = () => {
   ]
 
   const withIconLink = (link, iconComponent) => {
-    return <div className={styles.icon}>
-      <a href={link} target="blank" rel="noopener noreferrer">
-        {iconComponent}
-      </a>
-    </div>
+    return (
+      <div className={styles.icon}>
+        <a href={link} target="blank" rel="noopener noreferrer">
+          {iconComponent}
+        </a>
+      </div>
+    )
   }
 
   return (
@@ -208,7 +210,10 @@ const Resume: React.FunctionComponent<{}> = () => {
 
       <div className={styles.iconsList}>
         {resumeLinks.map((item) => {
-          return withIconLink(item.link, <icons.FontAwesomeIcon icon={item.fa} />)
+          return withIconLink(
+            item.link,
+            <icons.FontAwesomeIcon icon={item.fa} />
+          )
         })}
       </div>
     </div>
@@ -236,11 +241,13 @@ const Socials: React.FunctionComponent<{}> = () => {
   ]
 
   const withIconLink = (link, iconComponent) => {
-    return <div className={styles.icon}>
-      <a href={link} target="blank" rel="noopener noreferrer">
-        {iconComponent}
-      </a>
-    </div>
+    return (
+      <div className={styles.icon}>
+        <a href={link} target="blank" rel="noopener noreferrer">
+          {iconComponent}
+        </a>
+      </div>
+    )
   }
 
   return (
@@ -258,7 +265,10 @@ const Socials: React.FunctionComponent<{}> = () => {
       <div className={styles.iconsList}>
         {socials.map((item) => {
           if (item.fa) {
-            return withIconLink(item.link, <icons.FontAwesomeIcon icon={item.fa} />)
+            return withIconLink(
+              item.link,
+              <icons.FontAwesomeIcon icon={item.fa} />
+            )
           } else {
             return withIconLink(item.link, <i className={item.icon} />)
           }

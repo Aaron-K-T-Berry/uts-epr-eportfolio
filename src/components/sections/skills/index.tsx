@@ -2,16 +2,8 @@ import * as React from "react"
 import { Terminal, TerminalLine } from "../../common/terminal-output"
 import { TechIconList } from "../../common/tech-icon-list"
 import { useOnScreen } from "../../../utility/on-screen-hook"
+import { data } from "./data"
 import * as styles from "./styles.module.css"
-
-interface SkillsProps {
-  headingId: string
-}
-
-interface Skill {
-  summary: string
-  extras: string[]
-}
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   return (
@@ -25,9 +17,13 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
 
         {/* How I use skills and tools in projects */}
         <div>
-          And these are just some of the ways I bring it all together
-          <TerminalShowcase skills={data.skills} />
+          <p>
+            I am always looking to expand my toolbox of skills to build
+            solutions that are simple and easy for any developer to understand.
+          </p>
         </div>
+
+        <TerminalShowcase skills={data.skills} />
 
         {/* Specific list of the skills and tools I use */}
         <div className={styles.detailsSkillsWrapper}>
@@ -112,7 +108,7 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
     <>
       <div className={sectionClass}>
         <span>
-          <h4>Leadership</h4>
+          <h3>Leadership</h3>
           <p>
             The projects I am most proud of are those where I have had a
             leadership role, and have been able to have a degree of ownership
@@ -124,26 +120,29 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
 
       <div className={subSectionClass}>
         <span>
-          <h5>Introduction of a new technology stacks</h5>
+          <h4>Introduction of a new technology stacks</h4>
           <p>
-            During this project the organization did not currently have a
-            standard pattern for building and deploying modern web applications
-            to production. This stack was built with React, Material Ui and
-            ExpressJs to build a modern, scalable and maintainable web
-            application.
+            The organization I worked for did not currently have a standard
+            pattern for building and deploying modern web applications to
+            production. To support the loading of custom asset commentaries a
+            web application stack was built with React, Material Ui and
+            ExpressJs to implement modern, scalable and maintainable standards
+            and tools.
           </p>
           <p>
-            After I conducted the initial proof of concept for the project I was
+            After I conducted the initial proof of concept for the stack I was
             able to lead a team of developers to build this application in 6
-            months using feedback from end users. This stack was successfully
-            deployed to production without any major defects.
+            months using feedback from end users to integrate it into their
+            current business dashboards. This stack was successfully deployed to
+            production without any major defects and servers on average 10,000
+            request a month.
           </p>
         </span>
       </div>
 
       <div className={subSectionClass}>
         <span>
-          <h5>Continuous improvements of Airflow environments</h5>
+          <h4>Continuous improvements in Airflow environments</h4>
           <p>
             With my time working on a data engineering team we maintained and
             developed on a self managed Airflow stack running on AWS ECS. During
@@ -156,9 +155,10 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
           <p>
             This focus on improvement of the stacks tools and standardization
             increased ability for tenants on the platform to self service
-            features whilst still maintaining quality and integration patterns
-            with external systems to the Data engineering teams internal
-            standards.
+            features and pipelines whilst still maintaining a standard of
+            quality and integration patterns with external systems to the Data
+            engineering teams internal standards in a way that can be easily
+            managed by a small team into he future.
           </p>
         </span>
       </div>
@@ -166,31 +166,11 @@ const LeaderShipSection: React.FunctionComponent<{}> = () => {
   )
 }
 
-const data: { skills: Skill[] } = {
-  skills: [
-    {
-      summary: "Modern full stack web development",
-      extras: [
-        "✅ Latest Javascript, Typescript and ReactJs standards and practices",
-        "✅ Focus on testing for a maintainable and scalable codebase",
-        "✅ Building custom internal and external user focused solutions",
-      ],
-    },
-    {
-      summary: "Developing scalable data engineering pipelines ",
-      extras: [
-        "✅ Maintaining and developing a dockerized Airflow environment",
-        "✅ Developing custom Airflow operators and plugins to support  data ingestion",
-        "✅ Using DBT and liquidbase for scalable data warehouse object management",
-      ],
-    },
-    {
-      summary: "Building scalable and automated devops solutions",
-      extras: [
-        "✅ Scalable applications and deployments with tools like docker and kubernetes",
-        "✅ Implementing infrastructure as code through tools like ansible and terraform",
-        "✅ Building generic and maintainable CICD infrastructure on Jenkins and Github Actions",
-      ],
-    },
-  ],
+interface SkillsProps {
+  headingId: string
+}
+
+export interface Skill {
+  summary: string
+  extras: string[]
 }
