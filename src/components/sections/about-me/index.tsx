@@ -1,7 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-
-import * as styles from "./hero.module.css"
+import * as styles from "./styles.module.css"
 
 interface AboutMeProps {
   headingId: string
@@ -31,11 +30,11 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
           <div className={styles.contentTextWrapper}>
             {/* My moto */}
             <div className={styles.moto}>
-              <h4>
+              <h3>
                 {
                   "I build scalable and automated software solutions in the cloud ☁️"
                 }
-              </h4>
+              </h3>
             </div>
             {/* Self motivation sumary */}
             <p>
@@ -61,41 +60,44 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
             {/* Professional summary */}
             <p>
               Over the last 3 years i have been working in the banking and
-              financial services sector as a full stack engineer
-              building customer facing web apps and in a data engineering
-              team building devops automation and software application in
-              pursuit of the business' data engineering goals.
+              financial services sector as a full stack engineer building
+              customer facing web apps and in a data engineering team building
+              devops automation and software application in pursuit of the
+              business' data engineering goals.
             </p>
 
             {/* Career / Future goals */}
-            <h3>Goals and the future</h3>
-            <p>
-              Over the next few years I aim to further my work in the DevOps
-              space through certification in Azure to support running multi
-              cloud workloads across Azure and AWS and support migrations
-              of existing cloud workloads to Azure.
-            </p>
-            <p>
-              Over the last 2 years developing workloads to run on containers
-              has been a key part of my everyday work and expertise. I aim to
-              further build on this skill through building out more distributed
-              applications and workloads on the Kubernetes platform running in
-              both AWS and Azure.
-            </p>
-            <p>
-              I am currently working with AMP Capital building solutions across
-              the data and analytics strategy and am not currently looking for
-              any further work. But feel free to reach out and say hi!
-            </p>
-            <p>
-              <b>
-                <a href={"#contact"}>Get in touch! 👋</a>
-              </b>
-              {" or "}
-              <b>
-                <a href={"#contact"}>Checkout my Resume 📝</a>
-              </b>
-            </p>
+            <div className={styles.goalsSection}>
+              <h3>Goals and the future</h3>
+              <p>
+                Over the next few years I aim to further my work in the DevOps
+                space through certification in Azure to support running multi
+                cloud workloads across Azure and AWS and support migrations of
+                existing cloud workloads to Azure.
+              </p>
+              <p>
+                Over the last 2 years developing workloads to run on containers
+                has been a key part of my everyday work and expertise. I aim to
+                further build on this skill through building out more
+                distributed applications and workloads on the Kubernetes
+                platform running in both AWS and Azure.
+              </p>
+              <p>
+                I am currently working with AMP Capital building solutions
+                across the data and analytics strategy and am not currently
+                looking for any further work. But feel free to reach out and say
+                hi!
+              </p>
+              <p>
+                <b>
+                  <a href={"#contact"}>Get in touch! 👋</a>
+                </b>
+                {" or "}
+                <b>
+                  <a href={"#contact"}>Checkout my Resume 📝</a>
+                </b>
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,58 @@
+.section {
+  padding: 50px 0;
+  background-color: var(--bg-color-4);
+  min-height: 80vh;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 8%;
+}
+
+.headingWrapper {
+  padding-bottom: 1rem;
+}
+
+.headingLink {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+.acaProjSummary {
+  padding-bottom: 25px;
+}
+
+.academicSection {
+  padding-bottom: 20px;
+}
+
+.academicSection h5 {
+  font-size: 14px;
+}
+
+.academicSection h5 {
+  padding-bottom: 10px;
+}
+
+.academicSection p {
+  padding-bottom: 5px;
+  line-height: var(--line-height);
+}
+
+.academicSectionItem {
+  padding-left: 15px;
+}
+
+@media (min-width: 700px) {
+  .academicSectionItem {
+    padding-left: 30px;
+  }
+
+  .academicSectionHeading p {
+    width: 75%;
+  }
+}

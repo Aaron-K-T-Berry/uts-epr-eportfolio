@@ -21,44 +21,11 @@
 .profExpSummary,
 .profProjGrid,
 .pubProjSummary,
-.pubProjGrid,
-.acaProjSummary {
+.pubProjGrid {
   padding-bottom: 25px;
 }
 
 .profExpSummary span p,
 .pubProjSummary span p {
   margin-bottom: 10px;
-}
-
-/* Academic Projects */
-.academicSection {
-  padding-bottom: 20px;
-}
-
-.academicSection h5 {
-  font-size: 14px;
-}
-
-.academicSection h5 {
-  padding-bottom: 10px;
-}
-
-.academicSection p {
-  padding-bottom: 5px;
-  line-height: var(--line-height);
-}
-
-.academicSectionItem {
-  padding-left: 15px;
-}
-
-@media (min-width: 700px) {
-  .academicSectionItem {
-    padding-left: 30px;
-  }
-
-  .academicSectionHeading p {
-    width: 75%;
-  }
 }

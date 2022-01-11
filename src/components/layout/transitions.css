@@ -1,5 +1,13 @@
 :root {
-  --transition-1-path: polygon(0 0, 0 100%, 100% 100%);
+  --transition-1-path: polygon(
+    14% 42%,
+    49% 22%,
+    80% 63%,
+    100% 24%,
+    100% 100%,
+    0 100%,
+    0 29%
+  );
   --transition-2-path: polygon(
     33% 75%,
     67% 21%,
@@ -17,12 +25,22 @@
     0 19%
   );
   --transition-4-path: polygon(
-    33% 75%,
-    67% 21%,
-    100% 65%,
+    40% 47%,
+    80% 14%,
+    100% 31%,
     100% 100%,
+    53% 100%,
     0 100%,
-    0 57%
+    0 0
+  );
+  --transition-5-path: polygon(
+    23% 28%,
+    71% 71%,
+    100% 40%,
+    100% 100%,
+    53% 100%,
+    0 100%,
+    0 56%
   );
 }
 
@@ -35,16 +53,30 @@
   position: absolute;
 }
 
+.angle,
+.angle:after {
+  height: 60px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .angle,
+  .angle:after {
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .angle,
+  .angle:after {
+    height: 40px;
+  }
+}
+
 /* ---------- Transition 1 ---------- */
 
 .angle1 {
   background-color: var(--bg-color-1);
-}
-
-.angle1,
-.angle1:after {
-  height: 80px;
-  width: 100%;
 }
 
 .angle1:after {
@@ -59,12 +91,6 @@
   background-color: var(--bg-color-2);
 }
 
-.angle2,
-.angle2:after {
-  height: 80px;
-  width: 100%;
-}
-
 .angle2:after {
   background-color: var(--bg-color-3);
   border-bottom: 1px var(--bg-color-3) solid;
@@ -75,12 +101,6 @@
 
 .angle3 {
   background-color: var(--bg-color-3);
-}
-
-.angle3,
-.angle3:after {
-  height: 80px;
-  width: 100%;
 }
 
 .angle3:after {
@@ -95,14 +115,20 @@
   background-color: var(--bg-color-4);
 }
 
-.angle4,
-.angle4:after {
-  height: 80px;
-  width: 100%;
-}
-
 .angle4:after {
   background-color: var(--bg-color-5);
   border-bottom: 1px var(--bg-color-5) solid;
   clip-path: var(--transition-4-path);
+}
+
+/* ---------- Transition 5 ---------- */
+
+.angle5 {
+  background-color: var(--bg-color-5);
+}
+
+.angle5:after {
+  background-color: var(--bg-color-6);
+  border-bottom: 1px var(--bg-color-6) solid;
+  clip-path: var(--transition-5-path);
 }
