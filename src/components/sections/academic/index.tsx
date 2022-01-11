@@ -58,10 +58,16 @@ export const AcademicProjectsSummary = () => {
           solution we built.
         </p>
       </span>
-      {/* TODO find an image for firebase */}
-      {/* TODO find an image for lambda */}
       <TechIconList
-        technologies={["typescript", "react", "express", "jest", "docker"]}
+        technologies={[
+          "typescript",
+          "react",
+          "express",
+          "jest",
+          "lambda",
+          "firebase",
+          "docker",
+        ]}
         size="small"
       />
     </div>,
@@ -98,20 +104,21 @@ export const AcademicProjectsSummary = () => {
           analysis with some simple dashboards using Google data studio.
         </p>
       </span>
-      {/* TODO find icon for mysql */}
-      {/* TODO find icon for google */}
       <TechIconList
-        technologies={["python", "airflow", "docker", "twitter"]}
+        technologies={[
+          "python",
+          "airflow",
+          "docker",
+          "mysql",
+          "gcp",
+          "twitter",
+        ]}
         size="small"
       />
     </div>,
   ]
 
-  return (
-    <>
-      {projects}
-    </>
-  )
+  return <>{projects}</>
 }
 
 interface IAcademicSectionProps {

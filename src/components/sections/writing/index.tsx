@@ -94,8 +94,7 @@ const data = {
       ],
       url: "https://levelup.gitconnected.com/airflow-dag-and-task-markdown-docs-2c00c72152b4",
       imageUrl: "https://miro.medium.com/max/1400/1*bFZ6qSsSNTLayT0Vr1tqXw.png",
-      // TODO fine icon for markdown
-      technologies: ["airflow", "python"],
+      technologies: ["airflow", "python", "markdown"],
     },
     {
       title:

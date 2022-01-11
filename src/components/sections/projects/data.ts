@@ -81,10 +81,16 @@ export const data: {
         "Integrating DevOps best practices into a data engineering stack.",
         "Monitoring and logging of data engineering workflows with Datadog.",
       ],
-      // TODO find dbt icon
-      // TODO find liquidbase icon
-      // TODO find data dog icon
-      technologies: ["python", "airflow", "snowflake", "docker", "aws"],
+      technologies: [
+        "python",
+        "airflow",
+        "snowflake",
+        "dbt",
+        "liquidbase",
+        "docker",
+        "aws",
+        "datadog",
+      ],
     },
     {
       title: "Using React applications  for custom Tableau extensions",
