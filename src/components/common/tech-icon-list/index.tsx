@@ -249,7 +249,7 @@ const useStyles = makeStyles({
 })
 
 export interface TechIconListProps {
-  technologies: ("typescript" | "python" | string)[]
+  technologies: string[]
   styles?: StylesProps
   displayName?: boolean
   spreadItems?: boolean
