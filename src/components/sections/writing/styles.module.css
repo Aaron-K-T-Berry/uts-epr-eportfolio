@@ -27,3 +27,11 @@
   line-height: var(--line-height);
   padding-bottom: 0.5rem;
 }
+
+.sectionImage {
+  position: absolute;
+  z-index: 1;
+  height: 10rem;
+  width: 10rem;
+  right: 5rem;
+}

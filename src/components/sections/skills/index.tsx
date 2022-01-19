@@ -4,6 +4,7 @@ import { TechIconList } from "../../common/tech-icon-list"
 import { useOnScreen } from "../../../utility/on-screen-hook"
 import { data } from "./data"
 import * as styles from "./styles.module.css"
+import { StaticImage } from "gatsby-plugin-image"
 
 export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   return (
@@ -63,6 +64,15 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
           <LeaderShipSection />
         </div>
       </div>
+
+      <StaticImage
+        className={styles.sectionImage}
+        layout="fullWidth"
+        alt=""
+        src={"../../../images/astro-2.png"}
+        formats={["auto", "webp", "avif"]}
+      />
+
     </section>
   )
 }
