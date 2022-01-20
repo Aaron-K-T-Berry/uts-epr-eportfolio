@@ -19,7 +19,7 @@ export const SimpleCard: React.FunctionComponent<{
       <div className={styles.cardHeading}>
         {props.titleLink ? (
           <h3>
-            <Link outbound={props.outboundLink} href={props.titleLink} text={props.title} />
+            <Link outbound={props.outboundLink} chevron={props.outboundLink} href={props.titleLink} text={props.title} />
           </h3>
         ) : (
           <h3>{props.title}</h3>
