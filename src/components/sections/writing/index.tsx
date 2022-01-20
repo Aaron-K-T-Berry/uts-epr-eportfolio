@@ -26,14 +26,6 @@ export const Writing: React.FunctionComponent<{
           <ArticleGrid articles={data.articles} />
         </div>
       </div>
-
-      <StaticImage
-        className={styles.sectionImage}
-        layout="fullWidth"
-        alt=""
-        src={"../../../images/astro-3.png"}
-        formats={["auto", "webp", "avif"]}
-      />
     </section>
   )
 }

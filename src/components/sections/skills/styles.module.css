@@ -46,14 +46,6 @@ p {
   padding-left: 15px;
 }
 
-.sectionImage {
-  position: absolute;
-  z-index: 1;
-  height: 10rem;
-  width: 10rem;
-  right: 10%;
-}
-
 @media (min-width: 700px) {
   .leadershipSectionItem {
     padding-left: 30px;

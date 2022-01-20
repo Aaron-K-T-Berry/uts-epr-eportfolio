@@ -64,15 +64,6 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
           <LeaderShipSection />
         </div>
       </div>
-
-      <StaticImage
-        className={styles.sectionImage}
-        layout="fullWidth"
-        alt=""
-        src={"../../../images/astro-2.png"}
-        formats={["auto", "webp", "avif"]}
-      />
-
     </section>
   )
 }
