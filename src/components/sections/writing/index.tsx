@@ -1,4 +1,3 @@
-import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 
 import { ProjectCard } from "../../common/card"
@@ -60,6 +59,7 @@ const ArticleGrid: React.FunctionComponent<{
                   title={article.title}
                   desc={article.summary}
                   titleLink={article.url}
+                  outboundLink={true}
                   technologies={article.technologies || undefined}
                   technologySize="small"
                 />
@@ -71,6 +71,7 @@ const ArticleGrid: React.FunctionComponent<{
                     title={article.title}
                     desc={article.summary}
                     titleLink={article.url}
+                    outboundLink={true}
                     technologies={article.technologies || undefined}
                     technologySize="small"
                   />

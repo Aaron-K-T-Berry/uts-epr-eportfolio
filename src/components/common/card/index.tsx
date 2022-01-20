@@ -3,12 +3,14 @@ import {
   TechIconList,
   StylesProps as TechIconListStyles,
 } from "../tech-icon-list"
+import { Link } from "../link"
 import icons from "./icons"
 import * as styles from "./styles.module.css"
 
 export const SimpleCard: React.FunctionComponent<{
   title: string
   titleLink?: string
+  outboundLink?: boolean
   imageUrl?: string
 }> = (props) => {
   return (
@@ -17,9 +19,7 @@ export const SimpleCard: React.FunctionComponent<{
       <div className={styles.cardHeading}>
         {props.titleLink ? (
           <h3>
-            <a target="blank" href={props.titleLink} rel="noopener noreferrer">
-              {props.title}
-            </a>
+            <Link outbound={props.outboundLink} href={props.titleLink} text={props.title} />
           </h3>
         ) : (
           <h3>{props.title}</h3>
@@ -51,6 +51,7 @@ export const SimpleCard: React.FunctionComponent<{
 export const ProjectCard: React.FunctionComponent<{
   title: string
   titleLink?: string
+  outboundLink?: boolean
   desc: string[]
   achievements?: string[]
   technologies?: string[]
@@ -62,6 +63,7 @@ export const ProjectCard: React.FunctionComponent<{
     <SimpleCard
       title={props.title}
       titleLink={props.titleLink}
+      outboundLink={props.outboundLink}
       imageUrl={props.imageUrl}
     >
       {/* Summary */}
@@ -111,6 +113,7 @@ export const GithubRepoCard: React.FunctionComponent<{
     <ProjectCard
       title={props.title}
       titleLink={props.url}
+      outboundLink={true}
       desc={props.desc}
       achievements={props.achievements}
       technologies={props.technologies}

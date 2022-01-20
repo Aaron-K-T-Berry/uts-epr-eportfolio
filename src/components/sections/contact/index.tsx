@@ -4,6 +4,7 @@ import * as yup from "yup"
 import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
 import icons from "../../common/tech-icon-list/icons"
+import { Link } from "../../common/link"
 import * as styles from "./styles.module.css"
 
 export const Contact: React.FunctionComponent<{
@@ -191,9 +192,7 @@ const Resume: React.FunctionComponent<{}> = () => {
   const withIconLink = (link, iconComponent) => {
     return (
       <div className={styles.icon}>
-        <a href={link} target="blank" rel="noopener noreferrer">
-          {iconComponent}
-        </a>
+        <Link href={link} outbound={true} text={iconComponent} />
       </div>
     )
   }
@@ -243,9 +242,7 @@ const Socials: React.FunctionComponent<{}> = () => {
   const withIconLink = (link, iconComponent) => {
     return (
       <div className={styles.icon}>
-        <a href={link} target="blank" rel="noopener noreferrer">
-          {iconComponent}
-        </a>
+        <Link href={link} outbound={true} text={iconComponent} />
       </div>
     )
   }
