@@ -15,7 +15,7 @@ module.exports = {
       options: {
         trackingIds: ["G-7895MKXS2E"],
         pluginConfig: {
-          head: false,
+          head: true,
         },
       },
     },
