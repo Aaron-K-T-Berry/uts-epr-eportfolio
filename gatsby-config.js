@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: "gatsby-plugin-google-gtag",
       options: {
         trackingIds: ["G-7895MKXS2E"],
         pluginConfig: {
@@ -19,19 +19,18 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "Aaron Berry - Portfolio",
+        short_name: "Portfolio",
         icon: "src/images/icon.png",
+        start_url: "/",
+        background_color: "#cdeeff",
+        theme_color: "#cdeeff",
+        display: "standalone",
       },
     },
-    "gatsby-plugin-react-svg",
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -49,15 +48,15 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: "gatsby-plugin-typescript",
       options: {
         isTSX: true,
-        jsxPragma: `jsx`,
+        jsxPragma: "jsx",
         allExtensions: true,
       },
     },
     {
-      resolve: `gatsby-source-github-api`,
+      resolve: "gatsby-source-github-api",
       options: {
         url: "https://api.github.com/graphql",
         token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
@@ -67,5 +66,14 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-svg",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline"
   ],
 }

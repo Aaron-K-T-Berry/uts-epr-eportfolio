@@ -11,7 +11,7 @@ export const AboutMe: React.FunctionComponent<AboutMeProps> = (props) => {
     <section className={styles.aboutSection}>
       <div className={styles.sectionWrapper}>
         <div className={styles.headingWrapper}>
-          <a className={styles.headingLink} id={props.headingId}></a>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>About</h2>
           <h3>Who is Aaron Berry?</h3>
         </div>

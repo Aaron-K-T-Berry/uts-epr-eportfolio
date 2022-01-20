@@ -10,8 +10,8 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
   return (
     <section className={styles.skillsSection}>
       <div className={styles.sectionWrapper}>
-        <div className={styles.headingWrapper}>
-          <a className={styles.headingLink} id={props.headingId}></a>
+        <div>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Skills & Tools</h2>
           <h3>My Toolbox & Things I Can Do</h3>
         </div>
@@ -27,7 +27,7 @@ export const Skills: React.FunctionComponent<SkillsProps> = (props) => {
         <TerminalShowcase skills={data.skills} />
 
         {/* Specific list of the skills and tools I use */}
-        <div className={styles.detailsSkillsWrapper}>
+        <div>
           The skills, tools and technologies I use to bring your products to
           life:
           <TechIconList

@@ -11,8 +11,8 @@ export const Writing: React.FunctionComponent<{
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <div className={styles.headingWrapper}>
-          <a className={styles.headingLink} id={props.headingId}></a>
+        <div>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Research and Writing</h2>
           <h3>I like to put projects and thoughts to paper</h3>
         </div>

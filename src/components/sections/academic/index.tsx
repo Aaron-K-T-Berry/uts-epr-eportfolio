@@ -9,7 +9,7 @@ export const Academic: React.FunctionComponent<IAcademicSectionProps> = (
     <section className={styles.section}>
       <div className={styles.wrapper}>
         <div className={styles.headingWrapper}>
-          <a className={styles.headingLink} id={props.headingId}></a>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Academic Experience and Projects</h2>
           <p>
             I am currently studying at the University of Technology Sydney

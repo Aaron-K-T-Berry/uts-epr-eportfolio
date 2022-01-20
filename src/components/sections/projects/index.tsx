@@ -19,7 +19,7 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
     <section className={styles.projectsSection}>
       <div className={styles.wrapper}>
         <div>
-          <a className={styles.headingLink} id={props.headingId}></a>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Projects</h2>
           <h3>Selection of some of my professional projects and experience</h3>
         </div>

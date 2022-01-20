@@ -14,7 +14,7 @@ export const Contact: React.FunctionComponent<{
     <section className={styles.section}>
       <div className={styles.wrapper}>
         <div>
-          <a className={styles.headingLink} id={props.headingId}></a>
+          <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Contact</h2>
         </div>
 
@@ -189,10 +189,10 @@ const Resume: React.FunctionComponent<{}> = () => {
     },
   ]
 
-  const withIconLink = (link, iconComponent) => {
+  const withIconLink = (link, text, iconComponent) => {
     return (
       <div className={styles.icon}>
-        <Link href={link} outbound={true} text={iconComponent} />
+        <Link href={link} outbound={true}>{iconComponent}</Link>
       </div>
     )
   }
@@ -211,6 +211,7 @@ const Resume: React.FunctionComponent<{}> = () => {
         {resumeLinks.map((item) => {
           return withIconLink(
             item.link,
+            item.text,
             <icons.FontAwesomeIcon icon={item.fa} />
           )
         })}
