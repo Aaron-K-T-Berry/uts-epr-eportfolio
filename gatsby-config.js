@@ -10,6 +10,13 @@ module.exports = {
     title: "Aaron Berry - Portfolio",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "G-7895MKXS2E",
+        head: true,
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
