@@ -34,7 +34,7 @@ export const AcademicProjectsSummary = () => {
   const projects = [
     <div className={subSectionClass}>
       <span>
-        <h4>2019 - 2021 Software Studio</h4>
+        <h3>2019 - 2021 Software Studio</h3>
         <p>
           During the 6 classes involved in this course I was tasked with working
           in a group with 6 to 12 other students to emulate a scrum team and to
@@ -73,7 +73,7 @@ export const AcademicProjectsSummary = () => {
     </div>,
     <div className={subSectionClass}>
       <span>
-        <h4>2021 - Data Engineering</h4>
+        <h3>2021 - Data Engineering</h3>
         <p>
           This class offered by UTS outlined how a modern data engineering
           pipeline is constructed focusing on how to build ETL pipelines using
