@@ -51,15 +51,11 @@ p {
   z-index: 1;
   height: 10rem;
   width: 10rem;
-  right: 5rem;
+  right: 10%;
 }
 
 @media (min-width: 700px) {
   .leadershipSectionItem {
     padding-left: 30px;
   }
-
-  /* .sectionImage {
-    right: 5rem;
-  } */
 }
