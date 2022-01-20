@@ -11,10 +11,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-7895MKXS2E",
-        head: true,
+        trackingIds: ["G-7895MKXS2E"],
+        pluginConfig: {
+          head: false,
+        },
       },
     },
     "gatsby-plugin-styled-components",
