@@ -122,10 +122,10 @@ export const GithubRepoCard: React.FunctionComponent<{
       <div className={styles.githubRepoStats}>
         {props.language && (
           <div>
-            <a
+            <span
               className={styles.langColor}
               style={{ backgroundColor: props.language.colour }}
-            ></a>{" "}
+            ></span>{" "}
             {props.language.name}
           </div>
         )}
