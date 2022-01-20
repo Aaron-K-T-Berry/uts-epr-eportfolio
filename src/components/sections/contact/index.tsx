@@ -3,8 +3,9 @@ import { useFormik } from "formik"
 import * as yup from "yup"
 import Button from "@material-ui/core/Button"
 import TextField from "@material-ui/core/TextField"
-import icons from "../../common/tech-icon-list/icons"
 import { Link } from "../../common/link"
+import data from "./data"
+import icons from "../../common/tech-icon-list/icons"
 import * as styles from "./styles.module.css"
 
 export const Contact: React.FunctionComponent<{
@@ -170,32 +171,21 @@ const ContactForm: React.FunctionComponent<{}> = (props) => {
   )
 }
 
-const Resume: React.FunctionComponent<{}> = () => {
-  const resumeLinks = [
-    {
-      text: "html",
-      fa: icons.faDesktop,
-      link: "https://cv.aaron-berry.com/index.html",
-    },
-    {
-      text: "doc",
-      fa: icons.faFileWord,
-      link: "https://cv.aaron-berry.com/resume.doc",
-    },
-    {
-      text: "pdf",
-      fa: icons.faFilePdf,
-      link: "https://cv.aaron-berry.com/resume.pdf",
-    },
-  ]
+const withIconLink = (link, text, iconComponent) => {
+  return (
+    <div className={styles.icon}>
+      <Link href={link} outbound={true}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+          <div>{iconComponent}</div>
+          <div style={{ paddingTop: "10px", width: "100%" }}>{text}</div>
+        </div>
+      </Link>
+    </div>
+  )
+}
 
-  const withIconLink = (link, text, iconComponent) => {
-    return (
-      <div className={styles.icon}>
-        <Link href={link} outbound={true}>{iconComponent}</Link>
-      </div>
-    )
-  }
+const Resume: React.FunctionComponent<{}> = () => {
+  const resumeLinks = data.resumeLinks
 
   return (
     <div className={styles.resume}>
@@ -221,32 +211,7 @@ const Resume: React.FunctionComponent<{}> = () => {
 }
 
 const Socials: React.FunctionComponent<{}> = () => {
-  const socials = [
-    {
-      link: "https://www.linkedin.com/in/aaron-kt-berry/",
-      icon: "devicon-linkedin-plain",
-    },
-    {
-      link: "https://github.com/Aaron-K-T-Berry",
-      icon: "devicon-github-plain",
-    },
-    {
-      link: "https://aaron-kt-berry.medium.com/",
-      fa: icons.faMedium,
-    },
-    {
-      link: "https://twitter.com/Aaron_KT_Berry",
-      icon: "devicon-twitter-plain",
-    },
-  ]
-
-  const withIconLink = (link, iconComponent) => {
-    return (
-      <div className={styles.icon}>
-        <Link href={link} outbound={true} text={iconComponent} />
-      </div>
-    )
-  }
+  const socials = data.socials
 
   return (
     <div className={styles.socials}>
@@ -265,10 +230,11 @@ const Socials: React.FunctionComponent<{}> = () => {
           if (item.fa) {
             return withIconLink(
               item.link,
+              item.text,
               <icons.FontAwesomeIcon icon={item.fa} />
             )
           } else {
-            return withIconLink(item.link, <i className={item.icon} />)
+            return withIconLink(item.link, item.text, <i className={item.icon} />)
           }
         })}
       </div>
