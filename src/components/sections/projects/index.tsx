@@ -23,10 +23,10 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
           <span className={styles.headingLink} id={props.headingId}></span>
           <h2>Projects</h2>
           <h3>Selection of some of my professional projects and experience</h3>
-        </div>
 
-        <div className={styles.profExpSummary}>
-          <ProfessionalExperienceSummary />
+          <div className={styles.profExpSummary}>
+            <ProfessionalExperienceSummary />
+          </div>
         </div>
 
         <div className={styles.profProjGrid}>
