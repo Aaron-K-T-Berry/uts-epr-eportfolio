@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import { ProjectCard, GithubRepoCard } from "../../common/card"
 import { GridContainer } from "../../common/grid"
@@ -45,6 +46,14 @@ export const Projects: React.FunctionComponent<IProjectsSectionProps> = (
           />
         </div>
       </div>
+
+      <StaticImage
+        className={styles.sectionImage}
+        layout="fullWidth"
+        alt="Astronaut on a planet"
+        src={"../../../images/astro-2.png"}
+        formats={["auto", "webp", "avif"]}
+      />
     </section>
   )
 }
