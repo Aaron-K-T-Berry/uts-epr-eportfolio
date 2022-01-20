@@ -13,10 +13,7 @@ export const Layout: React.FunctionComponent = ({ children }) => {
         <meta
           charSet="utf-8"
         />
-        <meta
-          name="theme-color"
-          content="#cdeeff"
-        />
+        <title>Aaron Berry - Portfolio</title>
         <meta
           name="description"
           content="I am a software engineer who is passionate about building applications that are easy to understand and automated to save developers time. I do this by keeping an eye on the details and implementing best practice wherever I go to keeping it simple as i believe modern software should produce tangible outputs for people without all the complexity."
