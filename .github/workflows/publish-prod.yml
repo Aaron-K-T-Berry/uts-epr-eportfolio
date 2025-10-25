@@ -31,9 +31,9 @@ jobs:
 
       - name: Build distributable
         run: yarn build
-        # env:
-        #   GITHUB_LOGIN: "aaron-k-t-berry"
-        #   GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_LOGIN: "aaron-k-t-berry"
+          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Publish distributable to s3
       #   uses: jakejarvis/s3-sync-action@master
