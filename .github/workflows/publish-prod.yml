@@ -31,26 +31,26 @@ jobs:
 
       - name: Build distributable
         run: yarn build
-        env:
-          GITHUB_LOGIN: "aaron-k-t-berry"
-          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # env:
+        #   GITHUB_LOGIN: "aaron-k-t-berry"
+        #   GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish distributable to s3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --follow-symlinks --delete
-        env:
-          AWS_S3_BUCKET: "${{ secrets.AWS_S3_BUCKET_PROD }}"
-          AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
-          AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          AWS_REGION: "ap-southeast-2"
-          SOURCE_DIR: "public"
+      # - name: Publish distributable to s3
+      #   uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --acl public-read --follow-symlinks --delete
+      #   env:
+      #     AWS_S3_BUCKET: "${{ secrets.AWS_S3_BUCKET_PROD }}"
+      #     AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
+      #     AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+      #     AWS_REGION: "ap-southeast-2"
+      #     SOURCE_DIR: "public"
 
-      - name: Invalidate CDN paths for changes
-        uses: chetan/invalidate-cloudfront-action@v2
-        env:
-          DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION }}
-          PATHS: "/*"
-          AWS_REGION: "us-east-1"
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      # - name: Invalidate CDN paths for changes
+      #   uses: chetan/invalidate-cloudfront-action@v2
+      #   env:
+      #     DISTRIBUTION: ${{ secrets.AWS_DISTRIBUTION }}
+      #     PATHS: "/*"
+      #     AWS_REGION: "us-east-1"
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
