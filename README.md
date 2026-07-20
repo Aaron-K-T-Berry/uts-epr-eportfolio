@@ -11,13 +11,13 @@ The following repo contains the source code for Aaron Berry's UTS Engineering Pr
 **Install dependencies.**
 
 ```shell
-yarn
+pnpm install
 ```
 
 **Run the development site.**
 
 ```shell
-yarn develop
+pnpm develop
 ```
 
 **Open the code and start customizing!**

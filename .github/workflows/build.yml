@@ -14,17 +14,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Use Node.js 14.x
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js 22.x
         uses: actions/setup-node@v7
         with:
-          node-version: "14.x"
-          cache: yarn
+          node-version: "22.x"
+          cache: pnpm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: yarn build
+        run: pnpm build
         env:
           GITHUB_LOGIN: "aaron-k-t-berry"
           GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
