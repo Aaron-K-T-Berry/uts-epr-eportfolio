@@ -4,3 +4,4 @@ public
 .env
 *.log
 .vscode
+.pnpm-store
