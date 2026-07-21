@@ -25,8 +25,8 @@ importers:
         specifier: ^5.15.4
         version: 5.15.4
       '@fortawesome/free-solid-svg-icons':
-        specifier: ^5.15.4
-        version: 5.15.4
+        specifier: ^7.3.1
+        version: 7.3.1
       '@fortawesome/react-fontawesome':
         specifier: ^0.1.16
         version: 0.1.19(@fortawesome/fontawesome-svg-core@1.3.0)(react@17.0.2)
@@ -893,6 +893,10 @@ packages:
     engines: {node: '>=6'}
     deprecated: Please upgrade to 6.1.0. https://fontawesome.com/docs/changelog/
 
+  '@fortawesome/fontawesome-common-types@7.3.1':
+    resolution: {integrity: sha512-k0C0sdHmZtAo6dRDtd1Z/qcpyHbL0CKsjV8seMY/21xGhY5Wsv0XRmiI/xEEH4y2c9b1+jvgNs/3EqhV27yUEA==}
+    engines: {node: '>=6'}
+
   '@fortawesome/fontawesome-svg-core@1.3.0':
     resolution: {integrity: sha512-UIL6crBWhjTNQcONt96ExjUnKt1D68foe3xjEensLDclqQ6YagwCRYVQdrp/hW0ALRp/5Fv/VKw+MqTUWYYvPg==}
     engines: {node: '>=6'}
@@ -902,8 +906,8 @@ packages:
     resolution: {integrity: sha512-f1witbwycL9cTENJegcmcZRYyawAFbm8+c6IirLmwbbpqz46wyjbQYLuxOc7weXFXfB7QR8/Vd2u5R3q6JYD9g==}
     engines: {node: '>=6'}
 
-  '@fortawesome/free-solid-svg-icons@5.15.4':
-    resolution: {integrity: sha512-JLmQfz6tdtwxoihXLg6lT78BorrFyCf59SAwBM6qV/0zXyVeDygJVb3fk+j5Qat+Yvcxp1buLTY5iDh1ZSAQ8w==}
+  '@fortawesome/free-solid-svg-icons@7.3.1':
+    resolution: {integrity: sha512-v0BLa0eqg7ubvVWeNSHVBs8fWH/GJicERZoJaxJ3FE/lj67VSqzoMg9pzfZVOfLMX10y0pGwQAuxoRVVH2patg==}
     engines: {node: '>=6'}
 
   '@fortawesome/react-fontawesome@0.1.19':
@@ -8402,6 +8406,8 @@ snapshots:
 
   '@fortawesome/fontawesome-common-types@0.3.0': {}
 
+  '@fortawesome/fontawesome-common-types@7.3.1': {}
+
   '@fortawesome/fontawesome-svg-core@1.3.0':
     dependencies:
       '@fortawesome/fontawesome-common-types': 0.3.0
@@ -8410,9 +8416,9 @@ snapshots:
     dependencies:
       '@fortawesome/fontawesome-common-types': 0.2.36
 
-  '@fortawesome/free-solid-svg-icons@5.15.4':
+  '@fortawesome/free-solid-svg-icons@7.3.1':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 0.2.36
+      '@fortawesome/fontawesome-common-types': 7.3.1
 
   '@fortawesome/react-fontawesome@0.1.19(@fortawesome/fontawesome-svg-core@1.3.0)(react@17.0.2)':
     dependencies:
