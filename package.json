@@ -61,7 +61,7 @@
     "@types/node": "^26.6.2",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.20",
-    "prettier": "^3.9.8"
+    "prettier": "^3.9.9"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
