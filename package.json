@@ -33,7 +33,7 @@
     "@mui/styles": "^6.4.8",
     "babel-plugin-styled-components": "^2.1.4",
     "browser-monads": "^1.0.0",
-    "dotenv": "^18.0.4",
+    "dotenv": "^18.0.5",
     "formik": "^2.2.9",
     "gatsby": "^5.16.1",
     "gatsby-plugin-google-analytics": "^5.16.0",
@@ -58,7 +58,7 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@types/node": "^26.6.3",
+    "@types/node": "^26.6.4",
     "@types/react-dom": "^19.3.0",
     "@types/styled-components": "^5.1.20",
     "prettier": "^3.9.9"
