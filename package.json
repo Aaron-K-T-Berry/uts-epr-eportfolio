@@ -58,7 +58,7 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "@types/react-dom": "^19.3.0",
     "@types/styled-components": "^5.1.20",
     "prettier": "^3.9.10"
